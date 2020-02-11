@@ -230,7 +230,7 @@ Template.minutesedit.helpers({
     setDocumentTitle() {
         let min = new Minutes(_minutesID);
         let ms = min.parentMeetingSeries();
-        document.title = `4M! ${ms.name} [${ms.project}] ${min.date}`;
+        document.title = `AIIAS Minutes ${ms.name} [${ms.project}] ${min.date}`;
         // Hint: this will be resetted on router's exit hook (see router.js).
     },
 
