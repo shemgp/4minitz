@@ -256,7 +256,7 @@ Template.minutesedit.helpers({
         $(document).arrive('#id_minutesdatePicker', () => {
             // Configure DateTimePicker
             moment.locale('en', {
-                week: { dow: 1 } // Monday is the first day of the week
+                week: { dow: 0 } // Monday is the first day of the week
             });
 
             let datePickerNode = templateInstance.$('#id_minutesdatePicker');

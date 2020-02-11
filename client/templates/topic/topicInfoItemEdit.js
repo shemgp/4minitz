@@ -47,7 +47,7 @@ Template.topicInfoItemEdit.onCreated(function () {
 Template.topicInfoItemEdit.onRendered(function () {
     // Configure DateTimePicker
     moment.locale('en', {
-        week: { dow: 1 } // Monday is the first day of the week
+        week: { dow: 0 } // Monday is the first day of the week
     });
     // see http://eonasdan.github.io/bootstrap-datetimepicker/Options/
     this.$('#id_item_duedatePicker').datetimepicker({
