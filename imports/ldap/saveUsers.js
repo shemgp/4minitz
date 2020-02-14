@@ -32,6 +32,10 @@ let _insertUsers = function (client, mongoUri, users) {
             const mongoConnection = mongoUriParser.parse(mongoUri);
             let bulk = client.db(mongoConnection.database).collection('users').initializeUnorderedBulkOp();
             _.each(users, user => {
+		if (!user.emails[0] || !user.emails[0].address) {
+                    user.emails[0] = {};
+                    user.emails[0].address = user.username + '@aiias.edu';
+		}
                 if (user && user.username && user.emails[0] && user.emails[0].address) {
                     user.isLDAPuser = true;
                     let usrRegExp = new RegExp('^'+RegExp.escape(user.username)+'$', 'i');
