@@ -16,7 +16,7 @@ LDAP.bindValue = function (usernameOrEmail, isEmailAddress) {
     }
 
     const serverDn = LdapSettings.serverDn(),
-        searchDn = LdapSettings.usernameAttribute();
+        searchDn = "cn";
 
     if (!serverDn || !searchDn) {
         return '';
