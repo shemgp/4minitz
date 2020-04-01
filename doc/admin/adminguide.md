@@ -185,7 +185,7 @@ no error on your machine. ;-)
 So, to be able to build the sources in a runnable server, first 
 install the current version of the meteor build tool:
 
-    curl https://install.meteor.com/ | sh
+    curl https://install.meteor.com/?release=1.6
     meteor --version
 
 You'll need root rights for the above. As a non-root user you may install
@@ -238,6 +238,7 @@ Perform the following steps to build an run the 4Minitz server:
 
     cd ../4minitz_bin/bundle/programs/server
     meteor npm install --production
+    meteor npm install @babel/runtime@7.0.0-beta.55
     
     cd ../..
     nano settings.json
@@ -253,7 +254,7 @@ port where MongoDB listens and 61405 will be the port where
     export ROOT_URL='http://4minitz.example.com:61405'
     export METEOR_SETTINGS=$(cat ./settings.json)
 
-Now, inside the `/4minitz_bin/bundle/programs/server` directory,
+Now, inside the `/4minitz_bin/bundle` directory,
 you must launch the 4Minitz server:
 
     meteor node main.js
