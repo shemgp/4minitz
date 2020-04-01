@@ -185,7 +185,7 @@ no error on your machine. ;-)
 So, to be able to build the sources in a runnable server, first 
 install the current version of the meteor build tool:
 
-    curl https://install.meteor.com/?release=1.6
+    curl https://install.meteor.com/?release=1.6 | sh
     meteor --version
 
 You'll need root rights for the above. As a non-root user you may install
