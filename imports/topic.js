@@ -96,7 +96,7 @@ export class Topic {
         let infoItemDocs = topicDoc.infoItems;
         let i;
         for (i = 0; i < infoItemDocs.length; i++) {
-            if (infoItemDocs[i].isOpen) {
+            if (infoItemDocs[i].itemType === 'actionItem' &&  infoItemDocs[i].isOpen) {
                 return true;
             }
         }
@@ -121,13 +121,16 @@ export class Topic {
     }
 
     /**
-     * A topic is closed if it is not open
-     * and has no more open AIs.
-     *
+     * A topic is finally completed (and will not show up in future minutes) if it is
+     *    - not checked as dicussed and
+     *    - has no more open AIs and
+     *    - is not marked as recurring
      * @returns {boolean}
      */
-    isClosedAndHasNoOpenAIs() {
-        return (!this.getDocument().isOpen && !this.hasOpenActionItem() && !this.isRecurring());
+    isFinallyCompleted() {
+        return (!this.getDocument().isOpen &&
+                !this.hasOpenActionItem() &&
+                !this.isRecurring());
     }
 
     isDeleteAllowed() {

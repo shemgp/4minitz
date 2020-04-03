@@ -1,0 +1,601 @@
+---
+_splitKey: ':'
+_locale: 'no'
+Accounts:
+  usernamePlaceholder: "(min. 3 tegn)"
+  nameDisplayName: "Navn, Firma"
+  namePlaceholder: "John Doe, Happy Corp"
+  passwordPlaceholder: "min. 6 tegn (siffer, nedre og øvre)"
+  passwordError: "min. 6 tegn (min. 1 siffer, 1 lavere, 1 øvre)"
+Buttons:
+  add: "Legg til"
+  back: "Gå tilbake"
+  cancel: "Avbryt"
+  change: "Forandring"
+  close: "Lukke"
+  confirm: "Bekreft"
+  create: "Opprett"
+  delete: "Slett"
+  dismissAll: "Avvis alle"
+  edit: "Rediger"
+  hide: "Ok, skjul"
+  ok: "OK"
+  register: "Registrer deg"
+  save: "Lagre"
+UserRoles:
+  roleModerator: "Moderator"
+  roleUploader: "Opplasteren"
+  roleInvited: "Invitert"
+  roleInformed: "Informert"
+FlashMessages:
+  ok: "OK"
+  error: "Feil"
+  verifyEMailErr: "Feil: E-post kan ikke verifiseres"
+  verifyEMailOK: "OK: E-post er verifisert nå"
+  passwordChangeOK: "Passord endret"
+  passwordResetOK: "Passordet tilbakestilles på en riktig måte"
+  profileEditOK: "Profilendringer lagret"
+  minuteLinkErr: "Dessverre er minuttet ikke koblet til den overordnede serien riktig - vennligst kontakt systemadministratoren."
+  agendaSentOK: "Agenda ble sendt til {$result} mottakere"
+  finalizeProgress1: "Avslutt pågår"
+  finalizeProgress2: "Dette kan ta noen sekunder..."
+  finalizeOK: "Dette møteminuttene ble fullført"
+Dialog:
+  ConfirmDelete:
+    title: "Bekreft sletting?"
+    body: "Er du sikker på at du sletter dette?"
+  ConfirmDeleteMeetingSeries:
+    questionMeetingSeries: "Vil du virkelig slette møteserien"
+    questionMinutes: "Denne serien inneholder {$minutesCount} møteminutter (siste minutter av {$lastMinutesDate})."
+  ConfirmCreateNewMinutes:
+    title: "Bekreft oppretting av nye minutter"
+    content: "Vil du virkelig opprette nye minutter for møteserien \"{$project}: {$name}«?"
+  confirmDeleteAttachment: "Vil du virkelig slette vedlegget:\n**{$name}**?"
+  confirmDeleteDetails: "Vil du virkelig slette de valgte detaljene for elementet **{$subject}**?"
+  ConfirmDeleteItem:
+    allowed: "Vil du virkelig slette {$type} **{$subject}**?"
+    notAllowed: "Det er ikke mulig å slette {$type} **{$subject}** fordi {$type} ble opprettet i tidligere minutter."
+    questionActionItem: "Vil du lukke handlingselementet i stedet?"
+    questionInfoItem: "Ønsker du å fjerne det klebrige informasjonselementet i stedet?"
+    typeActionItem: "handling element"
+    typeInfoItem: "informasjon"
+    titleCloseActionItem: "Lukke handlingselement?"
+    titleUnpinInfoItem: "Unpin info element?"
+    buttonCloseActionItem: "Lukk handlingselement"
+    buttonUnpinInfoItem: "Unpin info element"
+  ConfirmDeleteTopic:
+    allowed: "Vil du virkelig slette emnet **{$subject}**?"
+    notAllowed: "Det er ikke mulig å slette emne**{$subject}** fordi emnet ble opprettet i tidligere minutter."
+    close: "Vil du lukke emnet i stedet?"
+    closeWithActions: "Vil du lukke emnet sammen med alle relaterte handlingselementer i stedet?"
+  confirmLeaveMeetingSeries: "Ønsker du virkelig å forlate møteserien:\n\n**{$project} / {$name}**\n\nDu må spørre en moderator hvis du vil bli med igjen etterpå."
+  ConfirmMinuteQualityAssurance:
+    title: "Fullføre minutter: Kvalitetskontroller"
+    button: "Fortsett"
+    issues: "Det er sluttføre problemer med minuttene dine!"
+    proceed: "Vil du fortsette med ferdigstillelse?"
+    warnNoTopics: "De aktuelle minuttene har ingen emner"
+    warnNoParticipants: "Ingen deltaker er er merket som til stede"
+    warnEditing: "Et emne/element/detalj er fortsatt redigert"
+    warnNoTopicDiscussed: "Intet emne er markeret som 'diskuteret'"
+    warnTopicWithoutItems: "Minst ett diskutert emne har ingen elementer"
+    warnActionItemWithoutResponsible: "Minst ett handlingselement har ingen ansvarlig"
+    warnTopicNoNewContent: "Et emne er merket, men har ikke noe nytt innhold"
+  ConfirmReOpenTopic:
+    title: "Åpne emnet på nytt?"
+    body: "Vil du virkelig åpne det allerede lukkede emnet **{$topicSubject}**?"
+    button: "Gjenåpne"
+  ConfirmSendAgenda:
+    body: "Vil du virkelig sende agendaen for dette møtet minutt datert på **{$minDate}**?\nDet ble allerede sendt på {$agendaSentDate} på {$agendaSentTime}"
+    title: "Bekreft sending av agenda"
+    button: "Send agenda"
+  ConfirmDeleteMinutes:
+    really: "Vil du virkelig slette dette møtet minutt datert på **{$minutesDate}**?"
+    newTopics: "Dette fjerner **{$newTopicsCount} emner**, som ble opprettet i løpet av dette minuttet."
+    closedTopicsAdditionally: "I tillegg vil **{$closedTopicsCount} emner** åpnes igjen, som ble stengt i løpet av disse minuttene."
+    closedTopics: "**{$closedTopicsCount} emner** vil bli åpnet igjen, som ble stengt i løpet av disse minuttene."
+  ConfirmFinalizeMinutes:
+    title: "Bekreft fullfør minutter"
+    button: "Avslutt"
+    really: "Vil du virkelig fullføre dette møtet minutt datert på **{$minutesDate}**?"
+    sendActionItems: "Send handlingselementer"
+    sendMinutes: "Send informasjonselementer"
+  LocaleSetting:
+    title: "Angi språk"
+    languageLocale: "Språkspråk"
+    automatic: "Automatisk via nettleser"
+    contributionHint1: "Oversettelsesfeil eller manglende språk?"
+    contributionHint2: "Hjelp oss å oversette 4Minitz!"
+  IsEditedHandling:
+    title: "Rediger til tross for eksisterende redigering"
+    confirmationDialogResetEdit: "Advarsel: Dette dokumentet er for øyeblikket redigert av {$name} siden: {$date}"
+    confirmationDialogResetEditDetails: "Klikk på detaljer igjen for å starte redigering."
+    button: "Rediger uansett"
+  ConnectionInfo:
+    tooltip: |
+      Connection Lost!
+        Status: {$status}
+        Retry Count: {$retryCount}
+        Retry Time: {$retryTime} sec.
+        Reason: {$reason}
+        Click to reconnect.
+    header: "Du har mistet tilkoblingen til 4Minitz-serveren."
+    body: "Hvis du lukker nettleseren, kan data som ikke er lagret, gå tapt. Ta kontakt med din egen administrator hvis dette problemet vedvarer."
+    tryToReconnect: "Prøv å koble til på nytt"
+  ConfirmGenerateProtocol:
+    title: "Bekreft generere protokoll"
+    body: "Det er ikke generert noen protokoll i disse minuttene. Vil du laste ned en dynamisk generert HTML-versjon av den i stedet?"
+    button: "Last ned"
+  ConfirmTopicDelete:
+    title1: "Bekreft sletting emne"
+    title2: "Marker emne som diskutert?"
+    button2: "Lukk emne og handlinger"
+    errortitle: "Kan ikke slette emne"
+    errorcontent: "Det er ikke mulig å slette dette emnet fordi det ble opprettet i tidligere minutter. Det valgte emnet er allerede lukket og har ingen åpne handlingselementer, så det kopieres ikke til følgende minutter."
+  ItemDeleteError:
+    title: "Kan ikke slette element"
+    body1: "Det er ikke mulig å slette dette elementet fordi det ble opprettet i tidligere minutter."
+    body2a: "Dette handlingselementet er allerede lukket,"
+    body2b: "Dette infoelementet er allerede un-pinned"
+    body3: "slik at den ikke kopieres til følgende minutter"
+  ActionItemResponsibleError:
+    title: "Ugyldig ansvarlig for handlingselement"
+    body: |
+      Dette er ikke en gyldig ansvarlig!
+
+      Velg en **eksisterende bruker** fra rullegardinmenyen eller skriv inn en **gyldig e-postadresse**.
+  ConvertItemError:
+    title: "Kan ikke konvertere element"
+    body: "Det er ikke mulig å konvertere dette elementet fordi det ble opprettet i tidligere minutter."
+About:
+  title: "Om 4Minitz"
+  copyrightTeam: "av 4Minitz-Team"
+  licensedUnder: "Lisensiert under MIT-lisensen"
+  licenseDependencies: "Lisens av avhengigheter"
+  thanksContributors: "Takk til alle våre bidragsytere"
+  thanksTranslators: "Takk til alle våre oversettere"
+  proudlySponsored: "Stolt sponset av"
+  specialThanks: "Spesiell takk til disse prosjektene"
+  forkGitHub: "Forgaffel oss på GitHub"
+  ServerStatistics:
+    title: "Server statistikk"
+    rowNumUser: "Antall brukere (aktive)"
+    rowNumMeetingSeries: "Antall møteserier"
+    rowNumMeetingMinutes: "Antall møteminutter"
+    rowNumAttachments: "Antall vedlegg"
+    rowSizeAttachments: "Størrelse på vedlegg"
+Item:
+  ariaLabel: "Legg til/rediger element"
+  editItem: "Rediger element"
+  editItemHint: "Rediger dette handlingen/info-elementet"
+  deleteItem: "Slett element"
+  deleteItemHint: "Slett dette handlingen/informasjonselementet"
+  addItemModal: "Legg {$type} til {$topic}"
+  editItemModal: "Rediger {$type} av {$topic}"
+  editItemModelTypeInfoItem: "Informasjon"
+  editItemModelTypeActionItem: "Handlingselement"
+  addInfo: "Legg til informasjonselement"
+  addInfoHint: "Legg til informasjonselement i emnet"
+  action: "Handlingselement"
+  addAction: "Legg til handlingselement"
+  addActionHint: "Legge til handlingselement i emnet"
+  convertToAction: "Konverter til handling"
+  convertToInfo: "Konverter til info"
+  convertDisabled: "Konvertering deaktivert: element finnes i tidligere møte"
+  subject: "Emne (obligatorisk)"
+  details: "Detaljer"
+  addDetails: "Legg til detaljer"
+  priority: "Prioritet"
+  Priorities:
+    high: "1 - Høy"
+    medium: "3 - Middels"
+    low: "5 - Lav"
+  due: "På grunn av det"
+  dueNone: "ingen"
+  detailPlaceholder: "Du kan bruke Markdown til å redigere. Trykk Ctrl+Enter eller Tab for å forlate."
+  markdownHint: "Hjelp for Markdown-syntaks"
+  setPin: "Sett festet"
+  setPinHint: "Angi som pinned informasjonselement"
+  unsetPin: "Usatt festet"
+  unsetPinHint: "Angi som ikke-festet informasjonselement"
+  done: "gjort"
+  pinned: "festet"
+  Error:
+    subject: "Skriv inn et gyldig emne"
+  Filter:
+    title: "Filtre"
+    usageHint: "Bruk av filter"
+    info: "Info-elementer"
+    action: "Handlingselementer"
+    open: "Åpne handlingselementer"
+    closed: "Lukkede handlingselementer"
+    yourAction: "Dine handlingselementer"
+    placeholder: "Filtrer"
+    matchCase: "Saken"
+    matchCaseHint: "Match sak"
+    matchCaseLong: "Match sak"
+    Usage:
+      body: "Du kan bruke flere nøkkelord til å filtrere de listede elementene. Alle søkeord kan kombineres som filtrerer disse elementene som samsvarer med alle gitte søkeparametere."
+      keyword: "Nøkkelord"
+      format: "Format"
+      values: "Verdier"
+      eg: "f.eks."
+  myActionItems: "Mine handlingselementer"
+Topic:
+  title: "Emne"
+  new: "Nytt"
+  add: "Legg til emne"
+  addLong: "Legg til emne..."
+  addShort: "Emne"
+  addHint: "Legg til nytt emne øverst på listen [Ctrl+Alt+T]"
+  quickAdd: "Legg til emne (til slutten av listen)"
+  edit: "Rediger emne"
+  save: "Lagre emne"
+  show: "Vis emne"
+  subject: "Emne for emne (obligatorisk)"
+  responsible: "Ansvarlig"
+  completed: "Fullført"
+  completedHint: "Dette emnet er endelig fullført. Så den blir ikke forplantet til neste møte."
+  setRecurring: "Angi gjentakende"
+  setRecurringHint: "Angi som gjentakende emne"
+  unsetRecurring: "Unset gjentakende"
+  unsetRecurringHint: "Angi som ikke-gjentakende emne"
+  setSkip: "Sett Hopp"
+  setSkipHint: "Angi som hoppet over emne"
+  unsetSkip: "Unset Hopp"
+  unsetSkipHint: "Angi som ikke-hoppet over emne"
+  history: "Vis historie"
+  historyHint: "Vis fullstendig sluttført tilstand for dette emnet"
+  delete: "Slett emne"
+  reopen: "Gjenåpne emne"
+  reopenHint: "Gjenåpne emne"
+  placeholder: "Legg til informasjonselement. Tilføy @username for å legge til et handlingselement. Trykk på Enter for å legge til detaljer. Trykk Ctrl+Enter eller Tab for å sende."
+  childOf: "Emne for møte-serien:"
+  historyTitle: "Dette emnet var"
+  createdOn: "opprettet på:"
+  lastUpdate: "sist oppdatert:"
+  finalizedOn: "ferdigstilt på minutter fra:"
+  doneBy: "(av {$user})"
+  notFoundTitle: "Beklager, Emne ble ikke funnet."
+  notFoundReasons: "Reasons may be...<br><ul><li>The topic was never finalized (it only lives in an unfinalized minute)</li><li>The topic was deleted</li><li>You do not have access rights to this topic (anymore)</li></ul>"
+  illegalAction: "Forsøkte å ringe en ulovlig hendelse i skrivebeskyttet modus"
+  addDetails: "Legg til detaljer"
+  addDetailsHint: "Legg til detaljer i elementet"
+  hideClosed: "Skjul lukket"
+  hideClosedHint: "Skjul diskutert/hoppet over emner midlertidig fra listen"
+  hideClosedLong: "Skjul lukkede emner"
+  collapse: "Kollaps"
+  collapseLong: "Skjul emner"
+  expand: "Utvid"
+  expandLong: "Utvid emner"
+  Error:
+    subject: "Skriv inn et gyldig emne"
+  Filter:
+    completed: "Fullførte emner"
+    uncompleted: "Ufullførte emner"
+    yourTopic: "Dine emner"
+  TooltipCreated:
+    date: "Opprettet {$dateCreateStr}"
+    user: "av {$userCreate}"
+  TooltipUpdated:
+    date: "Oppdatert {$dateUpdStr}"
+    user: "av {$userUpd}"
+Minutes:
+  create: "Opprett nye minutter"
+  date: "Stevnemøte"
+  dateOn: "på"
+  title: "Minutter for"
+  finalized: "Fullført"
+  finalizedHint: "Minutter er ferdigstilt"
+  notFinalized: "Ikke ferdigstilt"
+  notFinalizedHint: "Minutter er ikke ferdigstilt"
+  attachments: "Vedlegg"
+  attachmentsHint: "Minutter har vedlegg"
+  previous: "Forrige:"
+  next: "Neste:"
+  history: "Historie"
+  unfinalizeHint: "Klikk for å un-sluttføre minutter"
+  print: "Skriv ut minutter"
+  finalize: "Fullfør minutter"
+  finalizeHint: "Klikk for å fullføre minutter"
+  printHint: "Skriv ut minutter"
+  downloadHint: "Last ned minutter som fil"
+  agenda: "Agenda"
+  sendAgenda: "Send agenda"
+  delete: "Slett minutter"
+  GlobalNotes:
+    pin: "Angi som fastlåst global merknad"
+    unpin: "Angi som ikke-festet global merknad"
+    title: "Global merknad"
+    placeholder: "Globale notater for disse minuttene. Klikk pin for å overføre notater til neste minutt."
+  Upload:
+    button: "Last opp..."
+    uploading: "Laster opp"
+    start: "Start opplasting"
+    continue: "Fortsett opplasting"
+    pause: "Pause opplasting"
+    abort: "Avbryt opplasting"
+    error: "Feil under opplasting"
+  version: "Versjon"
+  versionTag: "V"
+  Participants:
+    title: "Deltakere"
+    invited: "Invitert"
+    solo: "1 Deltaker"
+    additional: "Flere deltakere"
+    additionalSolo: "1 ekstra deltaker"
+    placeholder: "Flere deltakere (atskilt med ';'). E-postadresser vil motta minutter."
+    editHint: "Rediger inviterte brukere."
+    markNone: "Merk ingen"
+    markAll: "Merk alle"
+    watchingHint: "Denne brukeren ser på (eksternt)"
+    informed: "Informerte brukere"
+    informedSolo: "1 Informert bruker"
+    present: "Presentere deltakere"
+    absent: "- Fraværende"
+    none: "- Ingen."
+MeetingSeries:
+  title: "Møte Series"
+  team: "Team/Prosjekt"
+  new: "Ny møte-serie"
+  leave: "Forlat møte-serien"
+  leaveButton: "Dra herfra"
+  moderator: "Du er moderator"
+  lastMinute: "Siste minutt:"
+  Search:
+    placeholder: "Søk etter møte-serien"
+    noResults: "Ingen resultater for denne input..."
+  Edit:
+    Error:
+      meetingName: "Angi et gyldig navn for møteserien"
+      teamName: "Angi et gyldig prosjektnavn"
+      notRegistered: "Dette er ikke et registrert brukernavn"
+      alreadyInList: "Dette brukernavnet er allerede i listen"
+    teamName: "Team/Prosjektnavn"
+    meetingName: "Navn på møte"
+    title: "Rediger møte-serien"
+    base: "Base-konfigurasjon"
+    editedBy: "Redigert av {$user} (på {$date})"
+    invited: "Inviterte og informerte brukere"
+    placeholderUsers: "Legg til brukere i Inviterte brukere..."
+    notifyRoleChange: "Varsle deltakerne om rolleendring"
+    labels: "Etiketter"
+    save: "Lagre møte-serien"
+    confirmDelete: "Bekreft sletting"
+  Labels:
+    Error:
+      name: "Skriv inn et gyldig etikettnavn"
+      hexValue: "Ugyldig hex fargeverdi"
+    add: "Legg til ny etikett"
+    new: "NewLabel"
+    select: "Velg..."
+  Tab:
+    minutes: "Minutter"
+    topics: "Emner"
+    items: "Elementer"
+Profile:
+  title: "Rediger profil for"
+  userName: "Brukernavn"
+  longName: "Langt navn"
+  email: "E-post"
+  password: "Passord"
+  passwordRepeat: "Gjenta passord"
+  ChangePassword:
+    title: "Endre passord for"
+    oldPassword: "Gammelt passord"
+    wrongOldPassword: "Skriv inn gammelt gyldig passord"
+    newPassword: "Nytt passord"
+    newPasswordRepeat: "Gjenta nytt passord"
+  Error:
+    name: "Skriv inn et gyldig brukernavn"
+    longName: "Skriv inn et gyldig, langt navn"
+    email: "Skriv inn en gyldig e-postadresse"
+    password: "Skriv inn et gyldig passord"
+  WarningEMailChange:
+    title: "Bekreft endring av brukere-post"
+    body: "Du er i ferd med å endre din verifiserte e-postadresse. Du vil bli logget av og må bekrefte den nye e-postadressen din før du kan fortsette."
+    button: "Logg av+Bekreft på nytt"
+Admin:
+  users: "Brukere"
+  messages: "Beskjeder"
+  Register:
+    label: "Registrer ny bruker"
+    hint: "Tips: Dette vil registrere en bruker for Standard Pålogging (Ikke for LDAP Login!)."
+    button: "Registrer ny bruker..."
+    sendMail: "Send e-post til ny bruker"
+    includePassword: "Inkluder passord i e-post"
+    success: "Registrert ny bruker: {$user}"
+  Message:
+    title: "Kringkastingsmeldinger fra administrator"
+    newMessage: "Ny melding til alle brukere"
+    broadcast: "Kringkasting"
+    date: "Stevnemøte"
+    message: "Melding"
+    dismissed: "Avvist"
+    dismissingUsers: "#Dismissing Brukere: {$number}\n"
+    edit: "Rediger"
+  Users:
+    filterUsers: "Filtrer brukere"
+    showInactive: "Vis inaktiv"
+    online: "Online"
+    onlineHint: "Viser kun brugere, der er aktive på en minutterredigeringsrute"
+    id: "ID"
+    editProfile: "Rediger brukerprofil"
+    countSingle: "Viser {$visible} av {$all} bruker. Bruk filter for å vise andre."
+    count: "Viser {$visible} av {$all} brukere. Bruk filter for å vise andre."
+    Type:
+      hint: "LDAP-bruker eller standardbruker"
+      column: "L/S"
+      ldap: "L"
+      standard: "S"
+    State:
+      hint: "Veksle aktiv/inaktiv tilstand. Inaktive brukere kan ikke logge inn."
+      column: "I/Aktiv"
+      active: "Aktiv"
+      inactive: "Inaktiv"
+      toggle: "Veksle"
+Login:
+  Error:
+    title: "Logg inn feil"
+    username: "Vennligst skriv inn ditt brukernavn"
+    password: "Vennligst skriv inn passordet ditt"
+  signIn: "Logg på"
+  ldap: "LDAP"
+  standard: "Standard"
+  demoHint: "Tips: Demo Mode Active<br>Du kan logge inn med brukernavn <b>demo</b> og passord <b>demo</b>. Eller du kan registrere din egen konto ved å klikke på «Registrer» linken nedenfor."
+  Login4MinitzInfo:
+    header: "4Minitz: Samarbeidsmøte minutter."
+    subheader: "● Klargjør agenda ● Dokument Minutter ● Spor emner ●"
+    abstract: |
+      <p>Alle inviterte og innloggede brukere kan se endringer i gjeldende møteminutter i sanntid.</p>
+      Vi gjorde 4Minitz gratis åpen kildekode-programvare, da vi sterkt tror at
+      sensitiv informasjon som møteminutter ikke skal være vert i skyen.
+      I stedet vil du vert den på din egen infrastruktur der du kan definere
+      sikkerhetsnivået du trenger.
+    prepareAgendaHeading: "Forbered agenda"
+    prepareAgendaDetails: |
+      <li>Create your meeting series</li>
+      <li>Invite other users</li>
+      <li>Specify moderators and uploaders</li>
+      <li>Fill agenda with topics</li>
+      <li>Mark recurring topics for standard agenda</li>
+      <li>Send agenda to invited users</li>
+    documentMinutesHeading: "Dokument minutter"
+    documentMinutesDetails: |
+      <li>Mark present participants</li>
+      <li>Add action items with responsibles to topics</li>
+      <li>Add information items to topics</li>
+      <li>Add labels like 'Decision' to items</li>
+      <li>Upload binary file attachments</li>
+      <li>Send minutes &amp; action items via EMail</li>
+    trackTopicsHeading: "Spor emner"
+    trackTopicsDetails: |
+      <li>Open action items will show up next time</li>
+      <li>Non-closed topics will show up next time</li>
+      <li>Search list of all ever discussed topics</li>
+      <li>Enrich topics with info items on multiple meetings</li>
+      <li>Find topics with labels (e.g. all Decisions)</li>
+      <li>Find items by fulltext search</li>
+  Footer:
+    withLove: "Kodet med ❤ av"
+    theTeam: "WebApp-team"
+Navigation:
+  help: "Hjelp"
+  about: "- Om hva"
+  adminTasks: "Admin-oppgaver"
+  editProfile: "Rediger profil"
+  changePassword: "Endre passord"
+  signOut: "Logg av"
+  toggleNavigation: "Veksle navigasjon"
+  meetings: "Møter"
+  processing: "Behandler innholdet ditt..."
+  setLanguageForUser: "Angi språk"
+  setLanguageLogin: "Språk"
+QuickHelp:
+  title: "Rask hjelp"
+  meetingSeries: "<p>Her kan du opprette nye minutter for gjeldende møteserie eller klikke på en datokobling for eksisterende minutter.</p>"
+  meetingSeriesList: "<p>Med 4Minitz kan du opprette minutter for møter.</p><p>Først opprett en ny møteserie og inviter noen andre brukere.<br>Deretter oppretter du møteminutter på flere datoer for møteserien.</p>"
+  minutes: "<p>Add topics to prepare your meeting agenda<br>During the meeting mark a topic with the checkbox to make clear you have discussed about it.<br>If the topic...<br>&nbsp;&nbsp; - is not marked as discussed or<br>&nbsp;&nbsp; - is set as recurring topic or<br>&nbsp;&nbsp; - contains un-done action items<br>... the topic will be presented in the next meeting again.</p><p>Click 'Finalize Minutes' to send the minutes to the invited users and the action items to their responsibles.</p>"
+  upload: "<ul><li>Here you can upload files like e.g., presentations, PDFs or whiteboard photos</li><li>You need the role 'Uploader' or 'Moderator' to do so</li><li>Uploading or deletion is possible until minutes are finalized</li><li>Pro Tip: Click the above 'Upload' button on your tablet or smart phone!</li></ul>"
+Mail:
+  greeting: "Hallo"
+  newAgenda: "Vi har en helt ny møteagenda til deg:"
+  newActionItem: "Du har blitt tilordnet følgende handlingselementer:"
+  newMinutes: "Nedenfor finner du de siste møteminuttene."
+  meeting: "Møtet"
+  links: "Lenker"
+  openSeries: "Åpen Serie"
+  openMinutes: "Åpne minutter"
+  minutesSubject: "Møte minutter"
+  discussedTopics: "Diskuterte emner"
+  skippedTopics: "Åpne emner"
+  none: "Ingen"
+  AdminNewVersion:
+    subject: "Nyere versjon finnes"
+    body: |
+      Hello Admin,
+
+      It seems you are running an outdated version of 4Minitz.
+
+      Your 4Minitz instance on: {$rootUrl}
+      has version: {$myVersion}
+
+      Newest version available is: {$masterVersion}'
+      Release notes: {$urlReleaseNotes}
+      Please consider to update.
+
+      {$masterMessageText}
+
+      This mail was generated by your 4Minitz backend.
+      You can disable the update check via settings.json: \"updateCheck\": false.
+
+      Have fun!
+              Your 4Minitz team.
+
+
+      ---
+      4Minitz is free open source developed by the 4Minitz team.
+      Source is available at {$url4Minitz}
+  AdminRegisterNewUser:
+    subject: "Din nye konto på vores server"
+    passwordNotSend: "    Kontakt admin for passord."
+    passwordParagraph: |
+      Ditt passord: {$password}
+
+      Ikke glem å endre passordet ditt etter første innlogging!
+    body: |
+      Hei {$userLongName},
+
+      Velkommen til vår 4Minitz WebApp.
+      Nå kan du begynne å delta i å holde profesjonelle møteminutter.
+
+      Du kan logge inn med 'Standard' (ikke LDAP!) logg inn på:
+         Din vert: {$rootURL}
+         Din bruker: {$userName}
+      {$passwordParagraph}
+
+      Ha det gøy!
+        Din administrator.
+
+      —
+      4Minitz er gratis åpen kildekode utviklet av 4Minitz-teamet.
+      Kilde er tilgjengelig på {$url4Minitz}
+  UserRoleChange:
+    subject: "Din rolle er endret for '{$meetingProject}:{$meetingName}'"
+    body: |
+      Hello {$userName}
+
+      Your role has changed for meeting series '{$meetingProject}:{$meetingName}'
+      ({$meetingSeriesURL})
+
+         Your old role was           : {$roleOld}
+         Your new role is            : {$roleNew}
+         The change was performed by : {$moderatorName}
+
+      For a comprehensive list of rights for each role see:
+      {$urlRoleDocu}
+
+      Have fun!
+        Your Admin.
+
+      ---
+      4Minitz is free open source developed by the 4Minitz team.
+      Source is available at {$url4Minitz}
+  VerifyEmailAddress:
+    subject: "[{$sitename}] Bekreft e-postadressen din"
+    body: |
+      For å bekrefte e-postadressen din {$emailAddress} , besøk følgende link:
+
+      {$urlWithoutHash}
+
+      Hvis du ikke ba om denne bekreftelsen, vennligst ignorer denne e-posten.
+      Hvis du føler at noe er galt, vennligst kontakt administrasjonsteamet ditt.
+  ResetPassword:
+    subject: "[{$sitename}] Tilbakestill passordet"
+    body: |
+      For å tilbakestille passordet for {$emailAddress} , besøk følgende link:
+
+      {$urlWithoutHash}
+
+      Hvis du ikke ba om å tilbakestille passordet ditt, vennligst ignorer denne e-posten.
+      Hvis du føler at noe er galt, vennligst kontakt administrasjonsteamet ditt.

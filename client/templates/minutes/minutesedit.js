@@ -1,5 +1,6 @@
 import moment from 'moment/moment';
 import { Template } from 'meteor/templating';
+import { i18n } from 'meteor/universe:i18n';
 import { Blaze } from 'meteor/blaze';
 import { Session } from 'meteor/session';
 import { $ } from 'meteor/jquery';
@@ -23,6 +24,7 @@ import { GlobalSettings } from '/imports/config/GlobalSettings';
 import { QualityTestRunner } from '/imports/client/QualityTestRunner';
 import { FlashMessage } from '../../helpers/flashMessage';
 import { UserTracker } from '../../helpers/userTracker';
+import {handleError} from '../../helpers/handleError';
 
 let _minutesID; // the ID of these minutes
 
@@ -33,10 +35,6 @@ let _minutesID; // the ID of these minutes
 let orphanFlashMessage = null;
 
 let filterClosedTopics = new ReactiveVar(false);
-
-let onError = (error) => {
-    (new FlashMessage('Error', error.reason)).show();
-};
 
 /**
  * togglePrintView
@@ -130,6 +128,26 @@ let handleTemplatesGlobalKeyboardShortcuts = function(switchOn) {
     }
 };
 
+
+
+Template.minutesedit.onRendered(function () {
+    let tmpl = this;    // store for second, inner callback
+    // Ugly hack...   :-(
+    // For some strange reason, our DOM element is not available immediately
+    // (Blaze API tells us differently!) - so, we give it some time to settle
+    Meteor.setTimeout(function(){
+        let target = tmpl.find('#editGlobalNotes');
+        if (target) {
+            target.style.height=0;
+            target.style.overflow = 'auto';
+            target.style.height = target.scrollHeight + 'px';
+            target.style.maxHeight = '700px';
+        }
+    }, 2000);
+
+    filterClosedTopics.set(false);
+});
+
 Template.minutesedit.onCreated(function () {
     this.minutesReady = new ReactiveVar();
     this.currentMinuteLoaded = new ReactiveVar();
@@ -190,21 +208,56 @@ let toggleTopicSorting = function () {
     }
 };
 
-let updateTopicSorting = function () {
+let updateTopicSorting = function (event, ui) {
+    const draggedTopicID = $(ui.item).attr('data-id');
+    if (!draggedTopicID) {
+        return;
+    }
+
+    // Attention: In the DOM we only see the currently visible topics.
+    // Some topics may be hidden due to "hide closed topics" feature
     let sorting = $('#topicPanel').find('> div.well'),
         minute = new Minutes(_minutesID),
         newTopicSorting = [];
 
+    // In visible topics find new target pos
+    let newTargetPos = sorting.length -1;
     for (let i = 0; i < sorting.length; ++i) {
-        let topicId = $(sorting[i]).attr('data-id');
-        let topic = minute.findTopic(topicId);
+        if ($(sorting[i]).attr('data-id') === draggedTopicID) {
+            newTargetPos = i;
+        }
+    }
+    // In visible topics find ID of the following topic, or '' if dragged to end of list
+    let followerTopicID = '';   // The ID of the topic below the dragged one
+    if (newTargetPos < sorting.length -1) {
+        followerTopicID = $(sorting[newTargetPos+1]).attr('data-id');
+    }
+    // In *all* topics before(!) the drag operation find
+    // * position of dragged topic and
+    // * position of follower after drag operation
+    const oldDragTopicPos = minute.topics.findIndex(t => t._id === draggedTopicID);
+    const oldFollowerPos = minute.topics.findIndex(t => t._id === followerTopicID);
 
-        newTopicSorting.push(topic);
+    // Perform position change in complete topic array coming from DB
+    // Here we also have currently hidden topics
+    newTopicSorting = minute.topics;
+    let topic = newTopicSorting[oldDragTopicPos];   // remember topic
+    newTopicSorting.splice(oldDragTopicPos, 1);     // remove topic from array
+    if (oldFollowerPos >= 0) {                          // insert before new follower
+        let correction = oldDragTopicPos > oldFollowerPos? 0 : 1;
+        newTopicSorting.splice(oldFollowerPos-correction, 0, topic);
+    } else {
+        const lastVisibleTopicId = $(sorting[sorting.length - 2]).attr('data-id');
+        const lastVisibleTopicPos = newTopicSorting.findIndex(t => t._id === lastVisibleTopicId);
+
+        // we want to add the topic AFTER the last visible topic, not before
+        newTopicSorting.splice(lastVisibleTopicPos + 1, 0, topic);
     }
 
+    // Write new sort order to DB
     minute.update({topics: newTopicSorting}).catch(error => {
         $('#topicPanel').sortable( 'cancel' );
-        onError(error);
+        handleError(error);
     });
 };
 
@@ -312,9 +365,7 @@ Template.minutesedit.helpers({
                 orphanFlashMessage = null;
             }
         } catch(error) {
-            let msg = 'Unfortunately the minute is not linked to its parent series correctly - please contact your ' +
-                'system administrator.';
-            orphanFlashMessage = (new FlashMessage('Error', msg, 'alert-danger', -1)).show();
+            orphanFlashMessage = (new FlashMessage(i18n.__('FlashMessages.error'), i18n.__('FlashMessages.minuteLinkErr'), 'alert-danger', -1)).show();
         }
     },
 
@@ -344,9 +395,9 @@ Template.minutesedit.helpers({
 
     finalizeHistoryTooltip: function (buttontype) {
         let aMin = new Minutes(_minutesID);
-        let tooltip = buttontype ? buttontype+'\n' : '';
+        let tooltip = buttontype ? i18n.__(buttontype)+'\n' : '';
         if (aMin.finalizedHistory) {
-            tooltip += '\nHistory:\n'+aMin.finalizedHistory.join('\n');
+            tooltip += '\n' + i18n.__('Minutes.history') + ':\n' + aMin.finalizedHistory.join('\n');
         }
         return tooltip;
     },
@@ -407,6 +458,11 @@ Template.minutesedit.helpers({
         return MinutesFinder.nextMinutes(aMin);
     },
 
+    displayCreateNextMinutes: function() {
+        return (isModerator() && isMinuteFinalized());
+    },
+
+
     isDocumentGenerationAllowed : function () {
         return Meteor.settings.public.docGeneration.enabled === true;
     },
@@ -420,6 +476,23 @@ Template.minutesedit.events({
     'click #checkHideClosedTopics': function(evt) {
         let isChecked = evt.target.checked;
         filterClosedTopics.set(isChecked);
+    },
+
+    'click #btnCreateNewMinutes': function(evt) {
+        evt.preventDefault();
+        let ms = new MeetingSeries(new Minutes(_minutesID).parentMeetingSeriesID());
+        const routeToNewMinutes = (newMinutesId) => FlowRouter.redirect('/minutesedit/' + newMinutesId);
+        const confirmationDialog = ConfirmationDialogFactory.makeSuccessDialogWithTemplate(
+            () => ms.addNewMinutes(routeToNewMinutes, handleError),
+            i18n.__('Dialog.ConfirmCreateNewMinutes.title'),
+            'confirmationDialogCreateNewMinutes',
+            {
+                project: ms.project,
+                name: ms.name,
+            },
+            i18n.__('Buttons.create'),
+        );
+        confirmationDialog.show();
     },
 
     'dp.change #id_minutesdatePicker': function (evt, tmpl) {
@@ -443,14 +516,22 @@ Template.minutesedit.events({
             return;
         }
 
-        aMin.update({date: aDate}).catch(onError);
+        aMin.update({date: aDate}).catch(handleError);
+    },
+
+    'keyup #editGlobalNotes' (evt) {
+        evt.preventDefault();
+        evt.target.style.height=0;
+        evt.target.style.overflow = 'auto';
+        evt.target.style.height = evt.target.scrollHeight + 'px';
+        evt.target.style.maxHeight = '700px';
     },
 
     'change #editGlobalNotes' (evt, tmpl) {
         evt.preventDefault();
         let aMin = new Minutes(_minutesID);
         let globalNote = tmpl.find('#editGlobalNotes').value;
-        aMin.update({globalNote: globalNote}).catch(onError);
+        aMin.update({globalNote: globalNote}).catch(handleError);
     },
 
     'click #btn_sendAgenda': async function(evt, tmpl) {
@@ -463,10 +544,9 @@ Template.minutesedit.events({
             sendBtn.prop('disabled', true);
             try {
                 let result = await aMin.sendAgenda();
-                let message = 'Agenda was sent to ' + result + ' recipients successfully';
-                (new FlashMessage('OK', message, 'alert-success')).show();
+                (new FlashMessage(i18n.__('FlashMessages.ok'), i18n.__('FlashMessages.agendaSentOK', {result: result}), 'alert-success')).show();
             } catch (error) {
-                onError(error);
+                handleError(error);
             }
             sendBtn.prop('disabled', false);
         };
@@ -476,16 +556,16 @@ Template.minutesedit.events({
                 let date = aMin.getAgendaSentAt();
                 console.log(date);
 
-                ConfirmationDialogFactory.makeSuccessDialogWithTemplate(
+                ConfirmationDialogFactory.makeSuccessDialog(
                     sendAgenda,
-                    'Confirm sending agenda',
-                    'confirmSendAgenda',
-                    {
+                    i18n.__('Dialog.ConfirmSendAgenda.title'),
+                    i18n.__('Dialog.ConfirmSendAgenda.body', {
                         minDate: aMin.date,
                         agendaSentDate: moment(date).format('YYYY-MM-DD'),
                         agendaSentTime: moment(date).format('h:mm')
-                    },
-                    'Send Agenda'
+                    }),
+                    {},
+                    i18n.__('Dialog.ConfirmSendAgenda.button')
                 ).show();
             } else {
                 await sendAgenda();
@@ -502,12 +582,12 @@ Template.minutesedit.events({
 
         let doFinalize = function () {
             tmpl.$('#btn_finalizeMinutes').prop('disabled', true);
-            let msg = (new FlashMessage('Finalize in progress', 'This may take a few seconds...', 'alert-info', -1)).show();
+            let msg = (new FlashMessage(i18n.__('FlashMessages.finalizeProgress1'), i18n.__('FlashMessages.finalizeProgress2'), 'alert-info', -1)).show();
             // Force closing the dialog before starting the finalize process
             Meteor.setTimeout(() => {
-                Finalizer.finalize(aMin._id, sendActionItems, sendInformationItems, onError);
+                Finalizer.finalize(aMin._id, sendActionItems, sendInformationItems, handleError);
                 tmpl.$('#btn_finalizeMinutes').prop('disabled', true);
-                (new FlashMessage('OK', 'This meeting minutes were successfully finalized', FlashMessage.TYPES().SUCCESS, 3000)).show();
+                (new FlashMessage(i18n.__('FlashMessages.ok'), i18n.__('FlashMessages.finalizeOK'), FlashMessage.TYPES().SUCCESS, 3000)).show();
                 msg.hideMe();
                 toggleTopicSorting();
                 Session.set('participants.expand', false);
@@ -518,7 +598,7 @@ Template.minutesedit.events({
             if (GlobalSettings.isEMailDeliveryEnabled()) {
                 ConfirmationDialogFactory.makeSuccessDialogWithTemplate(
                     doFinalize,
-                    'Confirm Finalize Minutes',
+                    i18n.__('Dialog.ConfirmFinalizeMinutes.title'),
                     'confirmationDialogFinalize',
                     {
                         minutesDate: aMin.date,
@@ -526,7 +606,7 @@ Template.minutesedit.events({
                         sendActionItems: (sendActionItems) ? 'checked' : '',
                         sendInformationItems: (sendInformationItems) ? 'checked' : ''
                     },
-                    'Finalize'
+                    i18n.__('Dialog.ConfirmFinalizeMinutes.button')
                 ).show();
             } else {
                 doFinalize();
@@ -557,7 +637,7 @@ Template.minutesedit.events({
             // otherwise the current route would automatically re-routed to the main page because the
             // minute is not available anymore -> see router.js
             FlowRouter.go('/meetingseries/'+aMin.meetingSeries_id);
-            ms.removeMinutesWithId(aMin._id).catch(onError);
+            ms.removeMinutesWithId(aMin._id).catch(handleError);
         };
 
         let newTopicsCount = aMin.getNewTopics().length;
@@ -573,7 +653,7 @@ Template.minutesedit.events({
 
         ConfirmationDialogFactory.makeWarningDialogWithTemplate(
             deleteMinutesCallback,
-            'Confirm delete',
+            i18n.__('Dialog.ConfirmDelete.title'),
             'confirmationDialogDeleteMinutes',
             tmplData
         ).show();
@@ -604,14 +684,14 @@ Template.minutesedit.events({
         let noProtocolExistsDialog = (downloadHTML) => {
             ConfirmationDialogFactory.makeSuccessDialogWithTemplate(
                 downloadHTML,
-                'Confirm generate protocol',
+                i18n.__('Dialog.ConfirmGenerateProtocol.title'),
                 'confirmPlainText',
-                { plainText: 'There has been no protocol generated for these minutes. Do you want to download a dynamically generated HTML version of it instead?'},
-                'Download'
+                { plainText: i18n.__('Dialog.ConfirmGenerateProtocol.body')},
+                i18n.__('Dialog.ConfirmGenerateProtocol.button')
             ).show();
         };
         
-        DocumentGeneration.downloadMinuteProtocol(_minutesID, noProtocolExistsDialog).catch(onError);
+        DocumentGeneration.downloadMinuteProtocol(_minutesID, noProtocolExistsDialog).catch(handleError);
     },
 
     'click #btnPinGlobalNote': function (evt) {
@@ -620,7 +700,7 @@ Template.minutesedit.events({
             return;
         }
         let aMin = new Minutes(_minutesID);
-        aMin.update({globalNotePinned: !aMin.globalNotePinned}).catch(onError);
+        aMin.update({globalNotePinned: !aMin.globalNotePinned}).catch(handleError);
     }
 });
 

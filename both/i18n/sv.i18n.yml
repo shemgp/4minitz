@@ -1,0 +1,601 @@
+---
+_splitKey: ':'
+_locale: 'sv'
+Accounts:
+  usernamePlaceholder: "(minst 3 tecken)"
+  nameDisplayName: "Namn, företag"
+  namePlaceholder: "John Doe, Happy Corp."
+  passwordPlaceholder: "minst 6 tecken (siffra, liten & stor)"
+  passwordError: "minst 6 tecken (minst 1 siffra, 1 liten, 1 stor)"
+Buttons:
+  add: "Lägg till"
+  back: "Gå tillbaka"
+  cancel: "Avbryt"
+  change: "Ändra"
+  close: "Stängning"
+  confirm: "Bekräfta"
+  create: "Skapa"
+  delete: "Radera"
+  dismissAll: "Ignorera alla"
+  edit: "Redigera"
+  hide: "Ok, göm"
+  ok: "OK"
+  register: "Registrera"
+  save: "Spara"
+UserRoles:
+  roleModerator: "Moderator"
+  roleUploader: "Uppladdare"
+  roleInvited: "Inbjuden"
+  roleInformed: "Informera"
+FlashMessages:
+  ok: "Ok"
+  error: "Fel"
+  verifyEMailErr: "Fel: EMail kunde inte verifieras"
+  verifyEMailOK: "OK: EMail verifieras nu"
+  passwordChangeOK: "Lösenord ändrat"
+  passwordResetOK: "Lösenordet har återställts"
+  profileEditOK: "Profiländringar sparade"
+  minuteLinkErr: "Tyvärr är minuten inte korrekt kopplad till dess överordnade serier - kontakta din systemadministratör."
+  agendaSentOK: "Föredragningslistan har skickats till {$result} mottagare"
+  finalizeProgress1: "Slutför pågående"
+  finalizeProgress2: "Detta kan ta några sekunder..."
+  finalizeOK: "Detta mötesprotokoll har slutförts"
+Dialog:
+  ConfirmDelete:
+    title: "Bekräfta radering?"
+    body: "Är du säker på att ta bort detta?"
+  ConfirmDeleteMeetingSeries:
+    questionMeetingSeries: "Vill du verkligen ta bort mötesserien"
+    questionMinutes: "Denna serie innehåller {$minutesCount} mötesprotokoll (sista minuterna av {$lastMinutesDate})."
+  ConfirmCreateNewMinutes:
+    title: "Bekräfta skapandet av nya protokoll"
+    content: "Vill du verkligen skapa nya protokoll för mötesserien \"{$project}: {$name}\"?"
+  confirmDeleteAttachment: "Vill du verkligen ta bort bilagan:\n**{$name}**?"
+  confirmDeleteDetails: "Vill du verkligen ta bort de markerade detaljerna i objektet **{$subject}**?"
+  ConfirmDeleteItem:
+    allowed: "Vill du verkligen ta bort {$type} **{$subject}**?"
+    notAllowed: "Det är inte möjligt att ta bort {$type} **{$subject}** eftersom {$type} skapades i ett tidigare minuter."
+    questionActionItem: "Vill du stänga åtgärdsobjektet istället?"
+    questionInfoItem: "Vill du lossa den klibbiga info objektet istället?"
+    typeActionItem: "Åtgärd objekt"
+    typeInfoItem: "information"
+    titleCloseActionItem: "Stäng åtgärdsobjekt?"
+    titleUnpinInfoItem: "Lossa informationsobjekt?"
+    buttonCloseActionItem: "Stäng åtgärdsobjekt"
+    buttonUnpinInfoItem: "Lossa infopost"
+  ConfirmDeleteTopic:
+    allowed: "Vill du verkligen ta bort ämnet **{$subject}**?"
+    notAllowed: "Det är inte möjligt att ta bort ämnet **{$subject}** eftersom ämnet skapades i ett tidigare minuter."
+    close: "Vill du stänga ämnet istället?"
+    closeWithActions: "Vill du stänga ämnet tillsammans med alla relaterade åtgärdsobjekt istället?"
+  confirmLeaveMeetingSeries: "Vill du verkligen lämna mötesserien:\n\n**{$project} / {$name}**\n\nDu måste fråga en moderator om du vill gå med igen efteråt."
+  ConfirmMinuteQualityAssurance:
+    title: "Slutför protokollet: Kvalitetskontroll"
+    button: "Fortsätt"
+    issues: "Det finns slutgiltiga problem med dina minuter!"
+    proceed: "Vill du fortsätta med att slutföra?"
+    warnNoTopics: "De aktuella minuterna har inga trådar"
+    warnNoParticipants: "Ingen deltagare är markerad som närvarande"
+    warnEditing: "En tråd/artikel/detalj är fortfarande redigerad"
+    warnNoTopicDiscussed: "Inget ämne är markerat som \"diskuterat\""
+    warnTopicWithoutItems: "Åtminstone en diskuterad tråd har inga objekt"
+    warnActionItemWithoutResponsible: "Åtminstone en åtgärdspost har inget ansvar"
+    warnTopicNoNewContent: "Ett ämne är markerat men har inget nytt innehåll"
+  ConfirmReOpenTopic:
+    title: "Öppna ämnet igen?"
+    body: "Vill du verkligen öppna den redan stängda tråden **{$topicSubject}**?"
+    button: "Återöppna"
+  ConfirmSendAgenda:
+    body: "Vill du verkligen skicka agendan för denna mötesminut daterad den **{$minDate}**?\nDen skickades redan den {$agendaSentDate} kl. {$agendaSentTime}"
+    title: "Bekräfta sändning av agenda"
+    button: "Skicka agenda"
+  ConfirmDeleteMinutes:
+    really: "Vill du verkligen ta bort denna mötesminut daterad den **{$minutesDate}**?"
+    newTopics: "Detta kommer att ta bort **{$newTopicsCount} ämnen**, som skapades inom denna minut."
+    closedTopicsAdditionally: "Dessutom kommer **{$closedTopicsCount} trådar** att öppnas igen, som stängdes inom dessa minuter."
+    closedTopics: "**{$closedTopicsCount} trådar** kommer att öppnas igen, som stängdes inom dessa minuter."
+  ConfirmFinalizeMinutes:
+    title: "Bekräfta slutföra minuter"
+    button: "Slutför"
+    really: "Vill du verkligen slutföra denna mötesminut daterad den **{$minutesDate}**?"
+    sendActionItems: "Skicka åtgärdsobjekt"
+    sendMinutes: "Skicka informationsobjekt"
+  LocaleSetting:
+    title: "Ange språk"
+    languageLocale: "Språk språk"
+    automatic: "Automatiskt via webbläsare"
+    contributionHint1: "Översättningsfel eller saknat språk?"
+    contributionHint2: "Hjälp oss att översätta 4Minitz!"
+  IsEditedHandling:
+    title: "Redigera trots befintlig redigering"
+    confirmationDialogResetEdit: "Varning: Detta dokument är för närvarande redigerat av {$name} sedan: {$date}"
+    confirmationDialogResetEditDetails: "Klicka på detaljer igen för att börja redigera."
+    button: "Redigera ändå"
+  ConnectionInfo:
+    tooltip: |
+      Anslutning förlorad!
+        Status: {$status}
+        Retry Count: {$retryCount}
+        Retry Time: {$retryTime} sec.
+        Anledning: {$reason}
+        Klicka för att återansluta.
+    header: "Du har förlorat anslutningen till 4Minitz server."
+    body: "Om du stänger din webbläsare kan osparade data gå förlorade. Kontakta din sever admin om problemet kvarstår."
+    tryToReconnect: "Försök att återanslut"
+  ConfirmGenerateProtocol:
+    title: "Confirm generate protocol"
+    body: "Det har inte genererats något protokoll för dessa minuter. Vill du ladda ner en dynamiskt genererad HTML-version av det istället?"
+    button: "Hämta"
+  ConfirmTopicDelete:
+    title1: "Bekräfta ta bort ämne"
+    title2: "Markera ämne som diskuterat?"
+    button2: "Stäng ämne och åtgärder"
+    errortitle: "Kan inte ta bort ämne"
+    errorcontent: "Det är inte möjligt att ta bort detta ämne eftersom det skapades i ett tidigare minuter. Det valda ämnet är redan stängt och har inga öppna åtgärdsobjekt, så det kommer inte att kopieras till de följande minuterna."
+  ItemDeleteError:
+    title: "Kan inte ta bort objekt"
+    body1: "Det är inte möjligt att ta bort detta objekt eftersom det skapades i ett tidigare minuter."
+    body2a: "Denna åtgärd är redan stängd,"
+    body2b: "Denna info är redan opåverkad"
+    body3: "så att det inte kommer att kopieras till följande minuter"
+  ActionItemResponsibleError:
+    title: "Ogiltigt ansvar för åtgärdsobjekt"
+    body: |
+      Detta är inte ett giltigt ansvar!
+
+      Välj en **befintlig användare** från rullgardinsmenyn eller ange en **giltig e-postadress**.
+  ConvertItemError:
+    title: "Kan inte konvertera objekt"
+    body: "Det är inte möjligt att konvertera detta objekt eftersom det skapades i en tidigare minuter."
+About:
+  title: "Om 4Minitz"
+  copyrightTeam: "av 4Minitz-Team"
+  licensedUnder: "Licensierad under MIT-licens"
+  licenseDependencies: "Licens för beroenden"
+  thanksContributors: "Tack till alla våra medverkande"
+  thanksTranslators: "Tack till alla våra översättare"
+  proudlySponsored: "Sponsrad av"
+  specialThanks: "Speciellt tack till dessa projekt"
+  forkGitHub: "Fork us on GitHub"
+  ServerStatistics:
+    title: "Server statistik"
+    rowNumUser: "Antal användare (aktiv)"
+    rowNumMeetingSeries: "Antal mötesserier"
+    rowNumMeetingMinutes: "Antal mötesprotokoll"
+    rowNumAttachments: "Antal bilagor"
+    rowSizeAttachments: "Bilagor storlek"
+Item:
+  ariaLabel: "Lägg till/redigera objekt"
+  editItem: "Redigera objekt"
+  editItemHint: "Redigera denna åtgärd/info objekt"
+  deleteItem: "Ta bort objekt"
+  deleteItemHint: "Ta bort detta åtgärd/info objekt"
+  addItemModal: "Lägg till {$type} till {$topic}"
+  editItemModal: "Redigera {$type} av {$topic}"
+  editItemModelTypeInfoItem: "Information"
+  editItemModelTypeActionItem: "Åtgärd objekt"
+  addInfo: "Lägg till informationsobjekt"
+  addInfoHint: "Lägg till infopost till ämne"
+  action: "Åtgärd objekt"
+  addAction: "Lägg till åtgärdsobjekt"
+  addActionHint: "Lägg till åtgärdsobjekt i ämnet"
+  convertToAction: "Konvertera till åtgärd"
+  convertToInfo: "Konvertera till Info"
+  convertDisabled: "Konvertering inaktiverad: objektet finns i tidigare möte"
+  subject: "Ämne (obligatoriskt)"
+  details: "Detaljer"
+  addDetails: "Lägg till detaljer"
+  priority: "Prioritet"
+  Priorities:
+    high: "1 - Hög"
+    medium: "3 - Medium"
+    low: "5 - Låg"
+  due: "Förfaller"
+  dueNone: "ingen"
+  detailPlaceholder: "Du kan använda Markdown för att redigera. Tryck på Ctrl+Enter eller Tab för att lämna."
+  markdownHint: "Hjälp för Markdown Syntax"
+  setPin: "Sätt Fäst"
+  setPinHint: "Ange som fäst info objekt"
+  unsetPin: "Avmarkera fastlåst"
+  unsetPinHint: "Ange som icke-fäst info objekt"
+  done: "klar"
+  pinned: "nådd"
+  Error:
+    subject: "Ange ett giltigt ärende"
+  Filter:
+    title: "Filter"
+    usageHint: "Filteranvändning"
+    info: "Informationsobjekt"
+    action: "Åtgärdsobjekt"
+    open: "Öppna åtgärdsobjekt"
+    closed: "Stängda åtgärdsobjekt"
+    yourAction: "Dina åtgärdsobjekt"
+    placeholder: "Filtrera"
+    matchCase: "Fall"
+    matchCaseHint: "Matcha fodral"
+    matchCaseLong: "Matcha fodral"
+    Usage:
+      body: "Du kan använda flera sökord för att filtrera de angivna elementen. Alla sökord kan kombineras som filtrerar de objekt som matchar alla givna sökparametrar."
+      keyword: "Keyword"
+      format: "Formatera"
+      values: "Värden"
+      eg: "t.ex."
+  myActionItems: "Mina åtgärdsobjekt"
+Topic:
+  title: "Ämne"
+  new: "Ny"
+  add: "Lägg till ämne"
+  addLong: "Lägg till ämne..."
+  addShort: "Ämne"
+  addHint: "Lägg till nytt ämne högst upp i listan [Ctrl+Alt+T]"
+  quickAdd: "LÄGG TILL TOPIC (till slutet av listan)"
+  edit: "Redigera ämne"
+  save: "Spara ämne"
+  show: "Visa ämne"
+  subject: "Ämne (obligatoriskt)"
+  responsible: "Ansvarig"
+  completed: "Slutförd"
+  completedHint: "Detta ämne är äntligen klart. Så det kommer inte att spridas till nästa möte."
+  setRecurring: "Ställ in återkommande"
+  setRecurringHint: "Ange som återkommande ämne"
+  unsetRecurring: "Avaktivera återkommande"
+  unsetRecurringHint: "Ange som not-recurring ämne"
+  setSkip: "Ställ in Hoppa"
+  setSkipHint: "Ange som överhoppat ämne"
+  unsetSkip: "Avmarkera Hoppa"
+  unsetSkipHint: "Ange som icke-överhoppat ämne"
+  history: "Visa historik"
+  historyHint: "Visa fullständig finaliserad status för det här ämnet"
+  delete: "Ta bort ämne"
+  reopen: "Öppna ämne igen"
+  reopenHint: "Öppna ämne igen"
+  placeholder: "Lägg till informationsobjekt. Lägg till @username för att lägga till ett åtgärdsobjekt. Tryck på Enter om du vill lägga till detaljer. Tryck på Ctrl + Enter eller Tabb för att skicka."
+  childOf: "Ämne för mötesserien:"
+  historyTitle: "Det här ämnet var"
+  createdOn: "skapades den:"
+  lastUpdate: "Senast uppdaterad den:"
+  finalizedOn: "som har finaliserats i minuter från:"
+  doneBy: "(med {$user})"
+  notFoundTitle: "Tyvärr, Topic hittades inte."
+  notFoundReasons: "Orsaker kan vara ...<br><ul><li>Ämnet har aldrig finaliserats (det är bara liv i en obegränsad minut)</li><li>Ämnet togs bort</li><li>Du har inte åtkomsträttigheter till det här ämnet (längre)</li></ul>"
+  illegalAction: "Försökte anropa en olaglig händelse i skrivskyddat läge"
+  addDetails: "Lägg till detaljer"
+  addDetailsHint: "Lägg till detaljer till objekt"
+  hideClosed: "Dölj stängd"
+  hideClosedHint: "Diskutera diskuterad/överhoppade ämnen från listan"
+  hideClosedLong: "Dölj stängda avsnitt"
+  collapse: "Komprimera"
+  collapseLong: "Komprimera etiketter"
+  expand: "Expandera"
+  expandLong: "Expandera Topik"
+  Error:
+    subject: "Ange ett giltigt ärende"
+  Filter:
+    completed: "Slutförda Topik"
+    uncompleted: "Oavslutade utopier"
+    yourTopic: "Dina \"Topics\""
+  TooltipCreated:
+    date: "Skapad {$dateCreateStr}"
+    user: "av {$userCreate}"
+  TooltipUpdated:
+    date: "Uppdaterad {$dateUpdStr}"
+    user: "av {$userUpd}"
+Minutes:
+  create: "Skapa nya minuter"
+  date: "Datum"
+  dateOn: "den"
+  title: "Minuter för"
+  finalized: "Slutade"
+  finalizedHint: "Minuter är slutanpassade"
+  notFinalized: "Oändlig"
+  notFinalizedHint: "Minuter är inte slutanpassade"
+  attachments: "Bilagor"
+  attachmentsHint: "Minuter har bilagor"
+  previous: "Föregående:"
+  next: "Nästa:"
+  history: "Historik"
+  unfinalizeHint: "Klicka på Un-finjustera minuter"
+  print: "Skriv ut minuter"
+  finalize: "Slutför minuter"
+  finalizeHint: "Klicka här om du vill hitta några minuter"
+  printHint: "Skriv ut minuter"
+  downloadHint: "Hämta minuter som fil"
+  agenda: "Dagordning"
+  sendAgenda: "Skicka agenda"
+  delete: "Ta bort minuter"
+  GlobalNotes:
+    pin: "Ange som favoritanteckning"
+    unpin: "Ställ in som icke-pinnerad global anteckning"
+    title: "Globalt anteckning"
+    placeholder: "Globala anteckningar för dessa minuter. Klicka på nålen om du vill sprida anteckningar till nästa minut."
+  Upload:
+    button: "Ladda upp ..."
+    uploading: "Överför"
+    start: "Starta uppladdning"
+    continue: "Fortsätt uppladdningen"
+    pause: "Pausa överföring"
+    abort: "Avbryt uppladdning"
+    error: "Fel vid uppladdning"
+  version: "Version"
+  versionTag: "v"
+  Participants:
+    title: "Deltagare"
+    invited: "Inbjuden"
+    solo: "1 deltagare"
+    additional: "Ytterligare deltagare"
+    additionalSolo: "1 Tilläggsdeltagare"
+    placeholder: "Ytterligare deltagare (separata med \";\"). Mejladresser kommer att få minuter."
+    editHint: "Redigera inbjudna användare."
+    markNone: "Markera ingen"
+    markAll: "Markera alla"
+    watchingHint: "Den här användaren tittar på (fjärran)"
+    informed: "Informerade användare"
+    informedSolo: "1 Informerad användare"
+    present: "Nuvarande deltagare"
+    absent: "Frånvarande"
+    none: "Ingen."
+MeetingSeries:
+  title: "Mötesserie"
+  team: "Team / Projekt"
+  new: "Ny mötesserie"
+  leave: "Lämna mötesserien"
+  leaveButton: "Lämna"
+  moderator: "Du är moderator"
+  lastMinute: "Senaste minuten:"
+  Search:
+    placeholder: "Sök efter mötesserier"
+    noResults: "Inga resultat för denna inmatning..."
+  Edit:
+    Error:
+      meetingName: "Ange ett giltigt namn för mötesserien"
+      teamName: "Ange ett giltigt projektnamn"
+      notRegistered: "Detta är inte ett registrerat användarnamn"
+      alreadyInList: "Detta användarnamn finns redan i listan"
+    teamName: "Team / Projektnamn"
+    meetingName: "Mötesens namn"
+    title: "Redigera mötesserie"
+    base: "Grundläggande konfiguration"
+    editedBy: "Redigerad av {$user} (vid {$date})"
+    invited: "Inbjudna och informerade användare"
+    placeholderUsers: "Lägg till användare till inbjudna användare..."
+    notifyRoleChange: "Meddela deltagarna om rollförändring"
+    labels: "Etiketter"
+    save: "Spara mötesserien"
+    confirmDelete: "Bekräfta radering"
+  Labels:
+    Error:
+      name: "Ange ett giltigt etikettnamn"
+      hexValue: "Ogiltigt hex-färgvärde"
+    add: "Lägg till ny etikett"
+    new: "Ny etikett"
+    select: "Välj ..."
+  Tab:
+    minutes: "Minuter"
+    topics: "Ämnen"
+    items: "Objekt"
+Profile:
+  title: "Redigera profil för"
+  userName: "Användarnamn"
+  longName: "Långt namn"
+  email: "E-post"
+  password: "Lösenord"
+  passwordRepeat: "Upprepa lösenord"
+  ChangePassword:
+    title: "Ändra lösenord för"
+    oldPassword: "Gammalt lösenord"
+    wrongOldPassword: "Ange ett gammalt giltigt lösenord"
+    newPassword: "Nytt lösenord"
+    newPasswordRepeat: "Nytt lösenord upprepas"
+  Error:
+    name: "Ange ett giltigt användarnamn"
+    longName: "Ange ett giltigt långt namn"
+    email: "Du måste ange en giltig EMail-adress"
+    password: "Ange ett giltigt lösenord"
+  WarningEMailChange:
+    title: "Bekräfta ändring av användarens e-post"
+    body: "Du håller på att ändra din verifierade e-postadress. Du kommer att loggas ut och måste verifiera din nya e-postadress innan du kan fortsätta."
+    button: "Logga in + Re-Verifiera"
+Admin:
+  users: "Användare"
+  messages: "Meddelanden"
+  Register:
+    label: "Registrera ny användare"
+    hint: "Tips: Det här registrerar en användare för standardinloggning (inte för LDAP-inloggning!)."
+    button: "Registrera ny användare ..."
+    sendMail: "Skicka e-post till ny användare"
+    includePassword: "Inkludera lösenord i E-post"
+    success: "Registrerad ny användare: {$user}"
+  Message:
+    title: "Utsändningsmeddelanden från Admin"
+    newMessage: "Nytt meddelande till alla användare"
+    broadcast: "Utsändning"
+    date: "Datum"
+    message: "Meddelande"
+    dismissed: "Avfärdad"
+    dismissingUsers: "#Avsaknade användare: {$number}\n"
+    edit: "Redigera"
+  Users:
+    filterUsers: "Filtrera användare"
+    showInactive: "Visa inaktiva"
+    online: "Online"
+    onlineHint: "Visar endast användare som är aktiva på en minutesedit rutt"
+    id: "ID"
+    editProfile: "Redigera användarprofil"
+    countSingle: "Visar {$visible} av {$all} användare. Använd filter för att visa andra."
+    count: "Visar {$visible} av {$all} användare. Använd filter för att visa andra."
+    Type:
+      hint: "LDAP-användare eller standardanvändare"
+      column: "L/S"
+      ldap: "L"
+      standard: "S"
+    State:
+      hint: "Växla aktiv/inaktivt tillstånd. Inaktiva användare kan inte logga in."
+      column: "In/Aktiv"
+      active: "Aktiv"
+      inactive: "Inaktiv"
+      toggle: "Växla"
+Login:
+  Error:
+    title: "Fel vid inloggning"
+    username: "Ange ditt användarnamn"
+    password: "Ange ditt lösenord"
+  signIn: "Logga in"
+  ldap: "LDAP"
+  standard: "Standard"
+  demoHint: "Tips: Demoläge Active<br>Du kan logga in med användarnamn <b>demo</b> och lösenord <b>demo</b>. Eller så kan du registrera ditt eget konto genom att klicka på länken \"Registrera\"."
+  Login4MinitzInfo:
+    header: "4Minitz: Samverkande mötesprotokoll."
+    subheader: "● Förbered agendan ● Dokumentprotokoll ● Spåra ämnen ●"
+    abstract: |
+      <p>Varje inbjuden och inloggad användare kan titta på ändringar i aktuella mötesprotokoll i realtid.</p>
+      Vi gjorde 4Minitz gratis programvara med öppen källkod, eftersom vi är övertygade om att
+      känslig information som mötesprotokoll inte bör vara värd i molnet.
+      Istället vill du vara värd för den på din egen infrastruktur där du kan definiera
+      vilken säkerhetsnivå du behöver.
+    prepareAgendaHeading: "Prepare Agenda"
+    prepareAgendaDetails: |
+      <li>Skapa dina mötesserier</li>
+      <li>Bjud in andra användare</li>
+      <li>Ange moderatorer och uppladdare</li>
+      <li>Fyll i agendan med ämnena</li>
+      <li>Markera återkommande ämnen för standardagendan</li>
+      <li>Skicka agenda till inbjudna användare</li>
+    documentMinutesHeading: "Dokument minuter"
+    documentMinutesDetails: |
+      <li>Markera nuvarande deltagare</li>
+      <li>Lägg till åtgärdsobjekt med ansvar för ämnen</li>
+      <li>Lägg till informationsobjekt till ämnen</li>
+      <li>Lägg till etiketter som 'Decision' till artiklar</li>
+      <li>Ladda upp binära bilagor</li>
+      <li>Skicka minuter &amp; åtgärdsobjekt via EMail</li>
+    trackTopicsHeading: "Spåra ämnen"
+    trackTopicsDetails: |
+      <li>Öppna åtgärdsobjekt visas nästa gång</li>
+      <li>Icke-stängda ämnen visas nästa gång</li>
+      <li>Söklista över alla ämnen som någonsin diskuterats</li>
+      <li>Berika ämnen med info på flera möten</li>
+      <li>Hitta ämnen med etiketter (e. . alla beslut)</li>
+      <li>Hitta objekt genom fulltextsökning</li>
+  Footer:
+    withLove: "Kodad med ❤ av"
+    theTeam: "WebApp Team"
+Navigation:
+  help: "Hjälp"
+  about: "Om"
+  adminTasks: "Administratörsuppgifter"
+  editProfile: "Redigera profil"
+  changePassword: "Byt lösenord"
+  signOut: "Logga ut"
+  toggleNavigation: "Växla navigering"
+  meetings: "Möten"
+  processing: "Bearbetar ditt innehåll ..."
+  setLanguageForUser: "Ange språk"
+  setLanguageLogin: "Språk"
+QuickHelp:
+  title: "Snabbhjälp"
+  meetingSeries: "<p>Här kan du skapa nya minuter för den aktuella mötesserien eller klicka på en datumlänk till befintliga minuter.</p>"
+  meetingSeriesList: "<p>Med 4Minitz kan du skapa protokoll för möten.</p><p>Skapa först en ny mötesserie och bjud in andra användare.<br>Skapa sedan mötesprotokoll på flera datum för din mötesserie.</p>"
+  minutes: "<p>Lägg till ämnen för att förbereda din mötesagenda<br>Under mötet markera ett ämne med kryssrutan för att klargöra att du har diskuterat det.<br>Om ämnet...<br>&nbsp;&nbsp; - är inte markerad som diskuterad eller<br>&nbsp;&nbsp; - är satt som återkommande ämne eller<br>&nbsp;&nbsp; - innehåller oklara åtgärdsobjekt<br>. . – Ämnet kommer att presenteras vid nästa möte igen.</p><p>Klicka på \"Slutför protokollet\" för att skicka protokollet till de inbjudna användarna och åtgärdsposterna till deras ansvariga.</p>"
+  upload: "<ul><li>Här kan du ladda upp filer som t.ex. presentationer, PDF:er eller bilder på whiteboard</li><li>Du behöver rollen 'Ladda upp' eller 'Moderator' för att göra det</li><li>Uppladdning eller borttagning är möjlig tills minuter är klara</li><li>Proffstips: Klicka på knappen 'Ladda upp' på din surfplatta eller smarttelefon!</li></ul>"
+Mail:
+  greeting: "Hej."
+  newAgenda: "Vi har en helt ny mötesplan för dig."
+  newActionItem: "Du har tilldelats följande åtgärdsobjekt:"
+  newMinutes: "Nedan hittar du de senaste mötesprotokollen."
+  meeting: "Möte"
+  links: "Länkar"
+  openSeries: "Öppna serie"
+  openMinutes: "Öppna minuter"
+  minutesSubject: "Mötesprotokoll"
+  discussedTopics: "Diskuterade Topik"
+  skippedTopics: "Öppna iopier"
+  none: "Ingen"
+  AdminNewVersion:
+    subject: "Nyare version finns"
+    body: |
+      Hej Admin,
+
+      Det verkar som om du kör en föråldrad version av 4Minitz.
+
+      Din 4Minitz instans på: {$rootUrl}
+      har version: {$myVersion}
+
+      Den senaste versionen tillgänglig är: {$masterVersion}'
+      Utgåvor: {$urlReleaseNotes}
+      Vänligen överväga att uppdatera.
+
+      {$masterMessageText}
+
+      Detta mail har genererats av din 4Minitz backend.
+      Du kan inaktivera uppdateringskontrollen via settings.json: \"updateCheck\": false.
+
+      Ha så kul!
+              Ditt 4Minitz team.
+
+
+      ---
+      4Minitz är fri öppen källkod som utvecklats av 4Minitz-teamet.
+      Källa finns tillgänglig på {$url4Minitz}
+  AdminRegisterNewUser:
+    subject: "Ditt nya konto på vår server"
+    passwordNotSend: "    Kontakta admin för lösenord."
+    passwordParagraph: |
+      Ditt lösenord : {$password}
+
+      Glöm inte att ändra ditt lösenord efter första inloggningen!
+    body: |
+      Hej {$userLongName},
+
+      Välkommen till vår 4Minitz WebApp.
+      Nu kan du börja delta i att hålla professionella mötesminuter.
+
+      Du kan logga in med 'Standard' (inte LDAP! Logga in på:
+         Din värd : {$rootURL}
+         Din användare : {$userName}
+      {$passwordParagraph}
+
+      Ha så kul!
+        Din administratör.
+
+      ---
+      4Minitz är fri öppen källkod som utvecklats av 4Minitz teamet.
+      Källa finns tillgänglig på {$url4Minitz}
+  UserRoleChange:
+    subject: "Din roll har ändrats för '{$meetingProject}:{$meetingName}'"
+    body: |
+      Hej {$userName}
+
+      Din roll har ändrats för mötesserien '{$meetingProject}:{$meetingName}'
+      ({$meetingSeriesURL})
+
+         Din gamla roll var: {$roleOld}
+         Din nya roll är : {$roleNew}
+         Ändringen utfördes av : {$moderatorName}
+
+      För en omfattande lista över rättigheter för varje roll se:
+      {$urlRoleDocu}
+
+      Ha så kul!
+        Din administratör.
+
+      ---
+      4Minitz är fri öppen källkod som utvecklats av 4Minitz teamet.
+      Källa finns tillgänglig på {$url4Minitz}
+  VerifyEmailAddress:
+    subject: "[{$sitename}] Verifiera din e-postadress"
+    body: |
+      För att verifiera din e-postadress {$emailAddress} besök följande länk:
+
+      {$urlWithoutHash}
+
+      Om du inte har begärt denna verifiering, ignorera detta mail.
+      Om du tycker att något är fel, kontakta din administratör.
+  ResetPassword:
+    subject: "[{$sitename}] Återställ ditt lösenord"
+    body: |
+      För att återställa ditt lösenord för {$emailAddress} besök följande länk:
+
+      {$urlWithoutHash}
+
+      Om du inte har begärt att återställa ditt lösenord, ignorera detta mail.
+      Om du tycker att något är fel, kontakta din administratör.

@@ -1,7 +1,9 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
+import { I18nHelper } from '/imports/helpers/i18n';
 import { Blaze } from 'meteor/blaze';
 import { Markdown } from 'meteor/perak:markdown';
+import { Astro } from 'meteor/jagi:astronomy';
 import '/imports/config/accounts';
 import { $ } from 'meteor/jquery';
 
@@ -82,13 +84,14 @@ window.onpopstate = () => {
     $('.modal').hide();
 };
 
-Meteor.startup(() => {
+Meteor.startup(async () => {
     Meteor.call('gitVersionInfoUpdate');
 
     // Make sure that all server side markdown rendering quotes all HTML <TAGs>
     Markdown.setOptions({
         sanitize: true
     });
+    Astro.config.logs.nonExistingField = false; // Turn off warnings about non existing fields.
 
     Template.registerHelper('pathForImproved', function(path) {
         // FlowRouters pathFor helper is a little bit inconsistent.
@@ -102,20 +105,22 @@ Meteor.startup(() => {
         }
         return pathWithTrailingSlash;
     });
+
+    await I18nHelper.setLanguageLocale();
 });
 
-window.onbeforeunload = function (e) {
-    let event = e || window.event;
-
+// IF we lost connection to server
+// AND (user wants to leave the current URL OR user wants to close the tab OR attempts to Reload page)
+// => we show a standard browsers warning message
+window.addEventListener('beforeunload', function (e) {
     if(Meteor.status().connected || Meteor.settings.public.isEnd2EndTest) {
+        // OK, continue with unload
+        delete e['returnValue'];
         return;
     }
 
-    const message = 'Do you really want to leave 4Minitz?';
-    // For IE and Firefox
-    if (event) {
-        event.returnValue = message;
-    }
-    // For Safari
-    return message;
-};
+    // Cancel the unload event and show browsers "Yes/No" confirmation box
+    e.preventDefault();
+    e.returnValue = '';     // Chrome requires returnValue to be set
+    return '?';             // Older browsers need string to be returned
+});

@@ -1,0 +1,601 @@
+---
+_splitKey: ':'
+_locale: 'pl'
+Accounts:
+  usernamePlaceholder: "(min. 3 znaki)"
+  nameDisplayName: "Nazwa, Firma"
+  namePlaceholder: "John Doe, Szczęśliwy Corp."
+  passwordPlaceholder: "min. 6 znaków (cyfra, dolna i górna)"
+  passwordError: "min. 6 znaków (min. 1 cyfra, 1 dolna, 1 cholewka)"
+Buttons:
+  add: "Dodaj"
+  back: "Wróć"
+  cancel: "Anuluj"
+  change: "Zmień"
+  close: "Zamknij"
+  confirm: "Potwierdź"
+  create: "Utwórz"
+  delete: "Usuń"
+  dismissAll: "Anuluj wszystko"
+  edit: "Edytuj"
+  hide: "Ok, ukryj"
+  ok: "OK"
+  register: "Zarejestruj się"
+  save: "Zapisz"
+UserRoles:
+  roleModerator: "Moderator"
+  roleUploader: "Przesyłacz"
+  roleInvited: "Zaproszono"
+  roleInformed: "Informowany"
+FlashMessages:
+  ok: "OK"
+  error: "Błąd"
+  verifyEMailErr: "Błąd: nie można zweryfikować EMail"
+  verifyEMailOK: "OK: EMail jest teraz zweryfikowany"
+  passwordChangeOK: "Hasło zmienione"
+  passwordResetOK: "Hasło pomyślnie zresetowane"
+  profileEditOK: "Zapisano zmiany profilu"
+  minuteLinkErr: "Niestety minuta nie jest poprawnie połączona z serią nadrzędną - skontaktuj się z administratorem systemu."
+  agendaSentOK: "Agenda została wysłana do {$result} odbiorców"
+  finalizeProgress1: "Kończenie w toku"
+  finalizeProgress2: "To może potrwać kilka sekund..."
+  finalizeOK: "Protokół spotkania został pomyślnie sfinalizowany"
+Dialog:
+  ConfirmDelete:
+    title: "Potwierdź usunięcie?"
+    body: "Czy na pewno chcesz to usunąć?"
+  ConfirmDeleteMeetingSeries:
+    questionMeetingSeries: "Czy na pewno chcesz usunąć serię spotkań"
+    questionMinutes: "Ta seria zawiera {$minutesCount} minut spotkania (ostatnie minuty {$lastMinutesDate})."
+  ConfirmCreateNewMinutes:
+    title: "Potwierdź utworzenie nowego protokołu"
+    content: "Czy na pewno chcesz utworzyć nowe minuty dla serii spotkań\"{$project}: {$name}\"?"
+  confirmDeleteAttachment: "Czy na pewno chcesz usunąć załącznik:\n**{$name}**?"
+  confirmDeleteDetails: "Czy na pewno chcesz usunąć wybrane szczegóły elementu **{$subject}**?"
+  ConfirmDeleteItem:
+    allowed: "Czy na pewno chcesz usunąć {$type} **{$subject}**?"
+    notAllowed: "Nie można usunąć {$type} **{$subject}** ponieważ {$type} został utworzony w poprzednich minutach."
+    questionActionItem: "Czy chcesz zamiast tego zamknąć element akcji?"
+    questionInfoItem: "Czy chcesz zamiast tego odpiąć lepką informację?"
+    typeActionItem: "element akcji"
+    typeInfoItem: "informacje"
+    titleCloseActionItem: "Zamknąć element akcji?"
+    titleUnpinInfoItem: "Usunąć element informacyjny?"
+    buttonCloseActionItem: "Zamknij element akcji"
+    buttonUnpinInfoItem: "Odepnij element informacji"
+  ConfirmDeleteTopic:
+    allowed: "Czy na pewno chcesz usunąć wątek **{$subject}**?"
+    notAllowed: "Usunięcie tematu **{$subject}** nie jest możliwe, ponieważ temat został utworzony w poprzednich minutach."
+    close: "Czy zamiast tego chcesz zamknąć temat?"
+    closeWithActions: "Czy chcesz zamknąć wątek razem ze wszystkimi powiązanymi elementami akcji?"
+  confirmLeaveMeetingSeries: "Czy na pewno chcesz opuścić serię spotkań:\n\n**{$project} / {$name}**\n\nBędziesz musiał zapytać moderatora, czy chcesz dołączyć ponownie później."
+  ConfirmMinuteQualityAssurance:
+    title: "Sfinalizuj protokół: Kontrole jakości"
+    button: "Kontynuuj"
+    issues: "Pojawiły się problemy z twoimi minutami!"
+    proceed: "Czy chcesz kontynuować zakończenie?"
+    warnNoTopics: "Obecne minuty nie mają tematów"
+    warnNoParticipants: "Żaden użytkownik nie jest oznaczony jako obecny"
+    warnEditing: "Wątek/element/szczegóły są nadal edytowane"
+    warnNoTopicDiscussed: "Żaden temat nie jest oznaczony jako 'omówiony'"
+    warnTopicWithoutItems: "Co najmniej jeden dyskutowany temat nie ma elementów"
+    warnActionItemWithoutResponsible: "Co najmniej jeden element akcji nie ma odpowiedzialności"
+    warnTopicNoNewContent: "Wątek jest zaznaczony, ale nie ma nowych treści"
+  ConfirmReOpenTopic:
+    title: "Ponownie otworzyć temat?"
+    body: "Czy na pewno chcesz ponownie otworzyć już zamknięty wątek **{$topicSubject}**?"
+    button: "Otwórz ponownie"
+  ConfirmSendAgenda:
+    body: "Czy na pewno chcesz wysłać porządek obrad na tę minutę spotkania z datą **{$minDate}**?\nZostał już wysłany {$agendaSentDate} o {$agendaSentTime}"
+    title: "Potwierdź wysyłanie programu"
+    button: "Wyślij plan"
+  ConfirmDeleteMinutes:
+    really: "Czy na pewno chcesz usunąć tę minutę spotkania datowaną na **{$minutesDate}**?"
+    newTopics: "Spowoduje to usunięcie **{$newTopicsCount} tematów**, które zostały utworzone w ciągu tej minuty."
+    closedTopicsAdditionally: "Dodatkowo **{$closedTopicsCount} tematów ** zostaną ponownie otwarte, które zostały zamknięte w ciągu tych minut."
+    closedTopics: "**{$closedTopicsCount} tematów** zostaną ponownie otwarte, które zostały zamknięte w ciągu tych minut."
+  ConfirmFinalizeMinutes:
+    title: "Potwierdź zakończenie protokołu"
+    button: "Kończenie"
+    really: "Czy na pewno chcesz sfinalizować tę minutę spotkania datowaną na **{$minutesDate}**?"
+    sendActionItems: "Wyślij elementy akcji"
+    sendMinutes: "Wyślij elementy informacji"
+  LocaleSetting:
+    title: "Ustaw język"
+    languageLocale: "Język językowy"
+    automatic: "Automatycznie przez przeglądarkę"
+    contributionHint1: "Tłumaczenie błędów lub brak języka?"
+    contributionHint2: "Pomóż nam przetłumaczyć 4Minitz!"
+  IsEditedHandling:
+    title: "Edytuj pomimo istniejącej edycji"
+    confirmationDialogResetEdit: "Ostrzeżenie: Ten dokument jest obecnie edytowany przez {$name} od: {$date}"
+    confirmationDialogResetEditDetails: "Kliknij ponownie szczegóły, aby rozpocząć edycję."
+    button: "Edytuj mimo to"
+  ConnectionInfo:
+    tooltip: |
+      Połączenie utracone!
+        Status: {$status}
+        Ponów liczbę: {$retryCount}
+        Czas próby: {$retryTime} s.
+        Powód: {$reason}
+        Kliknij, aby ponownie połączyć.
+    header: "Utracono połączenie z serwerem 4Minitz."
+    body: "Jeśli zamkniesz przeglądarkę, niezapisane dane mogą zostać utracone. Jeśli problem będzie się powtarzał, skontaktuj się z administratorem systemu."
+    tryToReconnect: "Spróbuj połączyć ponownie"
+  ConfirmGenerateProtocol:
+    title: "Confirm generate protocol"
+    body: "Przez te minuty nie wygenerowano protokołu. Czy chcesz pobrać wygenerowaną dynamicznie wersję HTML?"
+    button: "Pobierz"
+  ConfirmTopicDelete:
+    title1: "Potwierdź usunięcie wątku"
+    title2: "Oznaczyć temat jako omówiony?"
+    button2: "Zamknij temat i działania"
+    errortitle: "Nie można usunąć tematu"
+    errorcontent: "Nie można usunąć tego tematu, ponieważ został on utworzony w poprzednich minutach. Wybrany wątek jest już zamknięty i nie ma otwartych elementów akcji, więc nie zostanie skopiowany do następnych minut."
+  ItemDeleteError:
+    title: "Nie można usunąć elementu"
+    body1: "Nie można usunąć tego elementu, ponieważ został utworzony w poprzednich minutach."
+    body2a: "Ten element akcji jest już zamknięty,"
+    body2b: "Ten element informacji jest już odpięty"
+    body3: "więc nie zostanie skopiowany do następnych minut"
+  ActionItemResponsibleError:
+    title: "Nieprawidłowa osoba odpowiedzialna za pozycję działania"
+    body: |
+      To nie jest prawidłowa odpowiedzialność!
+
+      Wybierz **istniejącego użytkownika** z listy rozwijanej lub wprowadź **poprawny adres e-mail**.
+  ConvertItemError:
+    title: "Nie można przekonwertować elementu"
+    body: "Nie można przekonwertować tego elementu, ponieważ został on utworzony w poprzednich minutach."
+About:
+  title: "O 4Minitz"
+  copyrightTeam: "przez 4Minitz-Team"
+  licensedUnder: "Licencja na licencji MIT-License"
+  licenseDependencies: "Licencja zależności"
+  thanksContributors: "Podziękowania Dla Wszystkich Naszych Współpracowników"
+  thanksTranslators: "Dziękujemy wszystkim naszym tłumaczom"
+  proudlySponsored: "Dumnie sponsorowane przez"
+  specialThanks: "Specjalne podziękowania dla tych projektów"
+  forkGitHub: "Rozwidlenie nas na GitHub"
+  ServerStatistics:
+    title: "Statystyki serwera"
+    rowNumUser: "Liczba użytkowników (aktywnych)"
+    rowNumMeetingSeries: "Seria spotkań"
+    rowNumMeetingMinutes: "Liczba protokołów posiedzeń"
+    rowNumAttachments: "Liczba załączników"
+    rowSizeAttachments: "Rozmiar załączników"
+Item:
+  ariaLabel: "Dodaj/edytuj element"
+  editItem: "Edytuj element"
+  editItemHint: "Edytuj to działanie/element informacji"
+  deleteItem: "Usuń element"
+  deleteItemHint: "Usuń tę czynność/element informacji"
+  addItemModal: "Dodaj {$type} do {$topic}"
+  editItemModal: "Edytuj {$type} z {$topic}"
+  editItemModelTypeInfoItem: "Informacje"
+  editItemModelTypeActionItem: "Element akcji"
+  addInfo: "Dodaj element informacji"
+  addInfoHint: "Dodaj element informacji do tematu"
+  action: "Element działania"
+  addAction: "Dodaj element działania"
+  addActionHint: "Dodaj element działania do tematu"
+  convertToAction: "Przekształć w działanie"
+  convertToInfo: "Przekształć w informacje"
+  convertDisabled: "Konwersja jest wyłączona: element istnieje w minionym spotkaniu"
+  subject: "Temat (obowiązkowy)"
+  details: "Szczegóły"
+  addDetails: "Dodaj szczegóły"
+  priority: "Priorytet"
+  Priorities:
+    high: "1 - Wysoki"
+    medium: "3 - Średni"
+    low: "5 - Niski"
+  due: "Termin zakończenia"
+  dueNone: "brak"
+  detailPlaceholder: "Do edycji można użyć funkcji Markdown. Naciśnij klawisze Ctrl + Enter lub Tab, aby wyjść."
+  markdownHint: "Pomoc do komendy Markdown"
+  setPin: "Ustaw przypięte"
+  setPinHint: "Ustaw jako przypięty element info"
+  unsetPin: "Nieustawione przypięte"
+  unsetPinHint: "Ustaw jako nieprzypięty element informacji"
+  done: "wykonano"
+  pinned: "przypięte"
+  Error:
+    subject: "Wprowadź poprawny temat"
+  Filter:
+    title: "Filtry"
+    usageHint: "Użycie filtra"
+    info: "Elementy informacji"
+    action: "Elementy akcji"
+    open: "Otwórz elementy akcji"
+    closed: "Zamknięte elementy akcji"
+    yourAction: "Twoje elementy akcji"
+    placeholder: "Filtr"
+    matchCase: "Przypadek"
+    matchCaseHint: "Dopasuj wielkość liter"
+    matchCaseLong: "Dopasuj wielkość liter"
+    Usage:
+      body: "Możesz użyć kilku słów kluczowych do filtrowania wymienionych elementów. Wszystkie słowa kluczowe mogą być połączone, które filtrują te elementy pasujące do wszystkich parametrów wyszukiwania."
+      keyword: "Keyword"
+      format: "Formatowanie"
+      values: "Wartości"
+      eg: "np."
+  myActionItems: "Moje elementy akcji"
+Topic:
+  title: "Temat"
+  new: "Nowy"
+  add: "Dodaj temat"
+  addLong: "Dodaj temat..."
+  addShort: "Temat"
+  addHint: "Dodaj nowy temat do góry listy [Ctrl+Alt+T]"
+  quickAdd: "DODAJ TOPIC (do końca listy)"
+  edit: "Edytuj temat"
+  save: "Zapisz temat"
+  show: "Pokaż temat"
+  subject: "Temat (obowiązkowy)"
+  responsible: "Odpowiedzialny"
+  completed: "Zakończone"
+  completedHint: "Ten temat został ostatecznie zakończony. Więc to nie będzie propagowane na następne spotkanie."
+  setRecurring: "Ustaw powtarzające się"
+  setRecurringHint: "Ustaw jako temat powtarzalny"
+  unsetRecurring: "Anuluj ustawienie powtarzania"
+  unsetRecurringHint: "Ustaw jako temat nie powtarzający się"
+  setSkip: "Ustaw pomijanie"
+  setSkipHint: "Ustaw jako pominięty temat"
+  unsetSkip: "Anuluj ustawienie pominięcia"
+  unsetSkipHint: "Ustaw jako temat, który nie został pominięty"
+  history: "Pokaż historię"
+  historyHint: "Pokaż pełny finalny stan tego tematu"
+  delete: "Usuń wątek"
+  reopen: "Otwórz ponownie temat"
+  reopenHint: "Otwórz ponownie temat"
+  placeholder: "Dodaj element informacji. Dodaj @username, aby dodać element działania. Naciśnij klawisz Enter, aby dodać szczegóły. Naciśnij kombinację klawiszy Ctrl + Enter lub Tab, aby wprowadzić."
+  childOf: "Temat serii spotkań:"
+  historyTitle: "Ten temat był"
+  createdOn: "utworzone dnia:"
+  lastUpdate: "ostatnia aktualizacja:"
+  finalizedOn: "sfinalizowane w minutach od:"
+  doneBy: "(przez {$user})"
+  notFoundTitle: "Niestety, temat nie został znaleziony."
+  notFoundReasons: "Powodem może być ...<br><ul><li>Temat nigdy nie został sfinalizowany (to tylko żyje w nieskończone minuty)</li><li>Temat został usunięty</li><li>Nie masz praw dostępu do tego tematu (już)</li></ul>"
+  illegalAction: "Próbowano wywołać niedozwoloną zdarzenie w trybie tylko do odczytu"
+  addDetails: "Dodaj szczegóły"
+  addDetailsHint: "Dodaj szczegóły do elementu"
+  hideClosed: "Ukryj zamknięte"
+  hideClosedHint: "Tymczasowo ukryj omówione/pominięte tematy z listy"
+  hideClosedLong: "Ukryj zamknięte tematy"
+  collapse: "Zwiń"
+  collapseLong: "Zwiń tematy"
+  expand: "Rozwiń"
+  expandLong: "Rozwiń tematy"
+  Error:
+    subject: "Wprowadź poprawny temat"
+  Filter:
+    completed: "Wątki zakończone"
+    uncompleted: "Tematy nieukończone"
+    yourTopic: "Twoje Tematy"
+  TooltipCreated:
+    date: "Utworzono {$dateCreateStr}"
+    user: "przez {$userCreate}"
+  TooltipUpdated:
+    date: "Zaktualizowano {$dateUpdStr}"
+    user: "przez {$userUpd}"
+Minutes:
+  create: "Utwórz nowe minuty"
+  date: "Data"
+  dateOn: "Włączone"
+  title: "Minuty na"
+  finalized: "Sfinalizowano"
+  finalizedHint: "Minut został sfinalizowany"
+  notFinalized: "Nie ukończono"
+  notFinalizedHint: "Minuty nie są finalizowane"
+  attachments: "Załączniki"
+  attachmentsHint: "Protokoły zawierają załączniki"
+  previous: "Poprzednie:"
+  next: "Następne:"
+  history: "Historia"
+  unfinalizeHint: "Kliknij, aby zakończyć protokół"
+  print: "Drukuj minuty"
+  finalize: "Sfinalizuj protokół"
+  finalizeHint: "Kliknij, aby zakończyć protokół"
+  printHint: "Drukuj minuty"
+  downloadHint: "Pobierz minuty jako plik"
+  agenda: "Harmonogram"
+  sendAgenda: "Wyślij plan"
+  delete: "Usuń protokół"
+  GlobalNotes:
+    pin: "Ustaw jako przypiętą globalną notatkę"
+    unpin: "Ustaw jako nieprzypiętą globalną notatkę"
+    title: "Notatka globalna"
+    placeholder: "Globalne notatki na te minuty. Kliknij pin aby propagować notatki na następne minuty."
+  Upload:
+    button: "Załaduj..."
+    uploading: "Przesyłanie"
+    start: "Rozpocznij wysyłanie"
+    continue: "Kontynuuj wysyłanie"
+    pause: "Wstrzymaj wysyłanie"
+    abort: "Przerwij wysyłanie"
+    error: "Błąd podczas przesyłania"
+  version: "Wersja"
+  versionTag: "v"
+  Participants:
+    title: "Uczestnicy"
+    invited: "Zaproszono"
+    solo: "1 uczestnik"
+    additional: "Dodatkowi uczestnicy"
+    additionalSolo: "1 dodatkowy uczestnik"
+    placeholder: "Dodatkowi uczestnicy (oddzielni od \";\"). Adresy e-mail otrzymają minuty."
+    editHint: "Edytuj zaproszonych użytkowników."
+    markNone: "Nie zaznaczaj żadnego"
+    markAll: "Oznacz wszystko"
+    watchingHint: "Ten użytkownik jest obserwowany (zdalnie)"
+    informed: "Poinformowani użytkownicy"
+    informedSolo: "1 Poinformowany Użytkownik"
+    present: "Obecni uczestnicy"
+    absent: "Brak"
+    none: "Brak."
+MeetingSeries:
+  title: "Seria spotkań"
+  team: "Zespół/projekt"
+  new: "Nowa seria spotkań"
+  leave: "Opuszczanie serii konferencji"
+  leaveButton: "Opuść"
+  moderator: "Jesteś moderatorem"
+  lastMinute: "Ostatnia minuta:"
+  Search:
+    placeholder: "Wyszukiwanie serii spotkań"
+    noResults: "Brak wyników dla tego wejścia ..."
+  Edit:
+    Error:
+      meetingName: "Wprowadź poprawną nazwę dla serii konferencji"
+      teamName: "Wprowadź poprawną nazwę projektu"
+      notRegistered: "To nie jest nazwa zarejestrowanego użytkownika"
+      alreadyInList: "Ta nazwa użytkownika jest już na liście"
+    teamName: "Nazwa zespołu/projektu"
+    meetingName: "Nazwa konferencji"
+    title: "Edytuj serię spotkań"
+    base: "Konfiguracja podstawowa"
+    editedBy: "Edytowane przez {$user} (na {$date})"
+    invited: "Zaproszeni i informowani użytkownicy"
+    placeholderUsers: "Dodaj użytkowników do zaproszonych użytkowników..."
+    notifyRoleChange: "Powiadom uczestników o zmianie roli"
+    labels: "Etykiety"
+    save: "Zapisz serię spotkań"
+    confirmDelete: "Potwierdź usunięcie"
+  Labels:
+    Error:
+      name: "Wprowadź poprawną nazwę etykiety"
+      hexValue: "Niepoprawna wartość koloru szesnastkowego"
+    add: "Dodaj nową etykietę"
+    new: "Nowa_etykieta"
+    select: "Wybierz ..."
+  Tab:
+    minutes: "Minuty"
+    topics: "Tematy"
+    items: "Elementy"
+Profile:
+  title: "Edytuj profil dla"
+  userName: "Nazwa użytkownika"
+  longName: "Długa nazwa"
+  email: "Poczta elektroniczna"
+  password: "Hasło"
+  passwordRepeat: "Powtarzanie hasła"
+  ChangePassword:
+    title: "Zmień hasło dla"
+    oldPassword: "Stare hasło"
+    wrongOldPassword: "Wprowadź stare poprawne hasło"
+    newPassword: "Nowe hasło"
+    newPasswordRepeat: "Nowe powtarzanie hasła"
+  Error:
+    name: "Wprowadź poprawną nazwę użytkownika"
+    longName: "Wprowadź poprawną nazwę długą"
+    email: "Wprowadź poprawny adres e-mail"
+    password: "Wprowadź poprawne hasło"
+  WarningEMailChange:
+    title: "Potwierdź zmianę adresu użytkownika"
+    body: "Zamierzasz zmienić swój zweryfikowany adres e-mail. Zostaniesz wylogowany i musisz zweryfikować swój nowy adres e-mail, zanim będziesz mógł kontynuować."
+    button: "Zarejestruj się + Zweryfikuj ponownie"
+Admin:
+  users: "Użytkownicy"
+  messages: "Komunikaty"
+  Register:
+    label: "Zarejestruj nowego użytkownika"
+    hint: "Wskazówka: spowoduje to zarejestrowanie użytkownika na potrzeby standardowego logowania (nie dla logowania LDAP!)."
+    button: "Zarejestruj nowego użytkownika ..."
+    sendMail: "Wyślij wiadomość e-mail do nowego użytkownika"
+    includePassword: "Dołącz hasło do wiadomości e-mail"
+    success: "Zarejestrowany nowy użytkownik: {$user}"
+  Message:
+    title: "Rozgłaszanie wiadomości od administratora"
+    newMessage: "Nowa wiadomość dla wszystkich użytkowników"
+    broadcast: "Rozgłaszanie"
+    date: "Data"
+    message: "Wiadomość"
+    dismissed: "Oddalone"
+    dismissingUsers: "#Uniebrakujący Użytkownicy: {$number}\n"
+    edit: "Edytuj"
+  Users:
+    filterUsers: "Filtruj użytkowników"
+    showInactive: "Pokaż nieaktywne"
+    online: "Tryb z połączeniem"
+    onlineHint: "Wyświetlanie tylko aktywnych użytkowników na trasie minutesedit"
+    id: "Identyfikator"
+    editProfile: "Edytuj profil użytkownika"
+    countSingle: "Wyświetlanie {$visible} z {$all} użytkownika. Użyj filtru, aby wyświetlić inne osoby."
+    count: "Wyświetlanie {$visible} z {$all} użytkowników. Użyj filtru, aby wyświetlić inne osoby."
+    Type:
+      hint: "Użytkownik LDAP lub użytkownik standardowy"
+      column: "L/S"
+      ldap: "L"
+      standard: "Pr"
+    State:
+      hint: "Przełącz stan aktywny/nieaktywny. Nieaktywni użytkownicy nie mogą się zalogować."
+      column: "W/Aktywny"
+      active: "Aktywne"
+      inactive: "Nieaktywne"
+      toggle: "Przełącz"
+Login:
+  Error:
+    title: "Błąd logowania"
+    username: "Wprowadź nazwę użytkownika"
+    password: "Wprowadź swoje hasło"
+  signIn: "Zaloguj się"
+  ldap: "LDAP"
+  standard: "Standardowy"
+  demoHint: "Wskazówka: Tryb demonstracyjny Active<br>Możesz zalogować się z nazwą użytkownika <b>demo</b> i hasłami <b>demo</b>. Lub możesz zarejestrować własny rachunek, klikając na link \"Zarejestruj\" poniżej."
+  Login4MinitzInfo:
+    header: "4Minitz: Protokół ze spotkania w ramach współpracy."
+    subheader: "● Przygotowanie Agendy ● Minuty Dokumentu ● Śledzenie tematów ●"
+    abstract: |
+      <p>Każdy zaproszony i zalogowany użytkownik może oglądać zmiany w aktualnych minutach spotkania w czasie rzeczywistym.</p>
+      Stworzyliśmy 4Minitz darmowe oprogramowanie open source, ponieważ jesteśmy głęboko przekonani, że
+      poufne informacje, takie jak protokoły z posiedzeń, nie powinny być przechowywane w chmurze.
+      Zamiast tego chcesz gościć go w swojej własnej infrastrukturze, gdzie możesz zdefiniować
+      poziom bezpieczeństwa i ochrony, którego potrzebujesz.
+    prepareAgendaHeading: "Prepare Agenda"
+    prepareAgendaDetails: |
+      <li>Utwórz serię spotkań</li>
+      <li>Zaproś innych użytkowników</li>
+      <li>Określ moderatorów i uploaderów</li>
+      <li>Wypełnij porządek obrad tematami</li>
+      <li>Zaznacz cykliczne tematy dla standardowego porządku obrad</li>
+      <li>Wyślij porządek obrad zaproszonym użytkownikom</li>
+    documentMinutesHeading: "Protokół dokumentu"
+    documentMinutesDetails: |
+      <li>Zaznacz obecnych uczestników</li>
+      <li>Dodaj elementy działania odpowiedzialne za tematy</li>
+      <li>Dodaj elementy informacji do tematów</li>
+      <li>Dodaj etykiety takie jak 'Decyzja' do pozycji</li>
+      <li>Prześlij pliki binarne</li>
+      <li>Wyślij minuty &amp; elementy akcji za pośrednictwem EMail</li>
+    trackTopicsHeading: "Śledź tematy"
+    trackTopicsDetails: |
+      <li>Otwarte elementy akcji pojawią się następnym razem</li>
+      <li>Niezamknięte tematy pojawią się następnym razem</li>
+      <li>Lista wyszukiwań wszystkich kiedykolwiek dyskutowanych tematów</li>
+      <li>wzbogacaj tematy z informacjami na wielu spotkaniach</li>
+      <li>Znajdź tematy z etykietami (e. . wszystkie decyzje)</li>
+      <li>Znajdź przedmioty przez wyszukiwanie pełnotekstowe</li>
+  Footer:
+    withLove: "Kodowane przez ❤"
+    theTeam: "Zespół WebApp"
+Navigation:
+  help: "Pomoc"
+  about: "Informacje o"
+  adminTasks: "Zadania administracyjne"
+  editProfile: "Edytuj profil"
+  changePassword: "Zmień hasło"
+  signOut: "Wyloguj się"
+  toggleNavigation: "Przełącz nawigację"
+  meetings: "Posiedzenia"
+  processing: "Przetwarzanie treści..."
+  setLanguageForUser: "Ustaw język"
+  setLanguageLogin: "Język"
+QuickHelp:
+  title: "Szybka pomoc"
+  meetingSeries: "<p>Tutaj możesz utworzyć nowe minuty dla bieżącej serii spotkań lub kliknąć na link daty w istniejących minutach.</p>"
+  meetingSeriesList: "<p>Dzięki 4Minitz możesz tworzyć minuty na spotkania.</p><p>Najpierw stwórz nową serię spotkań i zaprosić innych użytkowników.<br>Następnie utwórz protokoły spotkania z wieloma datami dla serii spotkań.</p>"
+  minutes: "<p>Dodaj tematy, aby przygotować swój porządek spotkania<br>Podczas spotkania oznacz temat za pomocą pola wyboru, aby wyjaśnić, że o tym rozmawiałeś.<br>Jeśli temat...<br>&nbsp;&nbsp; - nie jest oznaczony jako dyskutowany, ani<br>&nbsp;&nbsp; - jest ustawiony jako temat cykliczny lub<br>&nbsp;&nbsp; - zawiera nieukończone elementy akcji<br>. . Temat zostanie ponownie przedstawiony na następnym posiedzeniu.</p><p>Kliknij \"Finalizuj protokół\", aby wysłać protokoły zaproszonym użytkownikom i elementy akcji do ich odpowiedzialnych.</p>"
+  upload: "<ul><li>Tutaj możesz przesłać pliki takie jak np. prezentacje, PDF lub zdjęcia tablicy danych</li><li>Potrzebujesz roli 'Uploader' lub 'Moderator' aby to zrobić</li><li>Przesyłanie lub usuwanie jest możliwe do czasu sfinalizowania</li><li>Wskazówka: Kliknij powyższy przycisk 'Załaduj' na tablecie lub smartfonie!</li></ul>"
+Mail:
+  greeting: "Witaj"
+  newAgenda: "Mamy dla Ciebie nową agendę spotkań:"
+  newActionItem: "Zostałeś przypisany do następujących elementów akcji:"
+  newMinutes: "Poniżej znajdziesz najnowsze minuty spotkania."
+  meeting: "Spotkanie"
+  links: "Linki"
+  openSeries: "Otwórz serię"
+  openMinutes: "Otwórz protokół"
+  minutesSubject: "Protokół ze spotkania"
+  discussedTopics: "Omówione tematy"
+  skippedTopics: "Otwórz tematy"
+  none: "Brak"
+  AdminNewVersion:
+    subject: "Nowa wersja istnieje"
+    body: |
+      Witaj Admin,
+
+      Wygląda na to, że używasz przestarzałej wersji 4Minitz.
+
+      Twoja instancja 4Minitza dnia: {$rootUrl}
+      ma wersję: {$myVersion}
+
+      Najnowsza wersja dostępna to: {$masterVersion}'
+      Notatki o wydaniu: {$urlReleaseNotes}
+      Rozważ aktualizację.
+
+      {$masterMessageText}
+
+      Ta wiadomość została wygenerowana przez tło 4Minitz.
+      Możesz wyłączyć sprawdzanie aktualizacji za pomocą settings.json: \"updateCheck\": false.
+
+      Baw się dobrze!
+              Twoja drużyna 4Minitz.
+
+
+      ---
+      4Minitz jest darmowym otwartym źródłem stworzonym przez zespół 4Minitz.
+      Źródło jest dostępne pod adresem {$url4Minitz}
+  AdminRegisterNewUser:
+    subject: "Twoje nowe konto na naszym serwerze"
+    passwordNotSend: "    Skontaktuj się z administratorem w celu uzyskania hasła."
+    passwordParagraph: |
+      Twoje hasło: {$password}
+
+      Nie zapomnij zmienić hasła po pierwszym zalogowaniu!
+    body: |
+      Witaj {$userLongName},
+
+      Witamy w naszej 4Minitz WebApp.
+      Teraz możesz zacząć uczestniczyć w trakcie profesjonalnych minut spotkania.
+
+      Możesz zalogować się za pomocą 'Standard' (nie LDAP! zaloguj się na:
+         Twój host: {$rootURL}
+         Twój użytkownik: {$userName}
+      {$passwordParagraph}
+
+      Baw się dobrze!
+        Twój administrator.
+
+      ---
+      4Minitz jest darmowym otwartym źródłem stworzonym przez zespół 4Minitz.
+      Źródło jest dostępne pod adresem {$url4Minitz}
+  UserRoleChange:
+    subject: "Twoja rola zmieniła się na '{$meetingProject}:{$meetingName}'"
+    body: |
+      Witaj {$userName}
+
+      Twoja rola zmieniła się dla serii spotkań '{$meetingProject}:{$meetingName}'
+      ({$meetingSeriesURL})
+
+         Twoja stara rola była : {$roleOld}
+         Twoja nowa rola to: {$roleNew}
+         Zmiana została wykonana przez: {$moderatorName}
+
+      Aby uzyskać wyczerpującą listę praw dla każdej roli, zobacz:
+      {$urlRoleDocu}
+
+      Baw się dobrze!
+        Twój administrator.
+
+      ---
+      4Minitz jest darmowym otwartym źródłem stworzonym przez zespół 4Minitz.
+      Źródło jest dostępne pod adresem {$url4Minitz}
+  VerifyEmailAddress:
+    subject: "[{$sitename}] Zweryfikuj adres e-mail"
+    body: |
+      Aby zweryfikować swój adres e-mail {$emailAddress} odwiedź następujący link:
+
+      {$urlWithoutHash}
+
+      Jeśli nie prosiłeś o weryfikację, proszę zignoruj ten e-mail.
+      Jeśli uważasz, że coś jest nie tak, skontaktuj się z zespołem administratora.
+  ResetPassword:
+    subject: "[{$sitename}] Zresetuj hasło"
+    body: |
+      Aby zresetować hasło dla {$emailAddress} odwiedź następujący link:
+
+      {$urlWithoutHash}
+
+      Jeśli nie prosiłeś o zresetowanie hasła, proszę zignoruj ten e-mail.
+      Jeśli uważasz, że coś jest nie tak, skontaktuj się z zespołem administratora.

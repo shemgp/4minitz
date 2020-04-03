@@ -1,0 +1,601 @@
+---
+_splitKey: ':'
+_locale: 'it'
+Accounts:
+  usernamePlaceholder: "(min. 3 caratteri)"
+  nameDisplayName: "Nome, Azienda"
+  namePlaceholder: "Dante Alighieri, Divina Commedia S.P.A."
+  passwordPlaceholder: "min. 6 caratteri (numero, inferiore e superiore)"
+  passwordError: "min. 6 caratteri (min. 1 cifra, 1 carattere minuscolo, 1 carattere maiuscolo)"
+Buttons:
+  add: "Aggiungi"
+  back: "Indietro"
+  cancel: "Annulla"
+  change: "Modifica"
+  close: "Chiudi"
+  confirm: "Conferma"
+  create: "Crea"
+  delete: "Elimina"
+  dismissAll: "Rimuovi tutto"
+  edit: "Modifica"
+  hide: "Ok, nascondi"
+  ok: "OK"
+  register: "Registra"
+  save: "Salva"
+UserRoles:
+  roleModerator: "Moderatore"
+  roleUploader: "Uploader"
+  roleInvited: "Invitato"
+  roleInformed: "Informato"
+FlashMessages:
+  ok: "OK"
+  error: "Errore"
+  verifyEMailErr: "Non è stato possibile verificare l'indirizzo e-mail"
+  verifyEMailOK: "OK: L'indirizzo email è ora verificato"
+  passwordChangeOK: "Password modificata"
+  passwordResetOK: "Password reimpostata con successo"
+  profileEditOK: "Modifiche al profilo salvate"
+  minuteLinkErr: "Purtroppo il verbale non è collegato correttamente alla sua serie - si prega di contattare l'amministratore di sistema."
+  agendaSentOK: "Agenda è stata inviata correttamente a {$result} destinatari"
+  finalizeProgress1: "Finalizzazione in corso"
+  finalizeProgress2: "Questa operazione potrebbe richiedere alcuni secondi..."
+  finalizeOK: "I verbali della riunione sono stati finalizzati con successo"
+Dialog:
+  ConfirmDelete:
+    title: "Confermi l'eliminazione?"
+    body: "Sei sicuro di volerlo eliminare?"
+  ConfirmDeleteMeetingSeries:
+    questionMeetingSeries: "Vuoi davvero eliminare la serie di riunioni"
+    questionMinutes: "Questa serie contiene {$minutesCount} verbali (ultimo verbale del {$lastMinutesDate})."
+  ConfirmCreateNewMinutes:
+    title: "Conferma la creazione di nuovi verbali"
+    content: "Vuoi davvero creare nuovi verbali per la serie di riunioni \"{$project}: {$name}\"?"
+  confirmDeleteAttachment: "Vuoi davvero eliminare l'allegato:\n**{$name}**?"
+  confirmDeleteDetails: "Vuoi davvero eliminare i dettagli selezionati dell'elemento **{$subject}**?"
+  ConfirmDeleteItem:
+    allowed: "Sei sicuro di voler eliminare {$type} **{$subject}**?"
+    notAllowed: "Non è possibile eliminare {$type} **{$subject}** perché il {$type} è stato creato in un verbale precedente."
+    questionActionItem: "Vuoi invece chiudere l'azione?"
+    questionInfoItem: "Vuoi invece togliere la nota?"
+    typeActionItem: "azione"
+    typeInfoItem: "informazione"
+    titleCloseActionItem: "Chiudere l'azione?"
+    titleUnpinInfoItem: "Sganciare le informazioni?"
+    buttonCloseActionItem: "Chiudi azione"
+    buttonUnpinInfoItem: "Sganciare le informazioni"
+  ConfirmDeleteTopic:
+    allowed: "Vuoi davvero eliminare l'argomento **{$subject}**?"
+    notAllowed: "Non è possibile eliminare l'argomento **{$subject}** perché è stato creato in un verbale precedente."
+    close: "Vuoi invece chiudere l'argomento?"
+    closeWithActions: "Vuoi invece chiudere l'argomento insieme a tutte le relative azioni?"
+  confirmLeaveMeetingSeries: "Vuoi davvero uscire dalla serie di riunioni:\n\n**{$project} / {$name}**\n\nDovrai chiedere ad un moderatore se vorrai rientrarvi in seguito."
+  ConfirmMinuteQualityAssurance:
+    title: "Finalizzazione dei verbali: verifica della qualità"
+    button: "Procedi"
+    issues: "Ci sono problemi di finalizzazione con i tuoi verbali!"
+    proceed: "Vuoi procedere con la finalizzazione?"
+    warnNoTopics: "I verbali attuali non hanno argomenti"
+    warnNoParticipants: "Nessun utente è contrassegnato come presente"
+    warnEditing: "Un argomento/oggetto/dettaglio è ancora in modifica"
+    warnNoTopicDiscussed: "Nessun argomento è contrassegnato come 'discusso'"
+    warnTopicWithoutItems: "Almeno un argomento discusso non ha elementi"
+    warnActionItemWithoutResponsible: "Almeno un'azione non ha alcun responsabile"
+    warnTopicNoNewContent: "È selezionato un argomento ma non ha nuovi contenuti"
+  ConfirmReOpenTopic:
+    title: "Riaprire l'argomento?"
+    body: "Vuoi davvero riaprire l'argomento già chiuso **{$topicSubject}**?"
+    button: "Riapri"
+  ConfirmSendAgenda:
+    body: "Vuoi davvero inviare l'ordine del giorno per questo verbale datato **{$minDate}**?\nÈ già stato inviato il {$agendaSentDate} alle {$agendaSentTime}"
+    title: "Conferma invio dell'agenda"
+    button: "Invia l'agenda"
+  ConfirmDeleteMinutes:
+    really: "Vuoi davvero eliminare questo verbale datato **{$minutesDate}**?"
+    newTopics: "Questo rimuoverà **{$newTopicsCount} argomenti**, che sono stati creati nel presente verbale."
+    closedTopicsAdditionally: "Inoltre, verranno riaperti **{$closedTopicsCount} argomenti**, che sono stati chiusi nel presente verbale."
+    closedTopics: "**{$closedTopicsCount} argomenti** verranno riaperti, che sono stati chiusi nel presente verbale."
+  ConfirmFinalizeMinutes:
+    title: "Conferma la finalizzazione dei verbali"
+    button: "Finalizzare"
+    really: "Vuoi davvero finalizzare questo verbale datato **{$minutesDate}**?"
+    sendActionItems: "Invia azioni"
+    sendMinutes: "Invia informazioni"
+  LocaleSetting:
+    title: "Imposta la lingua"
+    languageLocale: "Impostazioni internazionali della lingua"
+    automatic: "Automatico tramite Browser"
+    contributionHint1: "Errori di traduzione o linguaggio mancante?"
+    contributionHint2: "Aiutaci a tradurre 4Minitz!"
+  IsEditedHandling:
+    title: "Modifica nonostante le modifiche esistenti"
+    confirmationDialogResetEdit: "Attenzione: Questo documento è stato modificato da {$name} in data: {$date}"
+    confirmationDialogResetEditDetails: "Clicca nuovamente sui dettagli per iniziare a modificare."
+    button: "Modifica comunque"
+  ConnectionInfo:
+    tooltip: |
+      Connessione persa!
+        Stato: {$status}
+        Tentativi: {$retryCount}
+        Tempo del Tentativo: {$retryTime} sec.
+        Motivo: {$reason}
+        Clicca per riconnettersi.
+    header: "Hai perso la connessione con il server 4Minitz."
+    body: "Se chiudi il tuo browser, i dati non salvati potrebbero essere persi. Se il problema persiste, contattare l'amministratore del sistema."
+    tryToReconnect: "Prova a riconnetterti"
+  ConfirmGenerateProtocol:
+    title: "Conferma generazione del protocollo"
+    body: "Non c'è nessun protocollo generato per questi verbali. Vuoi scaricare una sua versione HTML generata dinamicamente?"
+    button: "Download"
+  ConfirmTopicDelete:
+    title1: "Conferma eliminazione dell'argomento"
+    title2: "Segnare l'argomento come discusso?"
+    button2: "Chiudi l'argomento e le azioni"
+    errortitle: "Impossibile eliminare l'argomento"
+    errorcontent: "Non è possibile eliminare questo argomento perché è stato creato in un verbale precedente. L'argomento selezionato è già chiuso e non ha azioni aperte, quindi non verrà copiato nei verbali successivi."
+  ItemDeleteError:
+    title: "Impossibile eliminare l'elemento"
+    body1: "Non è possibile eliminare questo elemento perché è stato creato in un verbale precedente."
+    body2a: "Questa azione è già chiusa,"
+    body2b: "Questa informazione è già sganciata"
+    body3: "quindi non sarà copiato nei verbali successivi"
+  ActionItemResponsibleError:
+    title: "Responsabile dell'azione non valido"
+    body: |
+      Questo non è un responsabile valido!
+
+      Per favore seleziona un **utente esistente** dal menu a tendina o inserisci un **indirizzo email valido**.
+  ConvertItemError:
+    title: "Impossibile convertire l'elemento"
+    body: "Non è possibile convertire questo elemento perché è stato creato in un verbale precedente."
+About:
+  title: "Informazioni su 4Minitz"
+  copyrightTeam: "dal 4Minitz-Team"
+  licensedUnder: "Sotto licenza MIT-License"
+  licenseDependencies: "Licenza delle dipendenze"
+  thanksContributors: "Grazie a tutti i nostri collaboratori"
+  thanksTranslators: "Grazie a tutti i nostri traduttori"
+  proudlySponsored: "Sponsorizzato da"
+  specialThanks: "Un ringraziamento speciale ai progetti"
+  forkGitHub: "Fai un fork su GitHub"
+  ServerStatistics:
+    title: "Statistiche del server"
+    rowNumUser: "Numero di utenti (attivi)"
+    rowNumMeetingSeries: "Numero di serie di riunioni"
+    rowNumMeetingMinutes: "Numero di verbali"
+    rowNumAttachments: "Numero di allegati"
+    rowSizeAttachments: "Dimensione allegati"
+Item:
+  ariaLabel: "Aggiungi/Modifica elemento"
+  editItem: "Modifica elemento"
+  editItemHint: "Modifica questa azione/informazione"
+  deleteItem: "Elimina elemento"
+  deleteItemHint: "Elimina questa azione/informazione"
+  addItemModal: "Aggiungi {$type} a {$topic}"
+  editItemModal: "Modifica {$type} di {$topic}"
+  editItemModelTypeInfoItem: "Informazioni"
+  editItemModelTypeActionItem: "Azione"
+  addInfo: "Aggiungi Informazione"
+  addInfoHint: "Aggiungi informazione all'argomento"
+  action: "Azione"
+  addAction: "Aggiungi Azione"
+  addActionHint: "Aggiungi azione all'argomento"
+  convertToAction: "Converti in azione"
+  convertToInfo: "Converti in Informazione"
+  convertDisabled: "Conversione disabilitata: l'elemento esiste nella riunione precedente"
+  subject: "Oggetto (obbligatorio)"
+  details: "Dettagli"
+  addDetails: "Aggiungi dettagli"
+  priority: "Priorità"
+  Priorities:
+    high: "1 - Alto"
+    medium: "3 - Medio"
+    low: "5 - Basso"
+  due: "Scadenza"
+  dueNone: "nessuno"
+  detailPlaceholder: "Puoi utilizzare Markdown per modificare. Premi Ctrl+Invio o Tab per uscire."
+  markdownHint: "Guida per la sintassi Markdown"
+  setPin: "Imposta come agganciato"
+  setPinHint: "Imposta come elemento agganciato"
+  unsetPin: "Sgancia"
+  unsetPinHint: "Imposta come informazione sganciata"
+  done: "fatto"
+  pinned: "agganciato"
+  Error:
+    subject: "Inserisci un oggetto valido"
+  Filter:
+    title: "Filtri"
+    usageHint: "Utilizzo del filtro"
+    info: "Informazioni"
+    action: "Azioni"
+    open: "Apri Azioni"
+    closed: "Azioni Chiuse"
+    yourAction: "Le tue Azioni"
+    placeholder: "Filtro"
+    matchCase: "Maiuscolo/minuscolo"
+    matchCaseHint: "Distingui maiuscole dalle minuscole"
+    matchCaseLong: "Distingui maiuscole dalle minuscole"
+    Usage:
+      body: "È possibile utilizzare diverse parole chiave per filtrare gli elementi elencati. Tutte le parole chiave possono essere combinate."
+      keyword: "Parola chiave"
+      format: "Formato"
+      values: "Valori"
+      eg: "ad es."
+  myActionItems: "Le mie Azioni"
+Topic:
+  title: "Argomento"
+  new: "Nuovo"
+  add: "Aggiungi argomento"
+  addLong: "Aggiungi argomento..."
+  addShort: "Argomento"
+  addHint: "Aggiungi un nuovo argomento in cima alla lista [Ctrl+Alt+T]"
+  quickAdd: "AGGIUNGI ARGOMENTO (alla fine dell'elenco)"
+  edit: "Modifica argomento"
+  save: "Salva argomento"
+  show: "Mostra argomento"
+  subject: "Oggetto dell'argomento (obbligatorio)"
+  responsible: "Responsabile"
+  completed: "Completato"
+  completedHint: "Questo argomento è finalmente completato. Non verrà propagato alla prossima riunione."
+  setRecurring: "Imposta Ricorrenza"
+  setRecurringHint: "Imposta come argomento ricorrente"
+  unsetRecurring: "Togli ricorrenza"
+  unsetRecurringHint: "Imposta come argomento non ricorrente"
+  setSkip: "Imposta Salta"
+  setSkipHint: "Imposta come argomento saltato"
+  unsetSkip: "Annulla salta"
+  unsetSkipHint: "Imposta come argomento non saltato"
+  history: "Mostra cronologia"
+  historyHint: "Mostra lo stato completo di questo argomento"
+  delete: "Cancella argomento"
+  reopen: "Riapri argomento"
+  reopenHint: "Riapri argomento"
+  placeholder: "Aggiungi informazioni. Aggiungi @username per aggiungere un'azione. Premere Invio per aggiungere dettagli. Premere Ctrl+Enter o Tab per inviare."
+  childOf: "Argomento della serie di riunioni:"
+  historyTitle: "Questo topic è stato"
+  createdOn: "creato il:"
+  lastUpdate: "ultimo aggiornamento il:"
+  finalizedOn: "completato nel verbale da:"
+  doneBy: "(da {$user})"
+  notFoundTitle: "Spiacenti, argomento non trovato."
+  notFoundReasons: "Le ragioni potrebbero essere...<br><ul><li>L'argomento non è mai stato completato (esiste solo in un verbale non completato)</li><li>L'argomento è stato eliminato</li><li>Non hai (più) i diritti di accesso a questo argomento </li></ul>"
+  illegalAction: "Tentativo di chiamare un evento illegale in modalità sola lettura"
+  addDetails: "Aggiungi dettagli"
+  addDetailsHint: "Aggiungi dettagli all'elemento"
+  hideClosed: "Nascondi elementi chiusi"
+  hideClosedHint: "Nascondi temporaneamente gli argomenti discussi / saltati dall'elenco"
+  hideClosedLong: "Nascondi argomenti chiusi"
+  collapse: "Comprimi"
+  collapseLong: "Comprimi argomenti"
+  expand: "Espandi"
+  expandLong: "Espandi Argomenti"
+  Error:
+    subject: "Inserisci un oggetto valido"
+  Filter:
+    completed: "Argomenti completati"
+    uncompleted: "Argomenti non completati"
+    yourTopic: "I tuoi argomenti"
+  TooltipCreated:
+    date: "Creato il {$dateCreateStr}"
+    user: "da {$userCreate}"
+  TooltipUpdated:
+    date: "Aggiornato il {$dateUpdStr}"
+    user: "da {$userUpd}"
+Minutes:
+  create: "Crea nuovo verbale"
+  date: "Data"
+  dateOn: "su"
+  title: "Verbali per"
+  finalized: "Completato"
+  finalizedHint: "Il verbale e' completato"
+  notFinalized: "Non completato"
+  notFinalizedHint: "Il verbale non e' completato"
+  attachments: "Allegati"
+  attachmentsHint: "Il verbale ha allegati"
+  previous: "Precedente:"
+  next: "Successivo:"
+  history: "Storico"
+  unfinalizeHint: "Clicca per impostare i verbali come non completati"
+  print: "Stampa Verbali"
+  finalize: "Completa i Verbali"
+  finalizeHint: "Fare clic per completare i Verbali"
+  printHint: "Stampa i verbali"
+  downloadHint: "Scarica il verbale come file"
+  agenda: "Agenda"
+  sendAgenda: "Invia agenda"
+  delete: "Elimina il Verbale"
+  GlobalNotes:
+    pin: "Imposta come nota globale agganciata"
+    unpin: "Imposta come nota globale non agganciata"
+    title: "Nota globale"
+    placeholder: "Note globali per questo verbale. Fare clic su Aggancia per propagare le note al prossimo verbale."
+  Upload:
+    button: "Carica..."
+    uploading: "Caricamento"
+    start: "Avvia caricamento"
+    continue: "Continua caricamento"
+    pause: "Pausa Caricamento"
+    abort: "Annulla caricamento"
+    error: "Errore durante il caricamento"
+  version: "Versione"
+  versionTag: "v"
+  Participants:
+    title: "Partecipanti"
+    invited: "Invitato"
+    solo: "1 Partecipante"
+    additional: "Partecipanti aggiuntivi"
+    additionalSolo: "1 Partecipante aggiuntivo"
+    placeholder: "Partecipanti aggiuntivi (separati con ';'). Gli indirizzi di posta riceveranno i verbali."
+    editHint: "Modifica utenti invitati."
+    markNone: "Segna nessuno"
+    markAll: "Segna tutto"
+    watchingHint: "Questo utente sta guardando (in remoto)"
+    informed: "Utenti Informati"
+    informedSolo: "1 Utente Informato"
+    present: "Partecipanti presenti"
+    absent: "Assente"
+    none: "Nessuno."
+MeetingSeries:
+  title: "Serie di riunioni"
+  team: "Team / Progetto"
+  new: "Nuova Serie di Riunioni"
+  leave: "Abbandona Serie di Riunioni"
+  leaveButton: "Abbandona"
+  moderator: "Sei un moderatore"
+  lastMinute: "Ultimo verbale:"
+  Search:
+    placeholder: "Cerca Serie di Riunioni"
+    noResults: "Nessun risultato per questa ricerca..."
+  Edit:
+    Error:
+      meetingName: "Inserisci un nome valido per la serie di riunioni"
+      teamName: "Inserisci un nome di progetto valido"
+      notRegistered: "Questo non è un nome utente registrato"
+      alreadyInList: "Questo nome utente è già nella lista"
+    teamName: "Team / Progetto"
+    meetingName: "Nome Riunione"
+    title: "Modifica Serie Riunione"
+    base: "Configurazione di base"
+    editedBy: "Modificato da {$user} (alle {$date})"
+    invited: "Utenti invitati e informati"
+    placeholderUsers: "Aggiungi utenti agli utenti invitati..."
+    notifyRoleChange: "Notificare i partecipanti della modifica del ruolo"
+    labels: "Etichette"
+    save: "Salva Serie di riunioni"
+    confirmDelete: "Conferma cancellazione"
+  Labels:
+    Error:
+      name: "Inserisci un nome di etichetta valido"
+      hexValue: "Valore colore esadecimale non valido"
+    add: "Aggiungi nuova etichetta"
+    new: "Nuova etichetta"
+    select: "Seleziona..."
+  Tab:
+    minutes: "Verbale"
+    topics: "Discussioni"
+    items: "Elementi"
+Profile:
+  title: "Modifica profilo per"
+  userName: "Nome utente"
+  longName: "Nome lungo"
+  email: "E-Mail"
+  password: "password"
+  passwordRepeat: "Ripeti password"
+  ChangePassword:
+    title: "Cambia la password per"
+    oldPassword: "Vecchia Password"
+    wrongOldPassword: "Inserisci la vecchia password valida"
+    newPassword: "Nuova Password"
+    newPasswordRepeat: "Ripeti nuova password"
+  Error:
+    name: "Inserisci un nome utente valido"
+    longName: "Inserisci un nome lungo valido"
+    email: "Inserisci un indirizzo email valido"
+    password: "Inserisci una password valida"
+  WarningEMailChange:
+    title: "Conferma la modifica dell'email"
+    body: "Stai per cambiare il tuo indirizzo email verificato. Sarai disconnesso e dovrai verificare il tuo nuovo indirizzo email prima di continuare."
+    button: "Disconnetiti + Ripeti Verifica"
+Admin:
+  users: "Utenti"
+  messages: "Messaggi"
+  Register:
+    label: "Registra un nuovo utente"
+    hint: "Suggerimento: Questo registrerà un utente per il Login Standard (non per il login LDAP!)."
+    button: "Registra un nuovo utente..."
+    sendMail: "Invia e-mail al nuovo utente"
+    includePassword: "Includi la password nell'e-mail"
+    success: "Nuovo utente registrato: {$user}"
+  Message:
+    title: "Trasmetti a tutti i messaggi dell'amministratore"
+    newMessage: "Nuovo messaggio a tutti gli utenti"
+    broadcast: "Trasmetti a tutti"
+    date: "Data"
+    message: "Messaggio"
+    dismissed: "Ignorato"
+    dismissingUsers: "#Rimuovi utenti: {$number}\n"
+    edit: "Modifica"
+  Users:
+    filterUsers: "Filtra utenti"
+    showInactive: "Mostra inattivi"
+    online: "Online"
+    onlineHint: "Visualizzazione solo degli utenti attualmente attivi per la modifica di un verbale"
+    id: "ID"
+    editProfile: "Modifica Profilo Utente"
+    countSingle: "Visualizzazione {$visible} di {$all} utente. Utilizzare il filtro per mostrare gli altri."
+    count: "Visualizzazione {$visible} di {$all} utente. Utilizzare il filtro per mostrare gli altri."
+    Type:
+      hint: "Utente LDAP o utente standard"
+      column: "L/S"
+      ldap: "L"
+      standard: "S"
+    State:
+      hint: "Cambia stato attivo/inattivo. Gli utenti inattivi non possono accedere."
+      column: "Inattivo/Attivo"
+      active: "Attivo"
+      inactive: "Inattivo"
+      toggle: "Cambia"
+Login:
+  Error:
+    title: "Errore di login"
+    username: "Inserisci il tuo nome utente"
+    password: "Inserisci la tua password"
+  signIn: "Accedi"
+  ldap: "LDAP"
+  standard: "Standard"
+  demoHint: "Suggerimento: Modalità demo attiva<br>Puoi accedere con nome utente <b>demo</b> e password <b>demo</b>. Oppure puoi registrare il tuo account cliccando sul link \"Registrati\" qui sotto."
+  Login4MinitzInfo:
+    header: "4Minitz: verbali collaborativi di riunione."
+    subheader: "● Preparare l'agenda ● Verbali ● Segui gli argomenti ●"
+    abstract: |
+      <p>Ogni utente invitato e loggato può guardare in tempo reale le modifiche ai verbali delle riunioni in corso.</p>
+      Abbiamo creato 4Minitz free software open source, poiché crediamo fermamente che
+      informazioni sensibili come i verbali non debbano essere ospitate in rete.
+      Invece tu puoi ospitarlo sulla tua infrastruttura dove è possibile definire
+      il livello di sicurezza necessario.
+    prepareAgendaHeading: "Preparare l'agenda"
+    prepareAgendaDetails: |
+      <li>Crea la tua serie di riunioni</li>
+      <li>Invita altri utenti</li>
+      <li>Specifica moderatori e caricatori</li>
+      <li>Riempi l'agenda con gli argomenti</li>
+      <li>Contrassegna gli argomenti ricorrenti per l'agenda standard</li>
+      <li>Invia l'agenda agli utenti invitati</li>
+    documentMinutesHeading: "Documenta i verbali"
+    documentMinutesDetails: |
+      <li>Segna i partecipanti presenti </li>
+      <li>Aggiungi azioni con i responsabili</li>
+      <li>Aggiungi informazioni agli argomenti</li>
+      <li>Aggiungi etichette (p. es. 'Decisione') agli elementi</li>
+      <li>Carica file allegati</li>
+      <li>Invia il verbale &amp; le azioni via EMail</li>
+    trackTopicsHeading: "Traccia argomenti"
+    trackTopicsDetails: |
+      <li>Le azioni aperte appariranno la prossima volta</li>
+      <li>Gli argomenti non chiusi appariranno la prossima volta</li>
+      <li>Lista di tutti gli argomenti mai discussi</li>
+      <li>Arricchisci argomenti con informazioni su più riunioni</li>
+      <li>Trova argomenti con etichette (e.. tutte le decisioni)</li>
+      <li></li>Trova elementi tramite ricerca fulltext</li>
+  Footer:
+    withLove: "Codificato con ❤ dal"
+    theTeam: "Team WebApp"
+Navigation:
+  help: "Aiuto"
+  about: "Informazioni"
+  adminTasks: "Attività Admin"
+  editProfile: "Modifica profilo"
+  changePassword: "Cambia password"
+  signOut: "Esci"
+  toggleNavigation: "Attiva/disattiva navigazione"
+  meetings: "Riunioni"
+  processing: "Elaborazione dati in corso..."
+  setLanguageForUser: "Imposta la lingua"
+  setLanguageLogin: "Lingua"
+QuickHelp:
+  title: "Guida rapida"
+  meetingSeries: "<p>Qui puoi creare un nuovo verbale per la serie di riunioni correnti o fare clic su una data dei verbali esistenti.</p>"
+  meetingSeriesList: "<p>Con 4Minitz puoi creare verbali per le riunioni.</p><p>Crea prima una nuova serie di riunioni e invita altri utenti.<br>Poi crea i verbali di riunione in più date per la tua serie di riunioni.</p>"
+  minutes: "<p>Aggiungi argomenti per preparare la tua agenda di riunione<br>Durante una riunione segna un argomento con la casella di controllo per contrassegnarlo come discusso.<br>Se l'argomento...<br>&nbsp;&nbsp; - non è contrassegnato come discusso o<br>&nbsp;&nbsp; - è impostato come argomento ricorrente o<br>&nbsp;&nbsp; - contiene azioni non eseguite<br>... l'argomento sarà nuovamente presentato nella prossima riunione.</p><p>Clicca su 'Finalizza processo verbale' per inviare i verbali agli utenti invitati e le azioni ai loro assegnatari.</p>"
+  upload: "<ul><li>Qui puoi caricare file come e.g. presentazioni, PDF o foto</li><li>Hai bisogno del ruolo 'Uploader' o 'Moderatore' per farlo</li><li>Il caricamento o la cancellazione è possibile finché il verbale non e' completato</li><li>Suggerimento: Clicca 'Carica' sul tuo tablet o sul tuo smartphone!</li></ul>"
+Mail:
+  greeting: "Ciao"
+  newAgenda: "Abbiamo una nuova agenda della riunione per te:"
+  newActionItem: "Ti sono state assegnate le seguenti azioni:"
+  newMinutes: "Di seguito troverai l'ultimo verbale."
+  meeting: "Riunione"
+  links: "Collegamenti"
+  openSeries: "Apri serie"
+  openMinutes: "Apri verbale"
+  minutesSubject: "Verbali riunione"
+  discussedTopics: "Argomenti discussi"
+  skippedTopics: "Argomenti aperti"
+  none: "Nessuno"
+  AdminNewVersion:
+    subject: "Esiste una versione piu' recente"
+    body: |
+      Ciao Admin,
+
+      Sembra che tu stia eseguendo una versione obsoleta di 4Minitz.
+
+      4Minitz su: {$rootUrl}
+      ha una versione: {$myVersion}
+
+      La versione più recente disponibile è: {$masterVersion}'
+      Note di rilascio: {$urlReleaseNotes}
+      Si prega di considerare l'aggiornamento.
+
+      {$masterMessageText}
+
+      Questa mail è stata generata dal tuo backend di 4Minitz.
+      Puoi disabilitare il controllo degli aggiornamenti tramite settings.json: \"updateCheck\": false.
+
+      Divertiti!
+              Il tuo team di 4 Minitz.
+
+
+      ---
+      4Minitz è un open source gratuito sviluppato dal team di 4Minitz.
+      I sorgenti sono disponibili su {$url4Minitz}
+  AdminRegisterNewUser:
+    subject: "Il tuo nuovo account sul nostro server"
+    passwordNotSend: "    Contatta l'amministratore per la password."
+    passwordParagraph: |
+      La tua password: {$password}
+
+      Non dimenticare di cambiare la password dopo il primo accesso!
+    body: |
+      Ciao {$userLongName},
+
+      Benvenuto nella nostra WebAPP 4Minitz.
+      Ora puoi iniziare a mantenere i verbali di riunione in modo professionale.
+
+      Puoi accedere con 'Standard' (non LDAP!) login:
+         Il tuo host: {$rootURL}
+         Il tuo utente: {$userName}
+      {$passwordParagraph}
+
+      Buon divertimento!
+        Tuo Amministratore.
+
+      ---
+      4Minitz è un open source gratuito sviluppato dal team di 4Minitz.
+      I sorgenti sono disponibili su {$url4Minitz}
+  UserRoleChange:
+    subject: "Il tuo ruolo è cambiato per '{$meetingProject}:{$meetingName}'"
+    body: |
+      Ciao {$userName}
+
+      Il tuo ruolo è cambiato per la serie di riunioni '{$meetingProject}:{$meetingName}'
+      ({$meetingSeriesURL})
+
+         Il tuo vecchio ruolo era: {$roleOld}
+         Il tuo nuovo ruolo è : {$roleNew}
+         La modifica è stata eseguita da : {$moderatorName}
+
+      Per un elenco completo dei diritti per ogni ruolo sono presenti in:
+      {$urlRoleDocu}
+
+      Divertiti!
+        Il tuo amministratore.
+
+      ---
+      4Minitz è un open source gratuito sviluppato dal team di 4Minitz.
+      I sorgenti sono disponibili in {$url4Minitz}
+  VerifyEmailAddress:
+    subject: "[{$sitename}] Verifica il tuo indirizzo email"
+    body: |
+      Per verificare il tuo indirizzo email {$emailAddress} visita il seguente link:
+
+      {$urlWithoutHash}
+
+      Se non hai richiesto questa verifica, per favore ignora questa email.
+      Se credi che qualcosa non funzioni, contatta il tuo team amministratore.
+  ResetPassword:
+    subject: "[{$sitename}] Reimposta la tua password"
+    body: |
+      Per reimpostare la password per {$emailAddress} visitare il seguente link:
+
+      {$urlWithoutHash}
+
+      Se non hai richiesto di reimpostare la password, per favore ignora questa email.
+      Se credi che qualcosa non funzioni, contatta il tuo team amministratore.

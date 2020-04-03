@@ -1,0 +1,601 @@
+---
+_splitKey: ':'
+_locale: 'ro'
+Accounts:
+  usernamePlaceholder: "(min. 3 chars)"
+  nameDisplayName: "Nume, Companie"
+  namePlaceholder: "John Doe, Corp Fericit."
+  passwordPlaceholder: "min. 6 caractere (cifră, inferioară și superioară)"
+  passwordError: "min. 6 caractere (min. 1 cifră, 1 inferior, 1 superior)"
+Buttons:
+  add: "Adaugă"
+  back: "Du-te înapoi"
+  cancel: "Anulează"
+  change: "Schimbare"
+  close: "Pe aproape"
+  confirm: "Confirmaţi"
+  create: "Creează"
+  delete: "Şterge"
+  dismissAll: "Respinge toate"
+  edit: "Editează"
+  hide: "Ok, ascunde-te."
+  ok: "BINE"
+  register: "Înregistrare"
+  save: "Salvează"
+UserRoles:
+  roleModerator: "Moderator"
+  roleUploader: "Încărcător"
+  roleInvited: "Invitat"
+  roleInformed: "Informaţi"
+FlashMessages:
+  ok: "BINE"
+  error: "- Greşeală"
+  verifyEMailErr: "Eroare: E-mailul nu a putut fi verificat"
+  verifyEMailOK: "OK: E-mail este verificat acum"
+  passwordChangeOK: "Parola schimbată"
+  passwordResetOK: "Parola resetată cu Sucess"
+  profileEditOK: "Modificări de profil salvate"
+  minuteLinkErr: "Din păcate, minutul nu este conectat corect la seria părinte - vă rugăm să contactați administratorul de sistem."
+  agendaSentOK: "Agenda a fost trimisă cu succes către {$result} destinatari"
+  finalizeProgress1: "Finalizarea în curs de desfășurare"
+  finalizeProgress2: "Acest lucru poate dura câteva secunde..."
+  finalizeOK: "Acest proces-verbal de întâlnire a fost finalizat cu succes"
+Dialog:
+  ConfirmDelete:
+    title: "Confirmați ștergerea?"
+    body: "Sunteți sigur că ați șters acest lucru?"
+  ConfirmDeleteMeetingSeries:
+    questionMeetingSeries: "Chiar doriți să ștergeți seria de întâlniri"
+    questionMinutes: "Această serie conține {$minutesCount} minute de întâlnire (ultimele minute ale {$lastMinutesDate})."
+  ConfirmCreateNewMinutes:
+    title: "Confirmați crearea de procese-verbale noi"
+    content: "Chiar doriți să creați noi minute pentru seria de întâlniri \"{$project}: {$name}„?"
+  confirmDeleteAttachment: "Chiar doriți să ștergeți atașamentul:\n**{$name}**?"
+  confirmDeleteDetails: "Chiar doriți să ștergeți detaliile selectate ale elementului **{$subject}**?"
+  ConfirmDeleteItem:
+    allowed: "Chiar doriți să ștergeți {$type} **{$subject}**?"
+    notAllowed: "Nu este posibil să ștergeți {$type} **{$subject}** deoarece {$type} a fost creat într-un minut anterior."
+    questionActionItem: "Doriți să închideți elementul de acțiune în schimb?"
+    questionInfoItem: "Doriți să dezfixați elementul de informații lipicioase în schimb?"
+    typeActionItem: "element de acțiune"
+    typeInfoItem: "informaţii"
+    titleCloseActionItem: "Obiect de acţiune strânsă?"
+    titleUnpinInfoItem: "Dezlega elementul info?"
+    buttonCloseActionItem: "Închide elementul de acțiune"
+    buttonUnpinInfoItem: "Dezleagă elementul de informații"
+  ConfirmDeleteTopic:
+    allowed: "Chiar doriți să ștergeți subiectul **{$subject}**?"
+    notAllowed: "Nu este posibilă ștergerea subiectului **{$subject}** deoarece subiectul a fost creat în câteva minute anterioare."
+    close: "Doriți să închideți subiectul în schimb?"
+    closeWithActions: "Doriți să închideți subiectul împreună cu toate elementele de acțiune aferente în schimb?"
+  confirmLeaveMeetingSeries: "Chiar doriți să părăsiți seria de întâlniri:\n\n**{$project} / {$name}**\n\nVa trebui să întrebați un moderator dacă doriți să vă alăturați din nou după aceea."
+  ConfirmMinuteQualityAssurance:
+    title: "Finalizează procesul-verbal: Verificări de calitate"
+    button: "Continuaţi"
+    issues: "Există probleme de finalizare cu procesul-verbal!"
+    proceed: "Doriți să continuați cu finalizarea?"
+    warnNoTopics: "Minutele curente nu au subiecte"
+    warnNoParticipants: "Niciun participant nu este marcat ca prezent"
+    warnEditing: "Un subiect/articol/detaliu este încă editat"
+    warnNoTopicDiscussed: "Niciun subiect nu este marcat ca „discutat”"
+    warnTopicWithoutItems: "Cel puțin un subiect discutat nu are elemente"
+    warnActionItemWithoutResponsible: "Cel puțin un element de acțiune nu are nici un responsabil"
+    warnTopicNoNewContent: "Un subiect este verificat, dar nu are conținut nou"
+  ConfirmReOpenTopic:
+    title: "Re-deschide Subiect?"
+    body: "Chiar doriți să redeschideți subiectul deja închis **{$topicSubject}**?"
+    button: "Redeschide"
+  ConfirmSendAgenda:
+    body: "Chiar doriți să trimiteți ordinea de zi pentru acest minut întâlnire datat pe **{$minDate}**?\nAcesta a fost deja trimis pe {$agendaSentDate} la {$agendaSentTime}"
+    title: "Confirmați trimiterea ordinii de zi"
+    button: "Trimite agendă"
+  ConfirmDeleteMinutes:
+    really: "Chiar doriți să ștergeți acest minut de întâlnire datat pe **{$minutesDate}**?"
+    newTopics: "Acest lucru va elimina **{$newTopicsCount} subiecte**, care au fost create în acest minut."
+    closedTopicsAdditionally: "În plus, **{$closedTopicsCount} subiecte** vor fi deschise din nou, care au fost închise în acest minute."
+    closedTopics: "**{$closedTopicsCount} subiecte** vor fi deschise din nou, care au fost închise în acest minute."
+  ConfirmFinalizeMinutes:
+    title: "Confirmare finalizarea minutelor"
+    button: "Finalizeaza"
+    really: "Chiar vrei să finalizezi acest minut de întâlnire datat pe **{$minutesDate}**?"
+    sendActionItems: "Trimiteți elemente de acțiune"
+    sendMinutes: "Trimiteți elemente de informații"
+  LocaleSetting:
+    title: "Stabilește limba"
+    languageLocale: "Localizare limbă"
+    automatic: "Automat prin browser"
+    contributionHint1: "Greşeli de traducere sau limbă lipsă?"
+    contributionHint2: "Ajutați-ne să traducem 4Minitz!"
+  IsEditedHandling:
+    title: "Editează în ciuda editării existente"
+    confirmationDialogResetEdit: "Atenție: Acest document ist editat în prezent de {$name} din moment ce: {$date}"
+    confirmationDialogResetEditDetails: "Vă rugăm să faceți clic din nou pe detalii pentru a începe editarea."
+    button: "Editează oricum"
+  ConnectionInfo:
+    tooltip: |
+      Conexiune pierdută!
+        stare: {$status}
+        Reîncercați Contele: {$retryCount}
+        Reîncercați Timp: {$retryTime} sec.
+        Motivul: {$reason}
+        Click pentru a reconecta.
+    header: "Ați pierdut conexiunea la serverul 4Minitz."
+    body: "Dacă închideți browserul, datele nesalvate ar putea fi pierdute. Vă rugăm să contactați administratorul sever dacă această problemă persistă."
+    tryToReconnect: "Încercați să vă reconectați"
+  ConfirmGenerateProtocol:
+    title: "Confirmă generarea protocolului"
+    body: "Nu a fost nici un protocol generat pentru aceste minute. Doriți să descărcați în schimb o versiune HTML generată dinamic a acesteia?"
+    button: "Descarcă"
+  ConfirmTopicDelete:
+    title1: "Confirmați ștergerea subiectului"
+    title2: "Mark subiect ca discutat?"
+    button2: "Închide subiectul și acțiunile"
+    errortitle: "Nu se poate șterge subiectul"
+    errorcontent: "Nu este posibil să ștergeți acest subiect deoarece a fost creat în câteva minute anterioare. Subiectul selectat este deja închis și nu are elemente de acțiune deschise, deci nu va fi copiat în următoarele minute."
+  ItemDeleteError:
+    title: "Nu se poate șterge elementul"
+    body1: "Nu este posibil să ștergeți acest element deoarece a fost creat în câteva minute anterioare."
+    body2a: "Acest element de acțiune este deja închis,"
+    body2b: "Acest element de informații este deja ne-fixat"
+    body3: "astfel încât să nu fie copiat în următoarele minute"
+  ActionItemResponsibleError:
+    title: "Responsabil pentru elementul de acțiune"
+    body: |
+      Acesta nu este un responsabil valabil!
+
+      Vă rugăm să selectaţi un **utilizator existent** din meniul derulant** sau introduceţi o adresă de email valabilă**.
+  ConvertItemError:
+    title: "Nu se poate converti elementul"
+    body: "Nu este posibil să convertiți acest element deoarece a fost creat în câteva minute anterioare."
+About:
+  title: "Despre 4Minitz"
+  copyrightTeam: "de 4Minitz-Team"
+  licensedUnder: "Licențiat sub licența MIT"
+  licenseDependencies: "Licența dependențelor"
+  thanksContributors: "Mulțumim tuturor contribuitorilor noștri"
+  thanksTranslators: "Mulțumim tuturor traducătorilor noștri"
+  proudlySponsored: "Sponsorizat cu mândrie de"
+  specialThanks: "Mulțumiri speciale pentru aceste proiecte"
+  forkGitHub: "Furcul-ne pe GitHub"
+  ServerStatistics:
+    title: "Statisticile serverului"
+    rowNumUser: "Numărul de utilizatori (activi)"
+    rowNumMeetingSeries: "Numărul seriilor de întâlniri"
+    rowNumMeetingMinutes: "Numărul de minute de întâlnire"
+    rowNumAttachments: "Numărul de atașamente"
+    rowSizeAttachments: "Dimensiune atașamente"
+Item:
+  ariaLabel: "Adăugare/Editare element"
+  editItem: "Editează elementul"
+  editItemHint: "Editează acest element de acțiune/info"
+  deleteItem: "Șterge elementul"
+  deleteItemHint: "Ștergeți acest element de acțiune/informații"
+  addItemModal: "Adaugă {$type} la {$topic}"
+  editItemModal: "Editează {$type} din {$topic}"
+  editItemModelTypeInfoItem: "Informaţii"
+  editItemModelTypeActionItem: "Element de acțiune"
+  addInfo: "Adaugă info element"
+  addInfoHint: "Adaugă informații la subiect"
+  action: "Element de acțiune"
+  addAction: "Adaugă element de acțiune"
+  addActionHint: "Adaugă element de acțiune la subiect"
+  convertToAction: "Convertește la acțiune"
+  convertToInfo: "Convertește la Info"
+  convertDisabled: "Conversie dezactivată: element există în întâlnirea anterioară"
+  subject: "Subiect (obligatoriu)"
+  details: "Detaliile"
+  addDetails: "Adaugă detalii"
+  priority: "Prioritate"
+  Priorities:
+    high: "1 - Mare"
+    medium: "3 - Mediu"
+    low: "5 - Scăzut"
+  due: "- Datorita"
+  dueNone: "Nici unul"
+  detailPlaceholder: "Puteți utiliza Markdown pentru a edita. Apăsați Ctrl+Enter sau Tab pentru a pleca."
+  markdownHint: "Ajutor pentru Sintaxa Markdown"
+  setPin: "Set Fixat"
+  setPinHint: "Stabilește ca element de informații fixat"
+  unsetPin: "Unset Fixat"
+  unsetPinHint: "Stabilește ca element de informații care nu sunt fixate"
+  done: "S-a făcut"
+  pinned: "Fixat"
+  Error:
+    subject: "Vă rugăm să introduceți un subiect valid"
+  Filter:
+    title: "Filtre"
+    usageHint: "Utilizare filtru"
+    info: "Info Articole"
+    action: "Elemente de acțiune"
+    open: "Deschidere elemente de acțiune"
+    closed: "Elemente de acțiune închise"
+    yourAction: "Elementele dvs. de acțiune"
+    placeholder: "Filtrează"
+    matchCase: "Caz"
+    matchCaseHint: "Cazul meciului"
+    matchCaseLong: "Cazul meciului"
+    Usage:
+      body: "Puteți utiliza mai multe cuvinte cheie pentru a filtra elementele listate. Toate cuvintele cheie pot fi combinate, care filtrează elementele care corespund tuturor parametrilor de căutare date."
+      keyword: "Cuvânt cheie"
+      format: "Format"
+      values: "Valori"
+      eg: "ex."
+  myActionItems: "Elementele mele de acțiune"
+Topic:
+  title: "Subiect"
+  new: "Nouă"
+  add: "Adaugă subiect"
+  addLong: "Adaugă subiect..."
+  addShort: "Subiect"
+  addHint: "Adaugă subiect nou în partea de sus a listei [Ctrl+Alt+T]"
+  quickAdd: "ADAUGĂ SUBIECT (la sfârșitul listei)"
+  edit: "Editare subiect"
+  save: "Salvează subiectul"
+  show: "Arată subiectul"
+  subject: "Subiectul subiectului (obligatoriu)"
+  responsible: "Responsabil"
+  completed: "Terminat"
+  completedHint: "Acest subiect este în cele din urmă finalizat. Deci, nu va fi propagat la următoarea întâlnire."
+  setRecurring: "Set recurente"
+  setRecurringHint: "Stabilește ca subiect recurent"
+  unsetRecurring: "Dezsetată recurente"
+  unsetRecurringHint: "Stabilește ca subiect care nu se repetă"
+  setSkip: "Setați omitere"
+  setSkipHint: "Stabilește ca subiect omis"
+  unsetSkip: "Dezsetează omitere"
+  unsetSkipHint: "Stabilește ca subiect neomis"
+  history: "Afișează istoricul"
+  historyHint: "Arată starea completă finalizată a acestui subiect"
+  delete: "Șterge subiectul"
+  reopen: "Redeschide subiectul"
+  reopenHint: "Redeschide subiectul"
+  placeholder: "Adaugă info element. Adaugă @username pentru a adăuga un element de acțiune. Apăsați Enter pentru a adăuga detalii. Apăsați Ctrl+Enter sau Tab pentru a trimite."
+  childOf: "Subiectul seriei Meeting:"
+  historyTitle: "Acest subiect a fost"
+  createdOn: "creat pe:"
+  lastUpdate: "Ultima actualizare la:"
+  finalizedOn: "finalizate la minute de la:"
+  doneBy: "(de {$user})"
+  notFoundTitle: "Ne pare rău, Subiect nu a fost găsit."
+  notFoundReasons: "Reasons may be...<br><ul><li>The topic was never finalized (it only lives in an unfinalized minute)</li><li>The topic was deleted</li><li>You do not have access rights to this topic (anymore)</li></ul>"
+  illegalAction: "A încercat să apeleze la un eveniment ilegal în modul doar în citire"
+  addDetails: "Adaugă detalii"
+  addDetailsHint: "Adaugă detalii la element"
+  hideClosed: "Ascunde închis"
+  hideClosedHint: "Ascunde temporar subiecte discutate/omise din listă"
+  hideClosedLong: "Ascunde subiecte închise"
+  collapse: "Colaps"
+  collapseLong: "Restrânge subiecte"
+  expand: "Extinde"
+  expandLong: "Extinde subiecte"
+  Error:
+    subject: "Vă rugăm să introduceți un subiect valid"
+  Filter:
+    completed: "Subiecte finalizate"
+    uncompleted: "Subiecte necompletate"
+    yourTopic: "Subiectele tale"
+  TooltipCreated:
+    date: "Creat {$dateCreateStr}"
+    user: "de {$userCreate}"
+  TooltipUpdated:
+    date: "Actualizat {$dateUpdStr}"
+    user: "de {$userUpd}"
+Minutes:
+  create: "Creează proces-verbal nou"
+  date: "Întâlnire"
+  dateOn: "pe"
+  title: "Minute pentru"
+  finalized: "Finalizat"
+  finalizedHint: "Procesele sunt finalizate"
+  notFinalized: "Nu a fost finalizat"
+  notFinalizedHint: "Procesele nu sunt finalizate"
+  attachments: "Ataşamente"
+  attachmentsHint: "Minutele au atașamente"
+  previous: "Precedent:"
+  next: "Urmatorul:"
+  history: "Istorie"
+  unfinalizeHint: "Click pentru a dezfinaliza minutele"
+  print: "Procesele de imprimare"
+  finalize: "Finalizează procesul-verbal"
+  finalizeHint: "Click pentru a finaliza minutele"
+  printHint: "Procesele de imprimare"
+  downloadHint: "Descărcați procesul-verbal ca fișier"
+  agenda: "Agenda"
+  sendAgenda: "Trimite agendă"
+  delete: "Șterge procesul-verbal"
+  GlobalNotes:
+    pin: "Stabilește ca notă globală fixată"
+    unpin: "Stabilește ca notă globală nefixată"
+    title: "Nota Globală"
+    placeholder: "Note globale pentru aceste minute. Faceți clic pe PIN-ul pentru a propaga notele la următoarele minute."
+  Upload:
+    button: "Încarcă..."
+    uploading: "Se încarcă"
+    start: "Începe încărcarea"
+    continue: "Continuă încărcarea"
+    pause: "Pauză încărcare"
+    abort: "Abandonează Încărcarea"
+    error: "Eroare în timpul încărcării"
+  version: "Versiune"
+  versionTag: "v"
+  Participants:
+    title: "Participanţi"
+    invited: "Invitat"
+    solo: "1 Participant"
+    additional: "Participanți suplimentari"
+    additionalSolo: "1 Participant suplimentar"
+    placeholder: "Participanți suplimentari (separați cu „;”). Adresele poștale vor primi minute."
+    editHint: "Editați utilizatorii invitați."
+    markNone: "Nu marcaţi niciuna."
+    markAll: "Marchează toate"
+    watchingHint: "Acest utilizator urmărește (de la distanță)"
+    informed: "Utilizatori informați"
+    informedSolo: "1 Utilizator informat"
+    present: "Participanți prezenți"
+    absent: "Absentă"
+    none: "Nici unul."
+MeetingSeries:
+  title: "Seria întâlnirilor"
+  team: "Echipă/Proiect"
+  new: "Noua serie de întâlniri"
+  leave: "Părăseşte seria Întâlniri"
+  leaveButton: "Plecaţi"
+  moderator: "Eşti moderator."
+  lastMinute: "Ultimul minut:"
+  Search:
+    placeholder: "Căutare pentru Meeting Series"
+    noResults: "Niciun rezultat pentru această intrare..."
+  Edit:
+    Error:
+      meetingName: "Introduceţi un nume valabil pentru seria de întâlniri"
+      teamName: "Vă rugăm să introduceți un nume de proiect valid"
+      notRegistered: "Acesta nu este un nume de utilizator înregistrat"
+      alreadyInList: "Acest nume de utilizator este deja în listă"
+    teamName: "Echipa/ Denumirea proiectului"
+    meetingName: "Numele întâlnirii"
+    title: "Editează seria întâlnirilor"
+    base: "Configurare bază"
+    editedBy: "Editat de {$user} (la {$date})"
+    invited: "Utilizatori invitați & informați"
+    placeholderUsers: "Adaugă utilizatori la utilizatorii invitați..."
+    notifyRoleChange: "Notificați participanții cu privire la schimbarea rolului"
+    labels: "Etichete"
+    save: "Salvează seria Întâlniri"
+    confirmDelete: "Confirmați ștergerea"
+  Labels:
+    Error:
+      name: "Vă rugăm să introduceți un nume de etichetă valabil"
+      hexValue: "Valoare nevalidă a culorii hexagonale"
+    add: "Adaugă etichetă nouă"
+    new: "Noul Label"
+    select: "Selectează..."
+  Tab:
+    minutes: "Minute"
+    topics: "Subiecte"
+    items: "Obiecte"
+Profile:
+  title: "Editare profil pentru"
+  userName: "Nume utilizator"
+  longName: "Nume lung"
+  email: "Poşta electronică"
+  password: "Parola"
+  passwordRepeat: "Repetare parolă"
+  ChangePassword:
+    title: "Schimbă parola pentru"
+    oldPassword: "Parolă veche"
+    wrongOldPassword: "Vă rugăm să introduceți parola veche validă"
+    newPassword: "Parolă nouă"
+    newPasswordRepeat: "Repetare parolă nouă"
+  Error:
+    name: "Vă rugăm să introduceţi un nume de utilizator valid"
+    longName: "Vă rugăm să introduceți un nume lung valabil"
+    email: "Vă rugăm să introduceți o adresă de e-mail validă"
+    password: "Vă rugăm să introduceți o parolă validă"
+  WarningEMailChange:
+    title: "Confirmați modificarea corespondenței utilizatorului"
+    body: "Sunteți pe cale să vă schimbați adresa de e-mail verificată. Veți fi deconectat și va trebui să verificați noua adresă de e-mail înainte de a putea continua."
+    button: "Conectați-vă + Re-Verificați"
+Admin:
+  users: "Utilizatori"
+  messages: "Mesaje"
+  Register:
+    label: "Înregistrare utilizator nou"
+    hint: "Sugestie: Acest lucru va înregistra un utilizator pentru autentificare standard (Nu pentru autentificare LDAP!)."
+    button: "Înregistrare utilizator nou..."
+    sendMail: "Trimite E-mail unui nou utilizator"
+    includePassword: "Include parola în E-mail"
+    success: "Utilizator nou inregistrat: {$user}"
+  Message:
+    title: "Transmiterea mesajelor de la administrator"
+    newMessage: "Mesaj nou pentru toți utilizatorii"
+    broadcast: "Transmisie"
+    date: "Întâlnire"
+    message: "Mesaj"
+    dismissed: "- Liber"
+    dismissingUsers: "#Dismissing Utilizatori: {$number}\n"
+    edit: "Editează"
+  Users:
+    filterUsers: "Filtrare utilizatori"
+    showInactive: "Arată inactiv"
+    online: "Online"
+    onlineHint: "Se afișează numai utilizatorii activi în prezent pe un traseu minutesedit"
+    id: "ID"
+    editProfile: "Editează profilul utilizatorului"
+    countSingle: "Afisare {$visible} din {$all} utilizator. Utilizați filtrul pentru a arăta altora."
+    count: "Afisare {$visible} din {$all} utilizatori. Utilizați filtrul pentru a arăta altora."
+    Type:
+      hint: "Utilizator LDAP sau Utilizator Standard"
+      column: "L/S"
+      ldap: "ML"
+      standard: "S"
+    State:
+      hint: "Comută starea activă/inactivă. Utilizatorii inactivi nu se pot conecta."
+      column: "In/Activ"
+      active: "Activ"
+      inactive: "Inactiv"
+      toggle: "Comută"
+Login:
+  Error:
+    title: "Eroare de conectare"
+    username: "Vă rugăm să introduceți numele de utilizator"
+    password: "Vă rugăm să introduceți parola"
+  signIn: "Autentificare"
+  ldap: "IDAP"
+  standard: "Standard"
+  demoHint: "Sugestie: Modul Demo Active<br>Vă puteți conecta cu numele de utilizator <b>demo</b> și parola <b>demo</b>. Sau vă puteți înregistra propriul cont făcând clic pe linkul „Înregistrare” de mai jos."
+  Login4MinitzInfo:
+    header: "4Minitz: Procesele de întâlnire în colaborare."
+    subheader: "● Pregătiți Agenda ● Procesul-verbal al documentelor ● Urmăriți subiectele ●"
+    abstract: |
+      <p>Fiecare utilizator invitat și conectat poate viziona modificări ale minutelor curente ale întâlnirii în timp real.</p>
+      Am creat un software open source gratuit 4Minitz, deoarece credem cu tărie că
+      informații sensibile cum ar fi minutele de întâlnire nu ar trebui să fie găzduite în cloud.
+      În schimb doriți să găzduiți-l pe propria infrastructură, unde puteți defini
+      nivelul de securitate și siguranță de care aveți nevoie.
+    prepareAgendaHeading: "Pregătiți ordinea de zi"
+    prepareAgendaDetails: |
+      <li>Create your meeting series</li>
+      <li>Invite other users</li>
+      <li>Specify moderators and uploaders</li>
+      <li>Fill agenda with topics</li>
+      <li>Mark recurring topics for standard agenda</li>
+      <li>Send agenda to invited users</li>
+    documentMinutesHeading: "Procesul-verbal al documentului"
+    documentMinutesDetails: |
+      <li>Mark present participants</li>
+      <li>Add action items with responsibles to topics</li>
+      <li>Add information items to topics</li>
+      <li>Add labels like 'Decision' to items</li>
+      <li>Upload binary file attachments</li>
+      <li>Send minutes &amp; action items via EMail</li>
+    trackTopicsHeading: "Urmăriți subiecte"
+    trackTopicsDetails: |
+      <li>Open action items will show up next time</li>
+      <li>Non-closed topics will show up next time</li>
+      <li>Search list of all ever discussed topics</li>
+      <li>Enrich topics with info items on multiple meetings</li>
+      <li>Find topics with labels (e.g. all Decisions)</li>
+      <li>Find items by fulltext search</li>
+  Footer:
+    withLove: "Codificat cu ❤ de către"
+    theTeam: "Echipa WebApp"
+Navigation:
+  help: "- Ajutor"
+  about: "Cam aşa ceva"
+  adminTasks: "Sarcini admin"
+  editProfile: "Editează profilul"
+  changePassword: "Schimbă parola"
+  signOut: "Inscrie-te"
+  toggleNavigation: "Comută navigarea"
+  meetings: "Întâlniri"
+  processing: "Procesarea conținutului tău..."
+  setLanguageForUser: "Stabilește limba"
+  setLanguageLogin: "Limbajul"
+QuickHelp:
+  title: "Ajutor rapid"
+  meetingSeries: "<p>Aici puteți crea noi minute pentru seria curentă de întâlniri sau faceți clic pe un link de dată al minutelor existente.</p>"
+  meetingSeriesList: "<p>Cu 4Minitz puteți crea minute pentru întâlniri.</p><p>Mai întâi creați o nouă serie de întâlniri și invitați alți utilizatori.<br>Apoi creați minute de întâlnire pe mai multe date pentru seria de întâlniri.</p>"
+  minutes: "<p>Add topics to prepare your meeting agenda<br>During the meeting mark a topic with the checkbox to make clear you have discussed about it.<br>If the topic...<br>&nbsp;&nbsp; - is not marked as discussed or<br>&nbsp;&nbsp; - is set as recurring topic or<br>&nbsp;&nbsp; - contains un-done action items<br>... the topic will be presented in the next meeting again.</p><p>Click 'Finalize Minutes' to send the minutes to the invited users and the action items to their responsibles.</p>"
+  upload: "<ul><li>Here you can upload files like e.g., presentations, PDFs or whiteboard photos</li><li>You need the role 'Uploader' or 'Moderator' to do so</li><li>Uploading or deletion is possible until minutes are finalized</li><li>Pro Tip: Click the above 'Upload' button on your tablet or smart phone!</li></ul>"
+Mail:
+  greeting: "Bună"
+  newAgenda: "Avem o nouă agendă de întâlnire pentru tine:"
+  newActionItem: "Ați fost atribuit următoarelor elemente de acțiune:"
+  newMinutes: "Mai jos veți găsi cele mai recente minute de întâlnire."
+  meeting: "Întâlnire"
+  links: "Link-uri"
+  openSeries: "Serie deschisă"
+  openMinutes: "Minute deschise"
+  minutesSubject: "Procesul-verbal de întâlnire"
+  discussedTopics: "Subiecte discutate"
+  skippedTopics: "Subiecte deschise"
+  none: "Nici unul"
+  AdminNewVersion:
+    subject: "Există o versiune mai nouă"
+    body: |
+      Hello Admin,
+
+      It seems you are running an outdated version of 4Minitz.
+
+      Your 4Minitz instance on: {$rootUrl}
+      has version: {$myVersion}
+
+      Newest version available is: {$masterVersion}'
+      Release notes: {$urlReleaseNotes}
+      Please consider to update.
+
+      {$masterMessageText}
+
+      This mail was generated by your 4Minitz backend.
+      You can disable the update check via settings.json: \"updateCheck\": false.
+
+      Have fun!
+              Your 4Minitz team.
+
+
+      ---
+      4Minitz is free open source developed by the 4Minitz team.
+      Source is available at {$url4Minitz}
+  AdminRegisterNewUser:
+    subject: "Noul dvs. cont pe serverul nostru"
+    passwordNotSend: "    Contactați admin pentru parolă."
+    passwordParagraph: |
+      Parola dvs.: {$password}
+
+      Nu uitați să vă schimbați parola după prima conectare!
+    body: |
+      Bună ziua {$userLongName},
+
+      Bine ați venit la 4Minitz WebApp.
+      Acum puteți începe să participați la păstrarea minutelor profesionale de întâlnire.
+
+      Vă puteți conecta cu 'Standard' (nu LDAP!) login la:
+         gazda ta: {$rootURL}
+         Utilizatorul tau: {$userName}
+      {$passwordParagraph}
+
+      Distreaza-te!
+        Administratorul dumneavoastră.
+
+      —
+      4Minitz este open source gratuit dezvoltat de echipa 4Minitz. Sursa
+      este disponibilă la {$url4Minitz}
+  UserRoleChange:
+    subject: "Rolul tău s-a schimbat pentru '{$meetingProject}:{$meetingName}'"
+    body: |
+      Hello {$userName}
+
+      Your role has changed for meeting series '{$meetingProject}:{$meetingName}'
+      ({$meetingSeriesURL})
+
+         Your old role was           : {$roleOld}
+         Your new role is            : {$roleNew}
+         The change was performed by : {$moderatorName}
+
+      For a comprehensive list of rights for each role see:
+      {$urlRoleDocu}
+
+      Have fun!
+        Your Admin.
+
+      ---
+      4Minitz is free open source developed by the 4Minitz team.
+      Source is available at {$url4Minitz}
+  VerifyEmailAddress:
+    subject: "[{$sitename}] Verificați adresa dvs. de e-mail"
+    body: |
+      Pentru a verifica adresa de email {$emailAddress} vizitează următorul link:
+
+      {$urlWithoutHash}
+
+      Dacă nu ați solicitat această verificare, vă rugăm să ignorați acest e-mail.
+      Dacă simțiți că ceva nu este în regulă, vă rugăm să contactați echipa de administrare.
+  ResetPassword:
+    subject: "[{$sitename}] Resetați parola"
+    body: |
+      Pentru a reseta parola pentru {$emailAddress} vizitează următorul link:
+
+      {$urlWithoutHash}
+
+      Dacă nu ați solicitat resetarea parolei, ignorați acest e-mail.
+      Dacă simțiți că ceva nu este în regulă, vă rugăm să contactați echipa de administrare.

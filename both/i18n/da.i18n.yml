@@ -1,0 +1,601 @@
+---
+_splitKey: ':'
+_locale: 'da'
+Accounts:
+  usernamePlaceholder: "(min. 3 tegn)"
+  nameDisplayName: "Navn, virksomhed"
+  namePlaceholder: "John Doe, Happy Corp."
+  passwordPlaceholder: "min. 6 tegn (cifre, små og store bogstaver)"
+  passwordError: "min. 6 tegn (min. 1 ciffer, 1 lille og 1 stort bogstav)"
+Buttons:
+  add: "Tilføj"
+  back: "Tilbage"
+  cancel: "Annullér"
+  change: "Change"
+  close: "Luk"
+  confirm: "Bekræft"
+  create: "Opret"
+  delete: "Slet"
+  dismissAll: "Afvist alle"
+  edit: "Redigér"
+  hide: "Ok, skjul"
+  ok: "Ok"
+  register: "Tilmelding"
+  save: "Gem"
+UserRoles:
+  roleModerator: "Moderator"
+  roleUploader: "Uploader"
+  roleInvited: "Inviteret"
+  roleInformed: "Informeret"
+FlashMessages:
+  ok: "Ok"
+  error: "Fejl"
+  verifyEMailErr: "Fejl: E-mail kunne ikke verificeres"
+  verifyEMailOK: "OK: E-mail er verificeret nu"
+  passwordChangeOK: "Adgangskode er ændret"
+  passwordResetOK: "Adgangskoden blev nulstillet succesfuldt"
+  profileEditOK: "Profilændringer er gemt"
+  minuteLinkErr: "Desværre er minuttet ikke linket til dens overordnede serie korrekt-kontakt systemadministratoren."
+  agendaSentOK: "Dagsordenen blev sendt til {$result} modtagere"
+  finalizeProgress1: "Finalisér i gang"
+  finalizeProgress2: "Det kan tage et par sekunder ..."
+  finalizeOK: "Dette mødeminutter er afsluttet."
+Dialog:
+  ConfirmDelete:
+    title: "Bekræft sletning?"
+    body: "Er du sikker på, at du vil slette dette?"
+  ConfirmDeleteMeetingSeries:
+    questionMeetingSeries: "Vil du virkelig slette mødeserien"
+    questionMinutes: "Denne serie indeholder {$minutesCount} mødeminutter (sidste minutter af {$lastMinutesDate})."
+  ConfirmCreateNewMinutes:
+    title: "Bekræft oprettelse af ny minutter"
+    content: "Vil du virkelig oprette nye minutter til møderserien \"{$project}: {$name}\"?"
+  confirmDeleteAttachment: "Vil du virkelig slette vedhæftningen:\n**{$name}**?"
+  confirmDeleteDetails: "Vil du virkelig slette de valgte detaljer for elementet **{$subject}**?"
+  ConfirmDeleteItem:
+    allowed: "Er du sikker på, at du vil slette {$type} **{$subject}**?"
+    notAllowed: "Det er ikke muligt at slette {$type} **{$subject}**, fordi {$type} er oprettet i en tidligere protokol."
+    questionActionItem: "Vil du lukke handlingselementet i stedet for?"
+    questionInfoItem: "Vil du fjerne det klistrede informationselement i stedet for?"
+    typeActionItem: "handlingspunkt"
+    typeInfoItem: "oplysninger"
+    titleCloseActionItem: "Luk handlingspunkt?"
+    titleUnpinInfoItem: "Frigør informationselement?"
+    buttonCloseActionItem: "Luk handlingspunkt"
+    buttonUnpinInfoItem: "Frigør oplysninger om oplysninger"
+  ConfirmDeleteTopic:
+    allowed: "Vil du virkelig slette emnet **{$subject}**?"
+    notAllowed: "Det er ikke muligt at slette emnet **{$subject}**, fordi emnet er oprettet i et tidligere minut."
+    close: "Vil du lukke emnet i stedet?"
+    closeWithActions: "Vil du lukke emnet sammen med alle relaterede handlingselementer i stedet for?"
+  confirmLeaveMeetingSeries: "Vil du virkelig forlade mødeserien:\n\n**{$project} / {$name}**\n\nDu bliver nødt til at spørge en moderator, hvis du vil deltage igen bagefter."
+  ConfirmMinuteQualityAssurance:
+    title: "Finalisér minutter: Kvalitetskontroller"
+    button: "Fortsæt"
+    issues: "Der er finalisér problemer med dine minutter!"
+    proceed: "Vil du fortsætte med finaliseringsarbejde?"
+    warnNoTopics: "De aktuelle minutter har ingen emner"
+    warnNoParticipants: "Ingen deltager er markeret som nuværende"
+    warnEditing: "En topic/item/detail er stadig redigeret"
+    warnNoTopicDiscussed: "Intet emne er markeret som 'diskuteret'"
+    warnTopicWithoutItems: "Mindst ét diskuterede emne har ingen elementer"
+    warnActionItemWithoutResponsible: "Mindst ét handlingselement har ikke nogen ansvarlig"
+    warnTopicNoNewContent: "Et emne er markeret, men har intet nyt indhold"
+  ConfirmReOpenTopic:
+    title: "Genåbne Topic?"
+    body: "Vil du virkelig genåbne det allerede lukkede emne **{$topicSubject}**?"
+    button: "Genåbn"
+  ConfirmSendAgenda:
+    body: "Vil du virkelig gerne have sendt dagsordenen for dette møde minut dateret på **{$minDate}**?\nDet blev allerede sendt på {$agendaSentDate} ved {$agendaSentTime}"
+    title: "Bekræft afsendelse af dagsorden"
+    button: "Send dagsorden"
+  ConfirmDeleteMinutes:
+    really: "Vil du virkelig slette dette møde i et minut, der er dateret på **{$minutesDate}**?"
+    newTopics: "Dette vil fjerne **{$newTopicsCount} emner**, som var oprettet inden for dette mødereferat."
+    closedTopicsAdditionally: "Yderligere **{$closedTopicsCount} emner** vil blive åbnet igen, som var lukket inden for disse mødereferater."
+    closedTopics: "**{$closedTopicsCount} emner** vil blive åbnet igen, som var lukket inden for disse mødereferater."
+  ConfirmFinalizeMinutes:
+    title: "Bekræft Finalisér minutter"
+    button: "Afslut"
+    really: "Vil du virkelig afslutte dette møde i et minut, der er dateret på **{$minutesDate}**?"
+    sendActionItems: "Send handlingselementer"
+    sendMinutes: "Send informationselementer"
+  LocaleSetting:
+    title: "Angiv sprog"
+    languageLocale: "Sprogkonvention for sprog"
+    automatic: "Automatisk via browser"
+    contributionHint1: "Oversættelsesfejl eller manglende sprog?"
+    contributionHint2: "Hjælp os med at oversætte 4Minitz!"
+  IsEditedHandling:
+    title: "Redigér til trods for eksisterende redigering"
+    confirmationDialogResetEdit: "Advarsel: Dette dokument er i øjeblikket redigeret af {$name} siden: {$date}"
+    confirmationDialogResetEditDetails: "Klik på detaljerede oplysninger igen for at begynde at redigere."
+    button: "Redigér alligevel"
+  ConnectionInfo:
+    tooltip: |
+      Forbindelsen er tabt!
+        Status: {$status}
+        Retry Count: {$retryCount}
+        Retry Time: {$retryTime} sek.
+        Årsag: {$reason}
+        Klik for at oprette forbindelse igen.
+    header: "Du har mistet forbindelsen til 4Minitz-serveren."
+    body: "Hvis du lukker din browser, kan data, der ikke er gemt, gå tabt. Kontakt administratoren af administratoren, hvis problemet opstår igen."
+    tryToReconnect: "Prøv at Reconnect"
+  ConfirmGenerateProtocol:
+    title: "Bekræft generering af protokol"
+    body: "Der er ikke genereret nogen protokol for disse minutter. Vil du downloade en dynamisk genereret HTML-version af den i stedet for?"
+    button: "Download"
+  ConfirmTopicDelete:
+    title1: "Bekræft sletning af emne"
+    title2: "Marker emnet som aftalt?"
+    button2: "Luk emne og handlinger"
+    errortitle: "Kan ikke slette emne"
+    errorcontent: "Det er ikke muligt at slette dette emne, fordi det er oprettet i et tidligere minut. Det valgte emne er allerede lukket og har ingen åbne handlingselementer, så den vil ikke blive kopieret til følgende minutter."
+  ItemDeleteError:
+    title: "Kan ikke slette element"
+    body1: "Det er ikke muligt at slette dette element, fordi det er oprettet i et tidligere minut."
+    body2a: "Handlingselementet er allerede lukket,"
+    body2b: "Dette informationselement er allerede un-fastgjort"
+    body3: "Så det ikke vil blive kopieret til følgende minutter"
+  ActionItemResponsibleError:
+    title: "Ugyldig ansvarlig for handlingspunkt"
+    body: |
+      Dette er ikke en gyldig ansvarlig.
+
+      Vælg en ** eksisterende bruger * * fra oversigten, eller angiv en gyldig e-mail-adresse * *.
+  ConvertItemError:
+    title: "Kan ikke konvertere vare"
+    body: "Det er ikke muligt at konvertere dette element, fordi det er oprettet i et tidligere minut."
+About:
+  title: "Om 4Minitz"
+  copyrightTeam: "af 4Minitz Teamet"
+  licensedUnder: "Licenseret under MIT-licens"
+  licenseDependencies: "Licens af afhængigheder"
+  thanksContributors: "Tak til alle vores bidragydere"
+  thanksTranslators: "Tak til alle vores oversættere"
+  proudlySponsored: "Proudly Sponsored af"
+  specialThanks: "Speciel tak til disse projekter"
+  forkGitHub: "Fork os på GitHub"
+  ServerStatistics:
+    title: "Serverstatistik"
+    rowNumUser: "Antal brugere (aktive)"
+    rowNumMeetingSeries: "Antal mødeserier"
+    rowNumMeetingMinutes: "Antal mødeminutter"
+    rowNumAttachments: "Antal vedhæftninger"
+    rowSizeAttachments: "Vedhæftningsstørrelse"
+Item:
+  ariaLabel: "Tilføj / redigér element"
+  editItem: "Redigér element"
+  editItemHint: "Redigér denne handling / oplysningselement"
+  deleteItem: "Slet element"
+  deleteItemHint: "Slet denne handling / oplysningselement"
+  addItemModal: "Tilføj {$type} til {$topic}"
+  editItemModal: "Redigér {$type} af {$topic}"
+  editItemModelTypeInfoItem: "Information"
+  editItemModelTypeActionItem: "Handlingspunkt"
+  addInfo: "Tilføj infoelement"
+  addInfoHint: "Tilføj informationselement til emne"
+  action: "Handlingspunkt"
+  addAction: "Tilføj handlingspunkt"
+  addActionHint: "Tilføj handlingspunkt til emne"
+  convertToAction: "Konvertér til handling"
+  convertToInfo: "Konvertér til info"
+  convertDisabled: "Konvertering er deaktiveret: Elementet findes i tidligere møde"
+  subject: "Emne (obligatorisk)"
+  details: "Detaljer"
+  addDetails: "Tilføj detaljer"
+  priority: "Prioritet"
+  Priorities:
+    high: "1 - Høj"
+    medium: "3 - Medium"
+    low: "5 - Lav"
+  due: "Tidsfrist"
+  dueNone: "ingen"
+  detailPlaceholder: "Du kan bruge Markdown til at redigere. Tryk på Ctrl + Enter eller tabulatortasten for at forlade."
+  markdownHint: "Hjælp til Markdown-syntaks"
+  setPin: "Sæt fastgjort"
+  setPinHint: "Angiv som fastgjort informationselement"
+  unsetPin: "Ikke-set fastgjort"
+  unsetPinHint: "Angiv som ikke-fastgjort informationselement"
+  done: "udført"
+  pinned: "fastgjort"
+  Error:
+    subject: "Angiv et gyldigt emne"
+  Filter:
+    title: "Filtre"
+    usageHint: "Filtrér forbrug"
+    info: "Informationselementer"
+    action: "Handlingspunkter"
+    open: "Åbne handlingspunkter"
+    closed: "Lukkede handlingspunkter"
+    yourAction: "Dine handlingspunkter"
+    placeholder: "Filtrér"
+    matchCase: "Sag"
+    matchCaseHint: "Match sag"
+    matchCaseLong: "Match sag"
+    Usage:
+      body: "Du kan bruge flere nøgleord til at filtrere de viste elementer. Alle nøgleord kan kombineres, hvilket filtrerer de elementer, der matcher alle givne søgeparametre."
+      keyword: "Nøgleord"
+      format: "Format"
+      values: "Værdier"
+      eg: "f.eks."
+  myActionItems: "Mine handlingspunkter"
+Topic:
+  title: "Emne"
+  new: "Ny"
+  add: "Tilføj emne"
+  addLong: "Tilføj emne ..."
+  addShort: "Emne"
+  addHint: "Tilføj nyt emne til toppen af liste [ Ctrl + Alt + T ]"
+  quickAdd: "ADD TOPIC (til slutningen af listen)"
+  edit: "Redigér emne"
+  save: "Gem emne"
+  show: "Vis emne"
+  subject: "Emne for emne (obligatorisk)"
+  responsible: "Ansvarlig"
+  completed: "Udført"
+  completedHint: "Dette emne er endeligt afsluttet. Så det vil ikke blive overført til det næste møde."
+  setRecurring: "Angiv gentagen"
+  setRecurringHint: "Angiv som tilbagevendende emne"
+  unsetRecurring: "Ophæv gentagelsesfunktion"
+  unsetRecurringHint: "Angiv som ikke-tilbagevendende emne"
+  setSkip: "Sæt Spring over"
+  setSkipHint: "Angiv som sprunget over emne"
+  unsetSkip: "Uset Spring over"
+  unsetSkipHint: "Angiv som ikke-sprunget emne"
+  history: "Vis historik"
+  historyHint: "Vis fuldstændig færdiggjort tilstand for dette emne"
+  delete: "Slet emne"
+  reopen: "Åbn emne igen"
+  reopenHint: "Åbn emne igen"
+  placeholder: "Tilføj infoelement. Tilføj @brugernavn for at tilføje et handlingspunkt. Tryk på Enter for at tilføje detaljer. Tryk på Ctrl + Enter eller tabulatortasten for at sende."
+  childOf: "Emne for mødeserie:"
+  historyTitle: "Dette emne var"
+  createdOn: "oprettet den:"
+  lastUpdate: "sidst opdateret:"
+  finalizedOn: "færdiggjort på minutter fra:"
+  doneBy: "(med {$user})"
+  notFoundTitle: "Beklager, Topic ikke fundet."
+  notFoundReasons: "Reasons kan være ...<br><ul><li>Emnet blev aldrig afsluttet (det gælder kun i et uafsluttet minut)</li><li>. Emnet er slettet</li><li>Du har ikke adgangsrettigheder til dette emne (længere)</li></ul>"
+  illegalAction: "Prøvede at kalde en ulovlig begivenhed i skrivebeskyttet tilstand"
+  addDetails: "Tilføj detaljer"
+  addDetailsHint: "Tilføj detaljer til element"
+  hideClosed: "Skjul lukket"
+  hideClosedHint: "Midlertidigt gem diskuterede / oversprunde emner fra liste"
+  hideClosedLong: "Skjul lukkede emner"
+  collapse: "Skjul"
+  collapseLong: "Skjul emner"
+  expand: "Udvid"
+  expandLong: "Udvid emner"
+  Error:
+    subject: "Angiv et gyldigt emne"
+  Filter:
+    completed: "Afsluttede emner"
+    uncompleted: "Ikke-udførte emner"
+    yourTopic: "Dine emner"
+  TooltipCreated:
+    date: "Oprettet {$dateCreateStr}"
+    user: "af {$userCreate}"
+  TooltipUpdated:
+    date: "Opdateret {$dateUpdStr}"
+    user: "af {$userUpd}"
+Minutes:
+  create: "Opret ny protokol"
+  date: "Dato"
+  dateOn: "om"
+  title: "Minutter til"
+  finalized: "Finaliseret"
+  finalizedHint: "Minutter er færdiggjort"
+  notFinalized: "Ikke færdiggjort"
+  notFinalizedHint: "Minutter er ikke færdiggjort"
+  attachments: "Vedhæftninger"
+  attachmentsHint: "Minutter har vedhæftninger"
+  previous: "Forrige:"
+  next: "Næste:"
+  history: "Historie"
+  unfinalizeHint: "Klik på Un-Finalisér minutter"
+  print: "Udskriv minutter"
+  finalize: "Finalisér minutter"
+  finalizeHint: "Klik for at finalisér minutter"
+  printHint: "Udskriv minutter"
+  downloadHint: "Download minutter som fil"
+  agenda: "Dagsorden"
+  sendAgenda: "Send dagsorden"
+  delete: "Slet mødereferat"
+  GlobalNotes:
+    pin: "Fastsæt som fastgjort global note"
+    unpin: "Angiv som ikke-fastgjort global note"
+    title: "Global Bemærk"
+    placeholder: "Globale noter til disse minutter. Klik på tegnestift for at udbrede noter til næste minutter."
+  Upload:
+    button: "Upload ..."
+    uploading: "Uploader"
+    start: "Start upload"
+    continue: "Fortsæt uploadning"
+    pause: "Stop uploadning af pause"
+    abort: "Afbryd uploadning"
+    error: "Fejl under uploadning"
+  version: "Version"
+  versionTag: "v"
+  Participants:
+    title: "Deltagere"
+    invited: "Inviteret"
+    solo: "1 deltager"
+    additional: "Yderligere deltagere"
+    additionalSolo: "1 Yderligere deltager"
+    placeholder: "Yderligere deltagere (adskilt med ';'). E-mailadresserne vil modtage mødereferater."
+    editHint: "Redigér inviterede brugere."
+    markNone: "Markér ingen"
+    markAll: "Markér alle"
+    watchingHint: "Denne bruger ser (fjernbetjening)"
+    informed: "Informerede brugere"
+    informedSolo: "1 Informeret bruger"
+    present: "Tilstedeværende deltagere"
+    absent: "Fraværende"
+    none: "Ingen."
+MeetingSeries:
+  title: "Møderække"
+  team: "Team / Projekt"
+  new: "Ny mødeserie"
+  leave: "Forlad mødeserie"
+  leaveButton: "Gå."
+  moderator: "Du er moderator"
+  lastMinute: "Sidste minut:"
+  Search:
+    placeholder: "Søg efter mødeserie"
+    noResults: "Ingen resultater for dette input ..."
+  Edit:
+    Error:
+      meetingName: "Angiv et gyldigt navn på møderserien"
+      teamName: "Angiv et gyldigt projektnavn"
+      notRegistered: "Dette er ikke et registreret brugernavn"
+      alreadyInList: "Dette brugernavn er allerede i listen"
+    teamName: "Team/projektnavn"
+    meetingName: "Mødenavn"
+    title: "Redigér mødeserie"
+    base: "Basiskonfiguration"
+    editedBy: "Redigeret af {$user} (ved {$date})"
+    invited: "Invited & Informerede brugere"
+    placeholderUsers: "Tilføj brugere til inviterede brugere..."
+    notifyRoleChange: "Advisér deltagere om rolleændring"
+    labels: "Etiketter"
+    save: "Gem mødeserie"
+    confirmDelete: "Bekræft sletning"
+  Labels:
+    Error:
+      name: "Angiv et gyldigt navn på en etiket"
+      hexValue: "Ugyldig hex-farveværdi"
+    add: "Tilføj ny etiket"
+    new: "NyEtiket"
+    select: "Vælg ..."
+  Tab:
+    minutes: "Minutter"
+    topics: "Emner"
+    items: "Elementer"
+Profile:
+  title: "Redigér profil for"
+  userName: "Brugernavn"
+  longName: "Langt navn"
+  email: "E-mail"
+  password: "Adgangskode"
+  passwordRepeat: "Adgangskode (gentag)"
+  ChangePassword:
+    title: "Skift adgangskode for"
+    oldPassword: "Gammel adgangskode"
+    wrongOldPassword: "Angiv gammel gyldig adgangskode"
+    newPassword: "Ny adgangskode"
+    newPasswordRepeat: "Gentag ny adgangskode"
+  Error:
+    name: "Angiv venligst et gyldigt brugernavn"
+    longName: "Angiv et gyldigt langt navn"
+    email: "Angiv en gyldig e-mail-adresse"
+    password: "Angiv et gyldigt kodeord"
+  WarningEMailChange:
+    title: "Bekræft ændring af brugerpost"
+    body: "Du er ved at ændre din validerede mailadresse. Du vil blive logget af og være nødt til at verificere din nye e-mailadresse, før du kan fortsætte."
+    button: "Log af + Re-Verify"
+Admin:
+  users: "Brugere"
+  messages: "Meddelelser"
+  Register:
+    label: "Registrér ny bruger"
+    hint: "Hint: Dette registrerer en bruger for standardlogon (Ikke for LDAP-logon!)."
+    button: "Registrér ny bruger ..."
+    sendMail: "Send E-mail til ny bruger"
+    includePassword: "Inkludér adgangskode i e-mail"
+    success: "Registreret ny bruger: {$user}"
+  Message:
+    title: "Rundsendelse af beskeder fra admin"
+    newMessage: "Ny besked til alle brugere"
+    broadcast: "Rundsendelse"
+    date: "Dato"
+    message: "Meddelelse"
+    dismissed: "Afvist"
+    dismissingUsers: "#Uforsvundne brugere: {$number}\n"
+    edit: "Redigér"
+  Users:
+    filterUsers: "Filtrér brugere"
+    showInactive: "Vis inaktive"
+    online: "Online"
+    onlineHint: "Viser kun brugere, der er aktive på en minutesedit-rute"
+    id: "ID"
+    editProfile: "Redigér brugerprofil"
+    countSingle: "Viser {$visible} på {$all} bruger. Brug filter til at vise andre."
+    count: "Viser {$visible} af {$all} brugere. Brug filter til at vise andre."
+    Type:
+      hint: "LDAP-bruger eller standardbruger"
+      column: "L/S"
+      ldap: "L"
+      standard: "S"
+    State:
+      hint: "Aktivér / deaktivér aktiv / inaktiv tilstand. Inaktive brugere kan ikke logge på."
+      column: "I / Aktiv"
+      active: "Aktiv"
+      inactive: "Inaktiv"
+      toggle: "Skift mellem"
+Login:
+  Error:
+    title: "Logon-fejl"
+    username: "Angiv dit brugernavn"
+    password: "Angiv dit kodeord"
+  signIn: "Log på"
+  ldap: "LDAP"
+  standard: "Standard"
+  demoHint: "Hint: Demo Mode Active<br>Du kan logge på med brugernavn <b>demo</b> og kodeord <b>demo</b>. Eller du kan registrere din egen konto ved at klikke på linket \"Registrér\" nedenfor."
+  Login4MinitzInfo:
+    header: "4Minitz: Samarbejdsmøde i mødeprotokollen."
+    subheader: "● Forberedelse af Agenda-dokumenter i Registrerede dokumentminutter i Registrerede Topics"
+    abstract: |
+      <p>Alle inviterede og brugere, der er logget på, kan se ændringer i de aktuelle mødeminutter i realtid.</p>
+      Vi har gjort 4Minitz gratis open source-software, da vi er helt overbevist om, at
+      følsomme oplysninger som mødeprotokollen ikke bør hostes i skyen.
+      I stedet ønsker du at være vært for den på din egen infrastruktur, hvor du kan definere
+      det sikkerhedsniveau og sikkerhed, du har brug for.
+    prepareAgendaHeading: "Klargør dagsorden"
+    prepareAgendaDetails: |
+      <li>Opret din mødeserie</li>
+      <li>Invitér andre brugere</li>
+      <li>Specificér moderatorer og uploadere</li>
+      <li>Udfyld dagsorden med emner</li>
+      <li>Markér tilbagevendende emner til standard dagsorden</li>
+      <li>Send dagsorden til inviterede brugere</li>
+    documentMinutesHeading: "Dokumentminutter"
+    documentMinutesDetails: |
+      <li>Markér tilstedeværende</li>
+      <li>Tilføj handlingspunkter med ansvarlige til emner</li>
+      <li>Tilføj information til emner</li>
+      <li>Tilføj labels som f.eks. 'Beslutning' til handlinger</li>
+      <li>Vedhæft binære filer</li>
+      <li>Send mødereferat og handlingspunkter via e-mail</li>
+    trackTopicsHeading: "Spor emner"
+    trackTopicsDetails: |
+      <li>Åbne handlingspunkter vil vises næste gang</li>
+      <li>Ikke lukkede emner vil vises næste gang</li>
+      <li>Søg i liste over alle diskuterede emner</li>
+      <li>Berig emner med info fra flere møder</li>
+      <li>Find emner med labels (f.eks. alle Beslutninger)</li>
+      <li>Find elementer med fuldtekst søgning</li>
+  Footer:
+    withLove: "Coded with ❤ by the"
+    theTeam: "WebApp-team"
+Navigation:
+  help: "Hjælp"
+  about: "Om"
+  adminTasks: "Administratoropgaver"
+  editProfile: "Redigér profil"
+  changePassword: "Skift kodeord"
+  signOut: "Log af"
+  toggleNavigation: "Aktivér / deaktivér navigation"
+  meetings: "Møder"
+  processing: "Behandler dit indhold ..."
+  setLanguageForUser: "Angiv sprog"
+  setLanguageLogin: "Sprog"
+QuickHelp:
+  title: "Hurtig hjælp"
+  meetingSeries: "<p>Her kan du oprette nye minutter til den aktuelle mødereferat eller klikke på et datalink på eksisterende minutter.</p>"
+  meetingSeriesList: "<p>Med 4Minitz kan du oprette minutter til møder.</p><p>Første oprettelse af en ny mødeserie, og invitér nogle andre brugere.<br>Så kan du oprette mødeminutter på flere datoer for din mødeserie.</p>"
+  minutes: "<p>Tilføj emner for at forberede din mødedagsorden<br>Markér emner under mødet med en checkbox, så det er tydeligt, at det har været debateret.<br>Hvis emnet...<br>&nbsp;&nbsp; - ikke er markeret som diskuteret<br>&nbsp;&nbsp; - er markeret som tilbagevendende emne eller<br>&nbsp;&nbsp; - indeholder ikke-færdige handlingspunkter<br>... vil emnet præsenteres igen på næste møde.</p><p>Klik på 'Afslut mødereferat' for at sende mødereferat til de inviterede brugere og handlingspunkter til de ansvarlige.</p>"
+  upload: "<ul><li>Her kan du uploade filer, som f.eks. præsentationer, PDF'er eller whiteboard fotos</li><li>Du skal have rollen 'Uploader' eller 'Moderator' for at gøre det</li><li>Uploading eller sletning er muligt indtil mødereferatet er afsluttet</li><li>Pro Tip: Klik på knappen 'Upload' ovenfor på din tablet eller smart phone!</li></ul>"
+Mail:
+  greeting: "Hej"
+  newAgenda: "Vi har en helt ny mødedagsorden til dig:"
+  newActionItem: "Du er blevet tildelt følgende handlingspunkter:"
+  newMinutes: "Nedenfor finder du de seneste mødereferater."
+  meeting: "Møde"
+  links: "Links"
+  openSeries: "Åbn serie"
+  openMinutes: "Åbn mødereferat"
+  minutesSubject: "Mødereferat"
+  discussedTopics: "Diskuterede emner"
+  skippedTopics: "Åbn emner"
+  none: "Ingen"
+  AdminNewVersion:
+    subject: "Der findes en nyere version"
+    body: |
+      Hej Admin
+
+      Det lader til at du kører en forældet version af 4Minitz.
+
+      Din 4Minitz instans på: {$rootUrl}
+      har version: {$myVersion}
+
+      Nyeste tilgængelige version er: {$masterVersion}'
+      Release notes: {$urlReleaseNotes}
+      Overvej venligst at opdatere.
+
+      {$masterMessageText}
+
+      Denne mail er genereret af din 4Minitz backend.
+      Du kan slå update-kontrol fra via settings.json: \"updateCheck\": false.
+
+      Hav det fornøjeligt!
+              Dit 4Minitz team.
+
+
+      ---
+      4Minitz er gratis open source, udviklet af 4Minitz teamet.
+      Kildekoden er tilgængelig på {$url4Minitz}
+  AdminRegisterNewUser:
+    subject: "Din nye konto på vores server"
+    passwordNotSend: "    Kontakt administrator for adgangskode."
+    passwordParagraph: |
+      Din adgangskode: {$password}
+
+      Glem ikke at ændre din adgangskode efter første login!
+    body: |
+      Hej {$userLongName},
+
+      Velkommen til vores 4Minitz webapp.
+      Nu kan du begynde at deltage i at holde professionelle mødeminutter.
+
+      Du kan logge ind med 'Standard' (ikke LDAP!) log ind på:
+         Din vært: {$rootURL}
+         Din bruger: {$userName}
+      {$passwordParagraph}
+
+      Hav det sjovt!
+        Din administrator.
+
+      —
+      4Minitz er gratis open source udviklet af 4Minitz team.
+      Kilde er tilgængelig på {$url4Minitz}
+  UserRoleChange:
+    subject: "Din rolle er ændret for '{$meetingProject}:{$meetingName}'"
+    body: |
+      Hej {$userName}
+
+      Din rolle er ændret for mødeserien '{$meetingProject}:{$meetingName}'
+      ({$meetingSeriesURL})
+
+         Din gamle rolle var           : {$roleOld}
+         Din nye rolle er                  : {$roleNew}
+         Ændringen blev foretaget af: {$moderatorName}
+
+      For en udtømmende liste over rettigheder for alle brugere se:
+      {$urlRoleDocu}
+
+      Hav det sjovt!
+        Din Admin.
+
+      ---
+      4Minitz er gratis open source udviklet af 4Minitz teamet.
+      Kildekoden er tilgængelig på {$url4Minitz}
+  VerifyEmailAddress:
+    subject: "[{$sitename}] Bekræft din e-mail-adresse"
+    body: |
+      Besøg følgende link for at bekræfte din e-mailadresse {$emailAddress}:
+
+      {$urlWithoutHash}
+
+      Hvis du ikke har anmodet om denne bekræftelse, så ignorér denne mail.
+      Hvis du mener, noget er galt, så kontakt venligst dit administrator team.
+  ResetPassword:
+    subject: "[{$sitename}] Nulstil din adgangskode"
+    body: |
+      Besøg følgende link for at nulstille adgangskoden for {$emailAddress}:
+
+      {$urlWithoutHash}
+
+      Hvis du ikke har anmodet om at nulstille din adgangskod, så ignorér denne mail.
+      Hvis du mener, noget er galt, så kontakt venligst dit administrator team.

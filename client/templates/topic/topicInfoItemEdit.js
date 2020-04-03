@@ -26,6 +26,7 @@ import {handlerShowMarkdownHint} from './helpers/handler-show-markdown-hint';
 import {IsEditedService} from '../../../imports/services/isEditedService';
 import {isEditedHandling} from '../../helpers/isEditedHelpers';
 import {configureSelect2Responsibles} from '/imports/client/ResponsibleSearch';
+import { i18n } from 'meteor/universe:i18n';
 
 Session.setDefault('topicInfoItemEditTopicId', null);
 Session.setDefault('topicInfoItemEditInfoItemId', null);
@@ -135,7 +136,9 @@ Template.topicInfoItemEdit.helpers({
 
     getTopicItemType: function () {
         let type = Session.get('topicInfoItemType');
-        return (type === 'infoItem') ? 'Information' : 'Action Item';
+        return (type === 'infoItem') ?
+            i18n.__('Item.editItemModelTypeInfoItem') :
+            i18n.__('Item.editItemModelTypeActionItem');
     },
 
     collapseState: function() {
@@ -146,42 +149,50 @@ Template.topicInfoItemEdit.helpers({
 
 Template.topicInfoItemEdit.events({
     'submit #frmDlgAddInfoItem': async function(evt, tmpl) {
-        evt.preventDefault();
+        let saveButton = $('#btnInfoItemSave');
 
-        if (!getRelatedTopic()) {
-            throw new Meteor.Error('IllegalState: We have no related topic object!');
+        try {
+            saveButton.prop('disabled', true);
+
+            evt.preventDefault();
+
+            if (!getRelatedTopic()) {
+                throw new Meteor.Error('IllegalState: We have no related topic object!');
+            }
+            if (Session.get('topicInfoItemEditInfoItemId') !== null)
+                IsEditedService.removeIsEditedInfoItem(_minutesID, Session.get('topicInfoItemEditTopicId'), Session.get('topicInfoItemEditInfoItemId'), true);
+            const editItem = getEditInfoItem();
+
+            const type = Session.get('topicInfoItemType');
+            const newSubject = tmpl.find('#id_item_subject').value;
+            const newDetail = (!editItem) ? tmpl.find('#id_item_detailInput').value : false;
+            const labels = tmpl.$('#id_item_selLabelsActionItem').val();
+
+            let doc = {};
+            if (editItem) {
+                _.extend(doc, editItem._infoItemDoc);
+            }
+
+            doc.subject = newSubject;
+
+            if (type === 'actionItem') {
+                doc.responsibles = $('#id_selResponsibleActionItem').val();
+                doc.duedate = tmpl.find('#id_item_duedateInput').value;
+                doc.priority = tmpl.find('#id_item_priority').value;
+            }
+
+            const minutes = new Minutes(_minutesID);
+            const newItem = createItem(doc, getRelatedTopic(), _minutesID, minutes.parentMeetingSeries(), type, labels);
+
+            if (newDetail) {
+                newItem.addDetails(minutes._id, newDetail);
+            }
+
+            newItem.saveAsync().catch(handleError);
+            $('#dlgAddInfoItem').modal('hide');
+        } finally {
+            saveButton.prop('disabled', false);
         }
-        if (Session.get('topicInfoItemEditInfoItemId') !== null)
-            IsEditedService.removeIsEditedInfoItem(_minutesID, Session.get('topicInfoItemEditTopicId'), Session.get('topicInfoItemEditInfoItemId'), true);
-        const editItem = getEditInfoItem();
-
-        const type = Session.get('topicInfoItemType');
-        const newSubject = tmpl.find('#id_item_subject').value;
-        const newDetail = (!editItem) ? tmpl.find('#id_item_detailInput').value : false;
-        const labels = tmpl.$('#id_item_selLabelsActionItem').val();
-
-        let doc = {};
-        if (editItem) {
-            _.extend(doc, editItem._infoItemDoc);
-        }
-
-        doc.subject = newSubject;
-
-        if (type === 'actionItem') {
-            doc.responsibles = $('#id_selResponsibleActionItem').val();
-            doc.duedate = tmpl.find('#id_item_duedateInput').value;
-            doc.priority = tmpl.find('#id_item_priority').value;
-        }
-
-        const minutes = new Minutes(_minutesID);
-        const newItem = createItem(doc, getRelatedTopic(), _minutesID, minutes.parentMeetingSeries(), type, labels);
-
-        if (newDetail) {
-            newItem.addDetails(minutes._id, newDetail);
-        }
-
-        newItem.saveAsync().catch(handleError);
-        $('#dlgAddInfoItem').modal('hide');
     },
 
     // will be called before the dialog is shown
@@ -278,8 +289,8 @@ Template.topicInfoItemEdit.events({
             if (! emailAddressRegExpTest.test(evt.params.args.data.text)) {    // no valid mail anystring@anystring.anystring
                 // prohibit non-mail free text entries
                 ConfirmationDialogFactory.makeInfoDialog(
-                    'Invalid Responsible',
-                    'This is not a valid responsible!\n\nPlease select an **existing user** from the dropdown or enter a **valid email address**.'
+                    i18n.__('Dialog.ActionItemResponsibleError.title'),
+                    i18n.__('Dialog.ActionItemResponsibleError.body')
                 ).show();
                 return false;
             }
