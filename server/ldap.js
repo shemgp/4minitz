@@ -29,10 +29,17 @@ LDAP.bindValue = function (usernameOrEmail, isEmailAddress) {
     // make some users isInactive==true - we stop them from logging in here.
     if (Meteor && Meteor.users) {   // skip this during unit tests
         const uid = username.toLowerCase();
+        var user = Meteor.users.findOne({"username": uid});
 
-        var database2 = new MongoInternals.RemoteCollectionDriver(process.env.MONGO_URL+"test");
-        const ldap_users = new Mongo.Collection("users", { _driver: database2, _suppressSameNameError: true });
-        const user = ldap_users.findOne({"username": uid});
+        // Lookup test database since the users might be there too.
+        // This happens if the Mongo URL is: mongodb://username:passwordlocalhost:27017/
+        // If the Mongo URL is mongodb://username:passwordlocalhost:27017/admin, there's no need for this
+        // If the Mongo URL mongodb://username:passwordlocalhost:27017 (note no / at the end) it will have an error.
+        if (user == undefined) {
+            var database2 = new MongoInternals.RemoteCollectionDriver(process.env.MONGO_URL+"test");
+            const ldap_users = new Mongo.Collection("users", { _driver: database2, _suppressSameNameError: true });
+            user = ldap_users.findOne({"username": uid});
+        }
 
         if (user && user.isInactive) {
             throw new Meteor.Error(403, 'User is inactive');
