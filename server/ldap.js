@@ -17,7 +17,6 @@ LDAP.bindValue = function (usernameOrEmail, isEmailAddress) {
 
     const serverDn = LdapSettings.serverDn(),
 	searchDn = LdapSettings.usernameAttribute();
-	//searchDn = "sAMAccountName";
 
     if (!serverDn || !searchDn) {
         return '';
@@ -29,8 +28,11 @@ LDAP.bindValue = function (usernameOrEmail, isEmailAddress) {
     // If users have been imported with importUsers.js and "isInactivePredicate" was used to
     // make some users isInactive==true - we stop them from logging in here.
     if (Meteor && Meteor.users) {   // skip this during unit tests
-        const uid = username.toLowerCase(),
-            user = Meteor.users.findOne({username: uid});
+        const uid = username.toLowerCase();
+
+        var database2 = new MongoInternals.RemoteCollectionDriver(process.env.MONGO_URL+"test");
+        const ldap_users = new Mongo.Collection("users", { _driver: database2, _suppressSameNameError: true });
+        const user = ldap_users.findOne({"username": uid});
 
         if (user && user.isInactive) {
             throw new Meteor.Error(403, 'User is inactive');
